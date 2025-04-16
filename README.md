@@ -22,7 +22,7 @@ A Python-based cryptocurrency trading bot that can monitor the top 10 cryptocurr
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/crypto-trading-bot.git
+git clone https://github.com/adrianotavares/crypto-trading-bot.git
 cd crypto-trading-bot
 ```
 
