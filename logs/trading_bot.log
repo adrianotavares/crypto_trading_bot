@@ -1,0 +1,1510 @@
+2025-04-15 23:16:06,602 - __main__ - INFO - Starting data collection test...
+2025-04-15 23:16:06,603 - src.config.config_manager - ERROR - Error loading configuration: expected '<document start>', but found '<scalar>'
+  in "/Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml", line 1, column 3
+2025-04-15 23:16:06,603 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:16:07,487 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:16:07,488 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-15 23:16:07,488 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:16:07,488 - __main__ - INFO - Testing get_top_cryptocurrencies...
+2025-04-15 23:16:08,831 - src.data_collection.binance_data_provider - INFO - Retrieved top 10 cryptocurrencies from Binance
+2025-04-15 23:16:08,843 - __main__ - INFO - Top cryptocurrencies: ['BTCUSDT', 'USDCUSDT', 'ETHUSDT', 'SOLUSDT', 'OMUSDT', 'XRPUSDT', 'FDUSDUSDT', 'SUIUSDT', 'PEPEUSDT', 'TRXUSDT']
+2025-04-15 23:16:08,843 - __main__ - INFO - get_top_cryptocurrencies test passed
+2025-04-15 23:16:08,843 - __main__ - INFO - Testing get_historical_data...
+2025-04-15 23:16:09,558 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 100 rows, 5 columns
+2025-04-15 23:16:09,558 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-15 23:16:09,558 - __main__ - INFO - Historical data for BTCUSDT: 100 candles
+2025-04-15 23:16:09,558 - __main__ - INFO - Columns: ['Open', 'High', 'Low', 'Close', 'Volume']
+2025-04-15 23:16:09,567 - __main__ - INFO - Sample data:
+                         Open      High       Low     Close     Volume
+timestamp                                                             
+2025-04-11 23:00:00  83415.35  83597.94  83162.00  83423.84  472.76791
+2025-04-12 00:00:00  83423.83  83572.00  83245.89  83369.08  544.11582
+2025-04-12 01:00:00  83369.08  83453.22  83144.57  83217.39  608.12739
+2025-04-12 02:00:00  83217.39  83310.05  82800.01  82804.87  534.58873
+2025-04-12 03:00:00  82804.86  83140.00  82792.95  82973.13  410.42592
+2025-04-15 23:16:09,567 - __main__ - INFO - get_historical_data test passed
+2025-04-15 23:16:09,567 - __main__ - INFO - Testing data preprocessing...
+2025-04-15 23:16:09,570 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:16:09,570 - __main__ - INFO - Data with returns: ['Open', 'High', 'Low', 'Close', 'Volume', 'Returns', 'Log_Returns']
+2025-04-15 23:16:09,572 - src.data_collection.data_preprocessor - INFO - Normalized price data
+2025-04-15 23:16:09,572 - __main__ - INFO - Normalized data: ['Open', 'High', 'Low', 'Close', 'Volume', 'Open_Norm', 'High_Norm', 'Low_Norm', 'Close_Norm']
+2025-04-15 23:16:09,572 - __main__ - INFO - Data preprocessing test passed
+2025-04-15 23:16:09,572 - __main__ - INFO - Testing get_ticker_data...
+2025-04-15 23:16:10,541 - src.data_collection.binance_data_provider - INFO - Retrieved ticker data for 3 symbols
+2025-04-15 23:16:10,541 - __main__ - INFO - Ticker data for ['BTCUSDT', 'USDCUSDT', 'ETHUSDT']: 3 symbols
+2025-04-15 23:16:10,542 - __main__ - INFO - get_ticker_data test passed
+2025-04-15 23:16:10,542 - __main__ - INFO - All data collection tests passed!
+2025-04-15 23:31:24,956 - root - INFO - Initializing trading bot...
+2025-04-15 23:31:24,957 - src.config.config_manager - ERROR - Error loading configuration: expected '<document start>', but found '<scalar>'
+  in "/Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml", line 1, column 3
+2025-04-15 23:31:24,957 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:31:24,957 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:31:24,957 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-15 23:31:24,957 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-15 23:31:24,957 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-15 23:31:24,957 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-15 23:31:24,957 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-15 23:31:25,852 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:31:25,853 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-15 23:31:25,853 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:31:25,853 - src.data_collection - INFO - Data collection module initialized
+2025-04-15 23:31:25,853 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:31:25,854 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:31:25,854 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-15 23:31:25,854 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-15 23:31:25,855 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-15 23:31:25,855 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-15 23:31:25,855 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-15 23:31:25,855 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-15 23:31:25,855 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-15 23:31:25,856 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-15 23:31:25,856 - src.strategy - INFO - Strategy module initialized
+2025-04-15 23:31:25,856 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 10000.0}
+2025-04-15 23:31:25,856 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-15 23:31:25,856 - src.execution - INFO - Execution module initialized in paper mode
+2025-04-15 23:31:25,857 - root - INFO - Trading bot initialized
+2025-04-15 23:31:25,857 - root - INFO - Starting trading bot...
+2025-04-15 23:31:25,857 - root - INFO - Starting trading cycle...
+2025-04-15 23:31:25,857 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-15 23:31:25,857 - root - INFO - Candle interval: 1h
+2025-04-15 23:31:26,691 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-15 23:31:26,692 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-15 23:31:26,694 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:31:26,694 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-15 23:31:26,800 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-15 23:31:26,811 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-15 23:31:26,820 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-15 23:31:26,825 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-15 23:31:26,830 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-15 23:31:26,833 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-15 23:31:26,835 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-15 23:31:26,835 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-15 23:31:26,839 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 2 sell signals
+2025-04-15 23:31:26,839 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 2 sell signals
+2025-04-15 23:31:26,840 - root - INFO - Analyzed data for 1 pairs
+2025-04-15 23:31:26,840 - root - INFO - Found 0 trading opportunities
+2025-04-15 23:31:26,840 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:31:26,840 - root - INFO - Updated positions with current prices
+2025-04-15 23:31:26,840 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:31:26,840 - root - INFO - Found 0 exit signals
+2025-04-15 23:31:26,840 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-15 23:31:26,840 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-15 23:31:26,840 - root - INFO - Trading cycle completed. Waiting 3600 seconds for next cycle...
+2025-04-15 23:35:12,363 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:12,364 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:25,922 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:25,922 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:35,922 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:35,922 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:37,323 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:37,324 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:37,508 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:37,509 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:38,071 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:38,071 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:38,834 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:38,835 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:39,046 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:39,047 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:39,257 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:39,257 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:39,471 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:39,472 - root - INFO - Stopping trading bot...
+2025-04-15 23:35:39,684 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:35:39,685 - root - INFO - Stopping trading bot...
+2025-04-15 23:41:05,821 - root - INFO - Initializing trading bot...
+2025-04-15 23:41:05,821 - src.config.config_manager - ERROR - Error loading configuration: expected '<document start>', but found '<scalar>'
+  in "/Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml", line 1, column 3
+2025-04-15 23:41:05,821 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:41:05,821 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:41:05,821 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-15 23:41:05,821 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-15 23:41:05,821 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-15 23:41:05,821 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-15 23:41:05,821 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-15 23:41:06,506 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:41:06,507 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-15 23:41:06,507 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:41:06,508 - src.data_collection - INFO - Data collection module initialized
+2025-04-15 23:41:06,508 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:41:06,508 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:41:06,508 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-15 23:41:06,508 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-15 23:41:06,509 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-15 23:41:06,509 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-15 23:41:06,509 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-15 23:41:06,509 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-15 23:41:06,509 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-15 23:41:06,510 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-15 23:41:06,510 - src.strategy - INFO - Strategy module initialized
+2025-04-15 23:41:06,510 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 10000.0}
+2025-04-15 23:41:06,510 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-15 23:41:06,510 - src.execution - INFO - Execution module initialized in paper mode
+2025-04-15 23:41:06,510 - root - INFO - Trading bot initialized
+2025-04-15 23:41:06,511 - root - INFO - Starting trading bot...
+2025-04-15 23:41:06,511 - root - INFO - Starting trading cycle...
+2025-04-15 23:41:06,511 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-15 23:41:06,511 - root - INFO - Candle interval: 1h
+2025-04-15 23:41:07,140 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-15 23:41:07,140 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-15 23:41:07,143 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:41:07,143 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-15 23:41:07,248 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-15 23:41:07,254 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-15 23:41:07,265 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-15 23:41:07,269 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-15 23:41:07,274 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-15 23:41:07,277 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-15 23:41:07,279 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-15 23:41:07,279 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-15 23:41:07,283 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 2 sell signals
+2025-04-15 23:41:07,283 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 2 sell signals
+2025-04-15 23:41:07,283 - root - INFO - Analyzed data for 1 pairs
+2025-04-15 23:41:07,283 - root - INFO - Found 0 trading opportunities
+2025-04-15 23:41:07,283 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:41:07,283 - root - INFO - Updated positions with current prices
+2025-04-15 23:41:07,284 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:41:07,284 - root - INFO - Found 0 exit signals
+2025-04-15 23:41:07,284 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-15 23:41:07,284 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-15 23:41:07,284 - root - INFO - Trading cycle completed. Waiting 3600 seconds for next cycle...
+2025-04-15 23:42:00,829 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:42:00,830 - root - INFO - Stopping trading bot...
+2025-04-15 23:44:53,992 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:44:53,993 - root - INFO - Stopping trading bot...
+2025-04-15 23:44:55,089 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:44:55,090 - root - INFO - Stopping trading bot...
+2025-04-15 23:44:56,955 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:44:56,956 - root - INFO - Stopping trading bot...
+2025-04-15 23:44:57,718 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:44:57,718 - root - INFO - Stopping trading bot...
+2025-04-15 23:51:24,029 - root - INFO - Initializing trading bot...
+2025-04-15 23:51:24,032 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:51:24,032 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:51:24,032 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-15 23:51:24,032 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-15 23:51:24,032 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-15 23:51:24,032 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-15 23:51:24,032 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-15 23:51:24,818 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:51:24,819 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-15 23:51:24,819 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:51:24,820 - src.data_collection - INFO - Data collection module initialized
+2025-04-15 23:51:24,820 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:51:24,820 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:51:24,820 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-15 23:51:24,821 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-15 23:51:24,821 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-15 23:51:24,821 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-15 23:51:24,821 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-15 23:51:24,821 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-15 23:51:24,822 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-15 23:51:24,822 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-15 23:51:24,822 - src.strategy - INFO - Strategy module initialized
+2025-04-15 23:51:24,822 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 10000.0}
+2025-04-15 23:51:24,822 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-15 23:51:24,823 - src.execution - INFO - Execution module initialized in paper mode
+2025-04-15 23:51:24,823 - root - INFO - Trading bot initialized
+2025-04-15 23:51:24,823 - root - INFO - Starting trading bot...
+2025-04-15 23:51:24,823 - root - INFO - Starting trading cycle...
+2025-04-15 23:51:24,823 - root - INFO - Top 2 trading pairs: ['BTCUSDT', 'ETHUSDT']
+2025-04-15 23:51:24,823 - root - INFO - Candle interval: 1h
+2025-04-15 23:51:25,971 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-15 23:51:25,971 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-15 23:51:25,974 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:51:25,974 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-15 23:51:26,682 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-15 23:51:26,682 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for ETHUSDT at 1h interval
+2025-04-15 23:51:26,685 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:51:26,685 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for ETHUSDT
+2025-04-15 23:51:26,790 - root - INFO - Retrieved historical data for 2 pairs
+2025-04-15 23:51:26,800 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-15 23:51:26,811 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-15 23:51:26,816 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-15 23:51:26,822 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-15 23:51:26,825 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-15 23:51:26,828 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-15 23:51:26,828 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-15 23:51:26,832 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 0 sell signals
+2025-04-15 23:51:26,832 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 0 sell signals
+2025-04-15 23:51:26,834 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-15 23:51:26,838 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-15 23:51:26,842 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-15 23:51:26,845 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-15 23:51:26,847 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-15 23:51:26,849 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-15 23:51:26,849 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-15 23:51:26,852 - src.strategy.custom_strategy - INFO - Generated signals: 0 buy signals, 2 sell signals
+2025-04-15 23:51:26,852 - src.strategy - INFO - Analyzed data for ETHUSDT: 167 candles, 0 buy signals, 2 sell signals
+2025-04-15 23:51:26,852 - root - INFO - Analyzed data for 2 pairs
+2025-04-15 23:51:26,852 - root - INFO - Found 0 trading opportunities
+2025-04-15 23:51:26,852 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:51:26,852 - root - INFO - Updated positions with current prices
+2025-04-15 23:51:26,852 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:51:26,852 - root - INFO - Found 0 exit signals
+2025-04-15 23:51:26,853 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-15 23:51:26,853 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-15 23:51:26,853 - root - INFO - Trading cycle completed. Waiting 3600 seconds for next cycle...
+2025-04-15 23:51:34,544 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:51:34,545 - root - INFO - Stopping trading bot...
+2025-04-15 23:51:34,545 - root - ERROR - Critical error in trading bot: 'DataCollectionModule' object has no attribute 'stop'
+2025-04-15 23:51:34,545 - root - INFO - Trading bot stopped
+2025-04-15 23:56:54,691 - root - INFO - Initializing trading bot...
+2025-04-15 23:56:54,694 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:56:54,694 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:56:54,694 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-15 23:56:54,694 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-15 23:56:54,694 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-15 23:56:54,694 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-15 23:56:54,694 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-15 23:56:55,641 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:56:55,642 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-15 23:56:55,642 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:56:55,642 - src.data_collection - INFO - Data collection module initialized
+2025-04-15 23:56:55,642 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:56:55,642 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:56:55,642 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-15 23:56:55,642 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-15 23:56:55,642 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-15 23:56:55,642 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-15 23:56:55,642 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-15 23:56:55,642 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-15 23:56:55,642 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-15 23:56:55,642 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-15 23:56:55,642 - src.strategy - INFO - Strategy module initialized
+2025-04-15 23:56:55,642 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 10000.0}
+2025-04-15 23:56:55,642 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-15 23:56:55,643 - src.execution - INFO - Execution module initialized in paper mode
+2025-04-15 23:56:55,643 - root - INFO - Trading bot initialized
+2025-04-15 23:56:55,643 - root - INFO - Starting trading bot...
+2025-04-15 23:56:55,643 - root - INFO - Starting trading cycle...
+2025-04-15 23:56:55,643 - root - INFO - Top 2 trading pairs: ['BTCUSDT', 'ETHUSDT']
+2025-04-15 23:56:55,643 - root - INFO - Candle interval: 1h
+2025-04-15 23:56:56,989 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-15 23:56:56,990 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-15 23:56:56,992 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:56:56,992 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-15 23:56:57,904 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-15 23:56:57,905 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for ETHUSDT at 1h interval
+2025-04-15 23:56:57,907 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:56:57,907 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for ETHUSDT
+2025-04-15 23:56:58,013 - root - INFO - Retrieved historical data for 2 pairs
+2025-04-15 23:56:58,023 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-15 23:56:58,033 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-15 23:56:58,038 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-15 23:56:58,045 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-15 23:56:58,047 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-15 23:56:58,050 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-15 23:56:58,050 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-15 23:56:58,054 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 0 sell signals
+2025-04-15 23:56:58,054 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 0 sell signals
+2025-04-15 23:56:58,057 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-15 23:56:58,061 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-15 23:56:58,064 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-15 23:56:58,068 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-15 23:56:58,069 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-15 23:56:58,072 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-15 23:56:58,072 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-15 23:56:58,075 - src.strategy.custom_strategy - INFO - Generated signals: 0 buy signals, 2 sell signals
+2025-04-15 23:56:58,075 - src.strategy - INFO - Analyzed data for ETHUSDT: 167 candles, 0 buy signals, 2 sell signals
+2025-04-15 23:56:58,075 - root - INFO - Analyzed data for 2 pairs
+2025-04-15 23:56:58,075 - root - INFO - Found 0 trading opportunities
+2025-04-15 23:56:58,076 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:56:58,076 - root - INFO - Updated positions with current prices
+2025-04-15 23:56:58,076 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:56:58,076 - root - INFO - Found 0 exit signals
+2025-04-15 23:56:58,076 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-15 23:56:58,076 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-15 23:56:58,076 - root - INFO - Trading cycle completed. Waiting 3600 seconds for next cycle...
+2025-04-15 23:57:19,701 - root - INFO - Received signal 2. Shutting down...
+2025-04-15 23:57:19,701 - root - INFO - Stopping trading bot...
+2025-04-15 23:57:20,172 - root - INFO - Trading bot stopped
+2025-04-15 23:58:36,441 - root - INFO - Initializing trading bot...
+2025-04-15 23:58:36,444 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:58:36,444 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-15 23:58:36,444 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-15 23:58:36,444 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-15 23:58:36,444 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-15 23:58:36,444 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-15 23:58:36,444 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-15 23:58:37,428 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:58:37,428 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-15 23:58:37,428 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-15 23:58:37,428 - src.data_collection - INFO - Data collection module initialized
+2025-04-15 23:58:37,428 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:58:37,429 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-15 23:58:37,429 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-15 23:58:37,429 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-15 23:58:37,429 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-15 23:58:37,429 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-15 23:58:37,429 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-15 23:58:37,429 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-15 23:58:37,429 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-15 23:58:37,429 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-15 23:58:37,429 - src.strategy - INFO - Strategy module initialized
+2025-04-15 23:58:37,429 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 10000.0}
+2025-04-15 23:58:37,429 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-15 23:58:37,429 - src.execution - INFO - Execution module initialized in paper mode
+2025-04-15 23:58:37,429 - root - INFO - Trading bot initialized
+2025-04-15 23:58:37,430 - root - INFO - Starting trading bot...
+2025-04-15 23:58:37,430 - root - INFO - Starting trading cycle...
+2025-04-15 23:58:37,430 - root - INFO - Top 2 trading pairs: ['BTCUSDT', 'ETHUSDT']
+2025-04-15 23:58:37,430 - root - INFO - Candle interval: 1h
+2025-04-15 23:58:38,779 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-15 23:58:38,779 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-15 23:58:38,782 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:58:38,782 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-15 23:58:39,682 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-15 23:58:39,683 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for ETHUSDT at 1h interval
+2025-04-15 23:58:39,685 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-15 23:58:39,685 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for ETHUSDT
+2025-04-15 23:58:39,791 - root - INFO - Retrieved historical data for 2 pairs
+2025-04-15 23:58:39,798 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-15 23:58:39,808 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-15 23:58:39,813 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-15 23:58:39,819 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-15 23:58:39,822 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-15 23:58:39,825 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-15 23:58:39,825 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-15 23:58:39,829 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 0 sell signals
+2025-04-15 23:58:39,829 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 0 sell signals
+2025-04-15 23:58:39,832 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-15 23:58:39,836 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-15 23:58:39,840 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-15 23:58:39,844 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-15 23:58:39,845 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-15 23:58:39,847 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-15 23:58:39,847 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-15 23:58:39,850 - src.strategy.custom_strategy - INFO - Generated signals: 0 buy signals, 2 sell signals
+2025-04-15 23:58:39,850 - src.strategy - INFO - Analyzed data for ETHUSDT: 167 candles, 0 buy signals, 2 sell signals
+2025-04-15 23:58:39,850 - root - INFO - Analyzed data for 2 pairs
+2025-04-15 23:58:39,851 - root - INFO - Found 0 trading opportunities
+2025-04-15 23:58:39,851 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:58:39,851 - root - INFO - Updated positions with current prices
+2025-04-15 23:58:39,851 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-15 23:58:39,851 - root - INFO - Found 0 exit signals
+2025-04-15 23:58:39,851 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-15 23:58:39,851 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-15 23:58:39,851 - root - INFO - Trading cycle completed. Waiting 3600 seconds for next cycle...
+2025-04-16 00:00:33,992 - root - INFO - Received signal 2. Shutting down...
+2025-04-16 00:00:33,994 - root - INFO - Stopping trading bot...
+2025-04-16 00:00:34,377 - root - INFO - Trading bot stopped
+2025-04-16 00:05:36,416 - root - INFO - Initializing trading bot...
+2025-04-16 00:05:36,419 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:05:36,419 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:05:36,419 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:05:36,419 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:05:36,419 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:05:36,419 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:05:36,419 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:05:37,506 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:05:37,507 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:05:37,507 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:05:37,508 - src.data_collection - INFO - Data collection module initialized
+2025-04-16 00:05:37,508 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:05:37,508 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:05:37,509 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:05:37,509 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:05:37,509 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:05:37,509 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:05:37,509 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:05:37,509 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:05:37,510 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:05:37,510 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:05:37,510 - src.strategy - INFO - Strategy module initialized
+2025-04-16 00:05:37,510 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 1000.0}
+2025-04-16 00:05:37,511 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-16 00:05:37,511 - src.execution - INFO - Execution module initialized in paper mode
+2025-04-16 00:05:37,511 - root - INFO - Trading bot initialized
+2025-04-16 00:05:37,511 - root - INFO - Starting trading bot...
+2025-04-16 00:05:37,511 - root - INFO - Starting trading cycle...
+2025-04-16 00:05:37,511 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:05:37,512 - root - INFO - Candle interval: 15m
+2025-04-16 00:05:38,310 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:05:38,310 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:05:38,312 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:05:38,312 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:05:38,417 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:05:38,423 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:05:38,433 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:05:38,437 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:05:38,441 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:05:38,443 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:05:38,447 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:05:38,450 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:05:38,488 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 0 sell signals
+2025-04-16 00:05:38,488 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 0 sell signals
+2025-04-16 00:05:38,488 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:05:38,489 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:05:38,489 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:05:38,489 - root - INFO - Updated positions with current prices
+2025-04-16 00:05:38,489 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:05:38,489 - root - INFO - Found 0 exit signals
+2025-04-16 00:05:38,489 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:05:38,489 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:05:38,489 - root - INFO - Trading cycle completed. Waiting 900 seconds for next cycle...
+2025-04-16 00:06:56,025 - root - INFO - Received signal 2. Shutting down...
+2025-04-16 00:06:56,026 - root - INFO - Stopping trading bot...
+2025-04-16 00:06:56,825 - root - INFO - Trading bot stopped
+2025-04-16 00:07:03,777 - root - INFO - Initializing trading bot...
+2025-04-16 00:07:03,780 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:07:03,780 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:07:03,780 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:07:03,780 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:07:03,780 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:07:03,780 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:07:03,780 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:07:04,317 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:07:04,318 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:07:04,318 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:07:04,318 - src.data_collection - INFO - Data collection module initialized
+2025-04-16 00:07:04,318 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:07:04,319 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:07:04,319 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:07:04,319 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:07:04,319 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:07:04,319 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:07:04,319 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:07:04,320 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:07:04,320 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:07:04,320 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:07:04,320 - src.strategy - INFO - Strategy module initialized
+2025-04-16 00:07:04,320 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 1000.0}
+2025-04-16 00:07:04,320 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-16 00:07:04,320 - src.execution - INFO - Execution module initialized in paper mode
+2025-04-16 00:07:04,321 - root - INFO - Trading bot initialized
+2025-04-16 00:07:04,321 - root - INFO - Starting trading bot...
+2025-04-16 00:07:04,321 - root - INFO - Starting trading cycle...
+2025-04-16 00:07:04,321 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:07:04,321 - root - INFO - Candle interval: 15m
+2025-04-16 00:07:05,151 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:07:05,152 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:07:05,153 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:07:05,154 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:07:05,259 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:07:05,268 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:07:05,275 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:07:05,281 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:07:05,286 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:07:05,288 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:07:05,290 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:07:05,290 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:07:05,294 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 0 sell signals
+2025-04-16 00:07:05,294 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 0 sell signals
+2025-04-16 00:07:05,294 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:07:05,295 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:07:05,295 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:07:05,295 - root - INFO - Updated positions with current prices
+2025-04-16 00:07:05,295 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:07:05,295 - root - INFO - Found 0 exit signals
+2025-04-16 00:07:05,295 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:07:05,295 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:07:05,296 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:08:05,562 - root - INFO - Starting trading cycle...
+2025-04-16 00:08:05,563 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:08:05,564 - root - INFO - Candle interval: 15m
+2025-04-16 00:08:06,897 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:08:06,897 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:08:06,899 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:08:06,899 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:08:07,004 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:08:07,009 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:08:07,015 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:08:07,020 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:08:07,024 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:08:07,027 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:08:07,029 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:08:07,029 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:08:07,033 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 0 sell signals
+2025-04-16 00:08:07,033 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 0 sell signals
+2025-04-16 00:08:07,033 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:08:07,033 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:08:07,034 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:08:07,034 - root - INFO - Updated positions with current prices
+2025-04-16 00:08:07,034 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:08:07,034 - root - INFO - Found 0 exit signals
+2025-04-16 00:08:07,034 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:08:07,034 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:08:07,034 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:08:32,518 - root - INFO - Received signal 2. Shutting down...
+2025-04-16 00:08:32,519 - root - INFO - Stopping trading bot...
+2025-04-16 00:08:33,151 - root - INFO - Trading bot stopped
+2025-04-16 00:11:01,568 - __main__ - INFO - Starting execution test...
+2025-04-16 00:11:01,571 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:11:02,938 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:11:02,939 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:11:02,939 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:11:02,939 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:11:02,939 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:11:02,940 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:11:02,940 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:11:02,940 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 1000.0}
+2025-04-16 00:11:02,940 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-16 00:11:02,940 - __main__ - INFO - Testing paper trading executor...
+2025-04-16 00:11:02,941 - src.execution.paper_trading_executor - INFO - Retrieved paper trading account balance: {'USDT': 1000.0}
+2025-04-16 00:11:02,941 - __main__ - INFO - Paper trading account balance: {'USDT': 1000.0}
+2025-04-16 00:11:02,941 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (500.0) exceeds max (50.0)
+2025-04-16 00:11:02,941 - src.execution.paper_trading_executor - WARNING - Order rejected by risk manager: BUY 0.01 BTCUSDT at 50000.0
+2025-04-16 00:11:02,941 - __main__ - ERROR - Error in paper trading executor: Order rejected by risk manager
+2025-04-16 00:12:22,129 - __main__ - INFO - Starting execution test...
+2025-04-16 00:12:22,131 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:12:23,122 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:12:23,122 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:12:23,122 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:12:23,122 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:12:23,123 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:12:23,123 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:12:23,123 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:12:23,123 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 1000.0}
+2025-04-16 00:12:23,123 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-16 00:12:23,123 - __main__ - INFO - Testing paper trading executor...
+2025-04-16 00:12:23,123 - src.execution.paper_trading_executor - INFO - Retrieved paper trading account balance: {'USDT': 1000.0}
+2025-04-16 00:12:23,123 - __main__ - INFO - Paper trading account balance: {'USDT': 1000.0}
+2025-04-16 00:12:23,123 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (500.0) exceeds max (50.0)
+2025-04-16 00:12:23,123 - src.execution.paper_trading_executor - WARNING - Order rejected by risk manager: BUY 0.01 BTCUSDT at 50000.0
+2025-04-16 00:12:23,124 - __main__ - ERROR - Error in paper trading executor: Order rejected by risk manager
+2025-04-16 00:12:54,178 - __main__ - INFO - Starting strategy test...
+2025-04-16 00:12:54,181 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:12:55,069 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:12:55,070 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:12:55,070 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:12:55,070 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:12:55,071 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:12:55,071 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:12:55,071 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:12:55,071 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:12:55,072 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:12:55,072 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:12:55,072 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:12:55,072 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:12:55,072 - __main__ - INFO - Getting historical data for testing...
+2025-04-16 00:12:56,642 - src.data_collection.binance_data_provider - INFO - Retrieved top 3 cryptocurrencies from Binance
+2025-04-16 00:12:57,283 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 200 rows, 5 columns
+2025-04-16 00:12:57,283 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for ETHUSDT at 1h interval
+2025-04-16 00:12:57,283 - __main__ - INFO - Retrieved 200 candles for ETHUSDT
+2025-04-16 00:12:57,887 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 200 rows, 5 columns
+2025-04-16 00:12:57,887 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-16 00:12:57,887 - __main__ - INFO - Retrieved 200 candles for BTCUSDT
+2025-04-16 00:12:58,522 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 200 rows, 5 columns
+2025-04-16 00:12:58,522 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for OMUSDT at 1h interval
+2025-04-16 00:12:58,522 - __main__ - INFO - Retrieved 200 candles for OMUSDT
+2025-04-16 00:12:58,522 - __main__ - INFO - Testing indicator calculation...
+2025-04-16 00:12:58,528 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:12:58,531 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,539 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,543 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,547 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,549 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,551 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,551 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:12:58,551 - __main__ - INFO - Calculated indicators for ETHUSDT: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA_20', 'SMA_50', 'SMA_200', 'EMA_20', 'EMA_50', 'EMA_200', 'RSI_14', 'RSI_Overbought', 'RSI_Oversold', 'MACD', 'MACD_Signal', 'MACD_Histogram', 'MACD_Bullish_Crossover', 'MACD_Bearish_Crossover', 'BB_Upper', 'BB_Middle', 'BB_Lower', 'BB_Width', 'BB_Squeeze', 'BB_Upper_Touch', 'BB_Lower_Touch', 'Stoch_K', 'Stoch_D', 'Stoch_Bullish_Crossover', 'Stoch_Bearish_Crossover', 'ATR_14', 'OBV', 'Volume_SMA_20', 'Volume_Ratio', 'High_Volume']
+2025-04-16 00:12:58,552 - __main__ - INFO - Indicator calculation for ETHUSDT passed
+2025-04-16 00:12:58,555 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:12:58,557 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,560 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,563 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,566 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,567 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,569 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,569 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:12:58,569 - __main__ - INFO - Calculated indicators for BTCUSDT: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA_20', 'SMA_50', 'SMA_200', 'EMA_20', 'EMA_50', 'EMA_200', 'RSI_14', 'RSI_Overbought', 'RSI_Oversold', 'MACD', 'MACD_Signal', 'MACD_Histogram', 'MACD_Bullish_Crossover', 'MACD_Bearish_Crossover', 'BB_Upper', 'BB_Middle', 'BB_Lower', 'BB_Width', 'BB_Squeeze', 'BB_Upper_Touch', 'BB_Lower_Touch', 'Stoch_K', 'Stoch_D', 'Stoch_Bullish_Crossover', 'Stoch_Bearish_Crossover', 'ATR_14', 'OBV', 'Volume_SMA_20', 'Volume_Ratio', 'High_Volume']
+2025-04-16 00:12:58,569 - __main__ - INFO - Indicator calculation for BTCUSDT passed
+2025-04-16 00:12:58,571 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:12:58,573 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,576 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,578 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,581 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,582 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,583 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,583 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:12:58,583 - __main__ - INFO - Calculated indicators for OMUSDT: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA_20', 'SMA_50', 'SMA_200', 'EMA_20', 'EMA_50', 'EMA_200', 'RSI_14', 'RSI_Overbought', 'RSI_Oversold', 'MACD', 'MACD_Signal', 'MACD_Histogram', 'MACD_Bullish_Crossover', 'MACD_Bearish_Crossover', 'BB_Upper', 'BB_Middle', 'BB_Lower', 'BB_Width', 'BB_Squeeze', 'BB_Upper_Touch', 'BB_Lower_Touch', 'Stoch_K', 'Stoch_D', 'Stoch_Bullish_Crossover', 'Stoch_Bearish_Crossover', 'ATR_14', 'OBV', 'Volume_SMA_20', 'Volume_Ratio', 'High_Volume']
+2025-04-16 00:12:58,583 - __main__ - INFO - Indicator calculation for OMUSDT passed
+2025-04-16 00:12:58,583 - __main__ - INFO - All indicator calculations passed
+2025-04-16 00:12:58,583 - __main__ - INFO - Testing strategy signal generation...
+2025-04-16 00:12:58,585 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,588 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,590 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,592 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,593 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,595 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,595 - src.strategy.custom_strategy - INFO - Calculated indicators for 200 data points
+2025-04-16 00:12:58,597 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 2 sell signals
+2025-04-16 00:12:58,597 - __main__ - INFO - Generated signals for ETHUSDT: 1 buy, 2 sell
+2025-04-16 00:12:58,598 - src.strategy.custom_strategy - INFO - Found 3 entry points
+2025-04-16 00:12:58,598 - __main__ - INFO - Found 3 entry points for ETHUSDT
+2025-04-16 00:12:58,604 - src.strategy.custom_strategy - INFO - Found 175 exit points for position entered at 2025-04-08 18:00:00
+2025-04-16 00:12:58,604 - __main__ - INFO - Found 175 exit points for sample position
+2025-04-16 00:12:58,604 - __main__ - INFO - Strategy signal generation for ETHUSDT passed
+2025-04-16 00:12:58,606 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,608 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,610 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,612 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,613 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,614 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,614 - src.strategy.custom_strategy - INFO - Calculated indicators for 200 data points
+2025-04-16 00:12:58,616 - src.strategy.custom_strategy - INFO - Generated signals: 2 buy signals, 0 sell signals
+2025-04-16 00:12:58,616 - __main__ - INFO - Generated signals for BTCUSDT: 2 buy, 0 sell
+2025-04-16 00:12:58,616 - src.strategy.custom_strategy - INFO - Found 2 entry points
+2025-04-16 00:12:58,616 - __main__ - INFO - Found 2 entry points for BTCUSDT
+2025-04-16 00:12:58,622 - src.strategy.custom_strategy - INFO - Found 163 exit points for position entered at 2025-04-09 01:00:00
+2025-04-16 00:12:58,622 - __main__ - INFO - Found 163 exit points for sample position
+2025-04-16 00:12:58,622 - __main__ - INFO - Strategy signal generation for BTCUSDT passed
+2025-04-16 00:12:58,623 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,625 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,627 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,629 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,630 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,631 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,631 - src.strategy.custom_strategy - INFO - Calculated indicators for 200 data points
+2025-04-16 00:12:58,633 - src.strategy.custom_strategy - INFO - Generated signals: 9 buy signals, 4 sell signals
+2025-04-16 00:12:58,633 - __main__ - INFO - Generated signals for OMUSDT: 9 buy, 4 sell
+2025-04-16 00:12:58,634 - src.strategy.custom_strategy - INFO - Found 13 entry points
+2025-04-16 00:12:58,634 - __main__ - INFO - Found 13 entry points for OMUSDT
+2025-04-16 00:12:58,636 - src.strategy.custom_strategy - INFO - Found 60 exit points for position entered at 2025-04-13 15:00:00
+2025-04-16 00:12:58,636 - __main__ - INFO - Found 60 exit points for sample position
+2025-04-16 00:12:58,636 - __main__ - INFO - Strategy signal generation for OMUSDT passed
+2025-04-16 00:12:58,636 - __main__ - INFO - All strategy signal generation tests passed
+2025-04-16 00:12:58,636 - __main__ - INFO - Testing signal generator...
+2025-04-16 00:12:58,638 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:12:58,639 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,641 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,643 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,645 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,646 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,647 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,647 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:12:58,651 - src.strategy.signal_generator - INFO - Generated signals: 1 buy, 2 sell
+2025-04-16 00:12:58,652 - src.strategy.signal_generator - INFO - Filtered signals: 3 significant signals
+2025-04-16 00:12:58,652 - __main__ - INFO - Generated and filtered signals for ETHUSDT: 3 significant signals
+2025-04-16 00:12:58,652 - __main__ - INFO - Signal generator test for ETHUSDT passed
+2025-04-16 00:12:58,654 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:12:58,655 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,658 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,659 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,661 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,662 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,664 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,664 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:12:58,668 - src.strategy.signal_generator - INFO - Generated signals: 2 buy, 0 sell
+2025-04-16 00:12:58,668 - src.strategy.signal_generator - INFO - Filtered signals: 2 significant signals
+2025-04-16 00:12:58,668 - __main__ - INFO - Generated and filtered signals for BTCUSDT: 2 significant signals
+2025-04-16 00:12:58,668 - __main__ - INFO - Signal generator test for BTCUSDT passed
+2025-04-16 00:12:58,670 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:12:58,671 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:12:58,674 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:12:58,676 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:12:58,678 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:12:58,678 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:12:58,680 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:12:58,680 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:12:58,683 - src.strategy.signal_generator - INFO - Generated signals: 9 buy, 4 sell
+2025-04-16 00:12:58,684 - src.strategy.signal_generator - INFO - Filtered signals: 13 significant signals
+2025-04-16 00:12:58,684 - __main__ - INFO - Generated and filtered signals for OMUSDT: 13 significant signals
+2025-04-16 00:12:58,684 - __main__ - INFO - Signal generator test for OMUSDT passed
+2025-04-16 00:12:58,684 - __main__ - INFO - All signal generator tests passed
+2025-04-16 00:12:58,684 - __main__ - INFO - All strategy tests passed!
+2025-04-16 00:14:08,234 - __main__ - INFO - Starting data collection test...
+2025-04-16 00:14:08,237 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:14:08,699 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:14:08,700 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:14:08,700 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:14:08,700 - __main__ - INFO - Testing get_top_cryptocurrencies...
+2025-04-16 00:14:10,705 - src.data_collection.binance_data_provider - INFO - Retrieved top 10 cryptocurrencies from Binance
+2025-04-16 00:14:10,709 - __main__ - INFO - Top cryptocurrencies: ['ETHUSDT', 'BTCUSDT', 'OMUSDT', 'SUIUSDT', 'SOLUSDT', 'XRPUSDT', 'AAVEUSDT', 'HBARUSDT', 'LAYERUSDT', 'WBTCUSDT']
+2025-04-16 00:14:10,710 - __main__ - INFO - get_top_cryptocurrencies test passed
+2025-04-16 00:14:10,710 - __main__ - INFO - Testing get_historical_data...
+2025-04-16 00:14:11,479 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 100 rows, 5 columns
+2025-04-16 00:14:11,479 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for ETHUSDT at 1h interval
+2025-04-16 00:14:11,479 - __main__ - INFO - Historical data for ETHUSDT: 100 candles
+2025-04-16 00:14:11,479 - __main__ - INFO - Columns: ['Open', 'High', 'Low', 'Close', 'Volume']
+2025-04-16 00:14:11,492 - __main__ - INFO - Sample data:
+                        Open     High      Low    Close     Volume
+timestamp                                                         
+2025-04-12 00:00:00  1568.00  1569.54  1561.91  1562.25  5619.8642
+2025-04-12 01:00:00  1562.26  1563.53  1553.95  1554.29  5825.1181
+2025-04-12 02:00:00  1554.08  1557.07  1548.87  1549.09  5557.2101
+2025-04-12 03:00:00  1549.09  1559.07  1547.00  1554.43  5843.3893
+2025-04-12 04:00:00  1554.40  1567.46  1550.64  1566.41  7077.3106
+2025-04-16 00:14:11,492 - __main__ - INFO - get_historical_data test passed
+2025-04-16 00:14:11,492 - __main__ - INFO - Testing data preprocessing...
+2025-04-16 00:14:11,495 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:14:11,495 - __main__ - INFO - Data with returns: ['Open', 'High', 'Low', 'Close', 'Volume', 'Returns', 'Log_Returns']
+2025-04-16 00:14:11,497 - src.data_collection.data_preprocessor - INFO - Normalized price data
+2025-04-16 00:14:11,497 - __main__ - INFO - Normalized data: ['Open', 'High', 'Low', 'Close', 'Volume', 'Open_Norm', 'High_Norm', 'Low_Norm', 'Close_Norm']
+2025-04-16 00:14:11,497 - __main__ - INFO - Data preprocessing test passed
+2025-04-16 00:14:11,498 - __main__ - INFO - Testing get_ticker_data...
+2025-04-16 00:14:13,105 - src.data_collection.binance_data_provider - INFO - Retrieved ticker data for 3 symbols
+2025-04-16 00:14:13,106 - __main__ - INFO - Ticker data for ['ETHUSDT', 'BTCUSDT', 'OMUSDT']: 3 symbols
+2025-04-16 00:14:13,106 - __main__ - INFO - get_ticker_data test passed
+2025-04-16 00:14:13,106 - __main__ - INFO - All data collection tests passed!
+2025-04-16 00:15:22,980 - __main__ - INFO - Starting integration test...
+2025-04-16 00:15:22,983 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:15:22,983 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:15:22,983 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:15:22,983 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:15:22,983 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:15:22,983 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:15:24,180 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:15:24,181 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:15:24,181 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:15:24,181 - src.data_collection - INFO - Data collection module initialized
+2025-04-16 00:15:24,181 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:15:24,182 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:15:24,182 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:15:24,182 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:15:24,182 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:15:24,182 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:15:24,182 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:15:24,183 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:15:24,183 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:15:24,183 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:15:24,183 - src.strategy - INFO - Strategy module initialized
+2025-04-16 00:15:24,183 - src.execution.paper_trading_executor - INFO - Paper trading executor initialized with balance: {'USDT': 1000.0}
+2025-04-16 00:15:24,184 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-16 00:15:24,184 - src.execution - INFO - Execution module initialized in paper mode
+2025-04-16 00:15:24,184 - __main__ - INFO - Testing complete trading workflow...
+2025-04-16 00:15:26,727 - src.data_collection.binance_data_provider - INFO - Retrieved top 3 cryptocurrencies from Binance
+2025-04-16 00:15:26,732 - src.data_collection - INFO - Retrieved top 3 trading pairs
+2025-04-16 00:15:26,733 - __main__ - INFO - Top trading pairs: ['ETHUSDT', 'BTCUSDT', 'OMUSDT']
+2025-04-16 00:15:27,346 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:15:27,347 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for ETHUSDT at 1h interval
+2025-04-16 00:15:27,349 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:15:27,350 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for ETHUSDT
+2025-04-16 00:15:28,050 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:15:28,050 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-16 00:15:28,051 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:15:28,051 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:15:29,597 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:15:29,597 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for OMUSDT at 1h interval
+2025-04-16 00:15:29,598 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:15:29,599 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for OMUSDT
+2025-04-16 00:15:29,703 - __main__ - INFO - Retrieved historical data for 3 pairs
+2025-04-16 00:15:29,706 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:15:29,711 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:15:29,716 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:15:29,720 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:15:29,721 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:15:29,724 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:15:29,724 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:15:29,727 - src.strategy.custom_strategy - INFO - Generated signals: 0 buy signals, 2 sell signals
+2025-04-16 00:15:29,727 - src.strategy - INFO - Analyzed data for ETHUSDT: 167 candles, 0 buy signals, 2 sell signals
+2025-04-16 00:15:29,729 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:15:29,733 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:15:29,735 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:15:29,738 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:15:29,740 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:15:29,742 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:15:29,742 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:15:29,745 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 0 sell signals
+2025-04-16 00:15:29,745 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 0 sell signals
+2025-04-16 00:15:29,746 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:15:29,749 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:15:29,751 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:15:29,754 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:15:29,755 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:15:29,757 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:15:29,757 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:15:29,759 - src.strategy.custom_strategy - INFO - Generated signals: 9 buy signals, 1 sell signals
+2025-04-16 00:15:29,760 - src.strategy - INFO - Analyzed data for OMUSDT: 167 candles, 9 buy signals, 1 sell signals
+2025-04-16 00:15:29,760 - __main__ - INFO - Analyzed data for 3 pairs
+2025-04-16 00:15:29,760 - __main__ - INFO - Found 0 trading opportunities
+2025-04-16 00:15:29,760 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:15:29,760 - __main__ - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:15:29,760 - __main__ - INFO - Complete trading workflow test passed
+2025-04-16 00:15:29,760 - __main__ - INFO - Integration test passed!
+2025-04-16 00:16:09,718 - __main__ - INFO - Starting strategy test...
+2025-04-16 00:16:09,720 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:16:10,148 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:16:10,149 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:16:10,149 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:16:10,149 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:16:10,149 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:16:10,150 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:16:10,150 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:16:10,150 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:16:10,150 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:16:10,150 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:16:10,150 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:16:10,151 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:16:10,151 - __main__ - INFO - Getting historical data for testing...
+2025-04-16 00:16:13,339 - src.data_collection.binance_data_provider - INFO - Retrieved top 3 cryptocurrencies from Binance
+2025-04-16 00:16:14,046 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 200 rows, 5 columns
+2025-04-16 00:16:14,046 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for ETHUSDT at 1h interval
+2025-04-16 00:16:14,047 - __main__ - INFO - Retrieved 200 candles for ETHUSDT
+2025-04-16 00:16:14,767 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 200 rows, 5 columns
+2025-04-16 00:16:14,767 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 1h interval
+2025-04-16 00:16:14,767 - __main__ - INFO - Retrieved 200 candles for BTCUSDT
+2025-04-16 00:16:15,589 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 200 rows, 5 columns
+2025-04-16 00:16:15,590 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for OMUSDT at 1h interval
+2025-04-16 00:16:15,590 - __main__ - INFO - Retrieved 200 candles for OMUSDT
+2025-04-16 00:16:15,590 - __main__ - INFO - Testing indicator calculation...
+2025-04-16 00:16:15,595 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:16:15,599 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,606 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,610 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,615 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,617 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,620 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,620 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:16:15,620 - __main__ - INFO - Calculated indicators for ETHUSDT: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA_20', 'SMA_50', 'SMA_200', 'EMA_20', 'EMA_50', 'EMA_200', 'RSI_14', 'RSI_Overbought', 'RSI_Oversold', 'MACD', 'MACD_Signal', 'MACD_Histogram', 'MACD_Bullish_Crossover', 'MACD_Bearish_Crossover', 'BB_Upper', 'BB_Middle', 'BB_Lower', 'BB_Width', 'BB_Squeeze', 'BB_Upper_Touch', 'BB_Lower_Touch', 'Stoch_K', 'Stoch_D', 'Stoch_Bullish_Crossover', 'Stoch_Bearish_Crossover', 'ATR_14', 'OBV', 'Volume_SMA_20', 'Volume_Ratio', 'High_Volume']
+2025-04-16 00:16:15,620 - __main__ - INFO - Indicator calculation for ETHUSDT passed
+2025-04-16 00:16:15,623 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:16:15,625 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,629 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,632 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,636 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,638 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,639 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,639 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:16:15,639 - __main__ - INFO - Calculated indicators for BTCUSDT: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA_20', 'SMA_50', 'SMA_200', 'EMA_20', 'EMA_50', 'EMA_200', 'RSI_14', 'RSI_Overbought', 'RSI_Oversold', 'MACD', 'MACD_Signal', 'MACD_Histogram', 'MACD_Bullish_Crossover', 'MACD_Bearish_Crossover', 'BB_Upper', 'BB_Middle', 'BB_Lower', 'BB_Width', 'BB_Squeeze', 'BB_Upper_Touch', 'BB_Lower_Touch', 'Stoch_K', 'Stoch_D', 'Stoch_Bullish_Crossover', 'Stoch_Bearish_Crossover', 'ATR_14', 'OBV', 'Volume_SMA_20', 'Volume_Ratio', 'High_Volume']
+2025-04-16 00:16:15,640 - __main__ - INFO - Indicator calculation for BTCUSDT passed
+2025-04-16 00:16:15,642 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:16:15,644 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,647 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,649 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,652 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,653 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,655 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,655 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:16:15,655 - __main__ - INFO - Calculated indicators for OMUSDT: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA_20', 'SMA_50', 'SMA_200', 'EMA_20', 'EMA_50', 'EMA_200', 'RSI_14', 'RSI_Overbought', 'RSI_Oversold', 'MACD', 'MACD_Signal', 'MACD_Histogram', 'MACD_Bullish_Crossover', 'MACD_Bearish_Crossover', 'BB_Upper', 'BB_Middle', 'BB_Lower', 'BB_Width', 'BB_Squeeze', 'BB_Upper_Touch', 'BB_Lower_Touch', 'Stoch_K', 'Stoch_D', 'Stoch_Bullish_Crossover', 'Stoch_Bearish_Crossover', 'ATR_14', 'OBV', 'Volume_SMA_20', 'Volume_Ratio', 'High_Volume']
+2025-04-16 00:16:15,655 - __main__ - INFO - Indicator calculation for OMUSDT passed
+2025-04-16 00:16:15,655 - __main__ - INFO - All indicator calculations passed
+2025-04-16 00:16:15,655 - __main__ - INFO - Testing strategy signal generation...
+2025-04-16 00:16:15,657 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,660 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,662 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,664 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,665 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,667 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,667 - src.strategy.custom_strategy - INFO - Calculated indicators for 200 data points
+2025-04-16 00:16:15,669 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 2 sell signals
+2025-04-16 00:16:15,669 - __main__ - INFO - Generated signals for ETHUSDT: 1 buy, 2 sell
+2025-04-16 00:16:15,669 - src.strategy.custom_strategy - INFO - Found 3 entry points
+2025-04-16 00:16:15,670 - __main__ - INFO - Found 3 entry points for ETHUSDT
+2025-04-16 00:16:15,676 - src.strategy.custom_strategy - INFO - Found 175 exit points for position entered at 2025-04-08 18:00:00
+2025-04-16 00:16:15,676 - __main__ - INFO - Found 175 exit points for sample position
+2025-04-16 00:16:15,676 - __main__ - INFO - Strategy signal generation for ETHUSDT passed
+2025-04-16 00:16:15,677 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,680 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,681 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,684 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,685 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,686 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,686 - src.strategy.custom_strategy - INFO - Calculated indicators for 200 data points
+2025-04-16 00:16:15,688 - src.strategy.custom_strategy - INFO - Generated signals: 2 buy signals, 0 sell signals
+2025-04-16 00:16:15,688 - __main__ - INFO - Generated signals for BTCUSDT: 2 buy, 0 sell
+2025-04-16 00:16:15,688 - src.strategy.custom_strategy - INFO - Found 2 entry points
+2025-04-16 00:16:15,688 - __main__ - INFO - Found 2 entry points for BTCUSDT
+2025-04-16 00:16:15,693 - src.strategy.custom_strategy - INFO - Found 163 exit points for position entered at 2025-04-09 01:00:00
+2025-04-16 00:16:15,693 - __main__ - INFO - Found 163 exit points for sample position
+2025-04-16 00:16:15,694 - __main__ - INFO - Strategy signal generation for BTCUSDT passed
+2025-04-16 00:16:15,695 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,697 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,699 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,701 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,702 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,703 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,703 - src.strategy.custom_strategy - INFO - Calculated indicators for 200 data points
+2025-04-16 00:16:15,705 - src.strategy.custom_strategy - INFO - Generated signals: 9 buy signals, 4 sell signals
+2025-04-16 00:16:15,705 - __main__ - INFO - Generated signals for OMUSDT: 9 buy, 4 sell
+2025-04-16 00:16:15,706 - src.strategy.custom_strategy - INFO - Found 13 entry points
+2025-04-16 00:16:15,706 - __main__ - INFO - Found 13 entry points for OMUSDT
+2025-04-16 00:16:15,708 - src.strategy.custom_strategy - INFO - Found 60 exit points for position entered at 2025-04-13 15:00:00
+2025-04-16 00:16:15,708 - __main__ - INFO - Found 60 exit points for sample position
+2025-04-16 00:16:15,709 - __main__ - INFO - Strategy signal generation for OMUSDT passed
+2025-04-16 00:16:15,709 - __main__ - INFO - All strategy signal generation tests passed
+2025-04-16 00:16:15,709 - __main__ - INFO - Testing signal generator...
+2025-04-16 00:16:15,710 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:16:15,711 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,713 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,715 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,717 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,718 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,719 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,719 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:16:15,723 - src.strategy.signal_generator - INFO - Generated signals: 1 buy, 2 sell
+2025-04-16 00:16:15,724 - src.strategy.signal_generator - INFO - Filtered signals: 3 significant signals
+2025-04-16 00:16:15,724 - __main__ - INFO - Generated and filtered signals for ETHUSDT: 3 significant signals
+2025-04-16 00:16:15,724 - __main__ - INFO - Signal generator test for ETHUSDT passed
+2025-04-16 00:16:15,726 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:16:15,727 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,729 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,730 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,732 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,733 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,734 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,734 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:16:15,738 - src.strategy.signal_generator - INFO - Generated signals: 2 buy, 0 sell
+2025-04-16 00:16:15,739 - src.strategy.signal_generator - INFO - Filtered signals: 2 significant signals
+2025-04-16 00:16:15,739 - __main__ - INFO - Generated and filtered signals for BTCUSDT: 2 significant signals
+2025-04-16 00:16:15,739 - __main__ - INFO - Signal generator test for BTCUSDT passed
+2025-04-16 00:16:15,740 - src.strategy.indicator_calculator - INFO - Added moving averages to DataFrame
+2025-04-16 00:16:15,742 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:16:15,744 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:16:15,745 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:16:15,747 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:16:15,748 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:16:15,749 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:16:15,749 - src.strategy.indicator_calculator - INFO - Added all indicators to DataFrame
+2025-04-16 00:16:15,753 - src.strategy.signal_generator - INFO - Generated signals: 9 buy, 4 sell
+2025-04-16 00:16:15,754 - src.strategy.signal_generator - INFO - Filtered signals: 13 significant signals
+2025-04-16 00:16:15,754 - __main__ - INFO - Generated and filtered signals for OMUSDT: 13 significant signals
+2025-04-16 00:16:15,754 - __main__ - INFO - Signal generator test for OMUSDT passed
+2025-04-16 00:16:15,754 - __main__ - INFO - All signal generator tests passed
+2025-04-16 00:16:15,754 - __main__ - INFO - All strategy tests passed!
+2025-04-16 00:18:56,850 - root - INFO - Initializing trading bot...
+2025-04-16 00:18:56,853 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:18:56,853 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:18:56,853 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:18:56,853 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:18:56,853 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:18:56,853 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:18:56,853 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:18:57,800 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:18:57,801 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:18:57,801 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:18:57,801 - src.data_collection - INFO - Data collection module initialized
+2025-04-16 00:18:57,801 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:18:57,802 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:18:57,802 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:18:57,802 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:18:57,802 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:18:57,802 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:18:57,802 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:18:57,803 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:18:57,803 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:18:57,803 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:18:57,803 - src.strategy - INFO - Strategy module initialized
+2025-04-16 00:18:58,152 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-16 00:18:58,458 - src.execution.binance_executor - ERROR - Failed to connect to Binance API: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2025-04-16 00:21:47,513 - root - INFO - Initializing trading bot...
+2025-04-16 00:21:47,516 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:21:47,516 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:21:47,516 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:21:47,516 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:21:47,516 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:21:47,516 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:21:47,516 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:21:48,077 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:21:48,078 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:21:48,078 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:21:48,078 - src.data_collection - INFO - Data collection module initialized
+2025-04-16 00:21:48,078 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:21:48,078 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:21:48,079 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:21:48,079 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:21:48,079 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:21:48,079 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:21:48,079 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:21:48,079 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:21:48,080 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:21:48,080 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:21:48,080 - src.strategy - INFO - Strategy module initialized
+2025-04-16 00:21:48,427 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-16 00:21:48,725 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-16 00:21:48,726 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-16 00:21:48,726 - src.execution - INFO - Execution module initialized in live mode
+2025-04-16 00:21:48,726 - root - INFO - Trading bot initialized
+2025-04-16 00:21:48,726 - root - INFO - Starting trading bot...
+2025-04-16 00:21:48,726 - root - INFO - Starting trading cycle...
+2025-04-16 00:21:48,727 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:21:48,727 - root - INFO - Candle interval: 15m
+2025-04-16 00:21:49,525 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:21:49,526 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:21:49,528 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:21:49,529 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:21:49,634 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:21:49,644 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:21:49,655 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:21:49,659 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:21:49,665 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:21:49,668 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:21:49,670 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:21:49,670 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:21:49,674 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:21:49,674 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:21:49,674 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:21:49,675 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:21:49,675 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:21:49,675 - root - INFO - Updated positions with current prices
+2025-04-16 00:21:49,675 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:21:49,675 - root - INFO - Found 0 exit signals
+2025-04-16 00:21:49,675 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:21:49,675 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:21:49,675 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:22:49,963 - root - INFO - Starting trading cycle...
+2025-04-16 00:22:49,964 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:22:49,965 - root - INFO - Candle interval: 15m
+2025-04-16 00:22:50,657 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:22:50,658 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:22:50,660 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:22:50,660 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:22:50,765 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:22:50,773 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:22:50,782 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:22:50,787 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:22:50,792 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:22:50,794 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:22:50,797 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:22:50,797 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:22:50,801 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:22:50,802 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:22:50,802 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:22:50,802 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:22:50,802 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:22:50,803 - root - INFO - Updated positions with current prices
+2025-04-16 00:22:50,803 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:22:50,803 - root - INFO - Found 0 exit signals
+2025-04-16 00:22:50,803 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:22:50,803 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:22:50,803 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:23:51,067 - root - INFO - Starting trading cycle...
+2025-04-16 00:23:51,069 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:23:51,069 - root - INFO - Candle interval: 15m
+2025-04-16 00:23:51,834 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:23:51,834 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:23:51,837 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:23:51,837 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:23:51,942 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:23:51,950 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:23:51,957 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:23:51,963 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:23:51,968 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:23:51,970 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:23:51,973 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:23:51,973 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:23:51,977 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:23:51,977 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:23:51,977 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:23:51,978 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:23:51,978 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:23:51,978 - root - INFO - Updated positions with current prices
+2025-04-16 00:23:51,978 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:23:51,978 - root - INFO - Found 0 exit signals
+2025-04-16 00:23:51,978 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:23:51,978 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:23:51,978 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:24:52,196 - root - INFO - Starting trading cycle...
+2025-04-16 00:24:52,198 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:24:52,199 - root - INFO - Candle interval: 15m
+2025-04-16 00:24:53,456 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:24:53,456 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:24:53,457 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:24:53,457 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:24:53,562 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:24:53,566 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:24:53,572 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:24:53,575 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:24:53,582 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:24:53,584 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:24:53,586 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:24:53,586 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:24:53,588 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:24:53,588 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:24:53,588 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:24:53,588 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:24:53,589 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:24:53,589 - root - INFO - Updated positions with current prices
+2025-04-16 00:24:53,589 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:24:53,589 - root - INFO - Found 0 exit signals
+2025-04-16 00:24:53,589 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:24:53,589 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:24:53,589 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:25:53,808 - root - INFO - Starting trading cycle...
+2025-04-16 00:25:53,811 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:25:53,811 - root - INFO - Candle interval: 15m
+2025-04-16 00:25:54,473 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:25:54,473 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:25:54,476 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:25:54,476 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:25:54,582 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:25:54,588 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:25:54,596 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:25:54,602 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:25:54,607 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:25:54,609 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:25:54,612 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:25:54,612 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:25:54,616 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:25:54,616 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:25:54,617 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:25:54,617 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:25:54,617 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:25:54,617 - root - INFO - Updated positions with current prices
+2025-04-16 00:25:54,617 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:25:54,617 - root - INFO - Found 0 exit signals
+2025-04-16 00:25:54,617 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:25:54,617 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:25:54,618 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:26:54,847 - root - INFO - Starting trading cycle...
+2025-04-16 00:26:54,851 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:26:54,851 - root - INFO - Candle interval: 15m
+2025-04-16 00:26:55,579 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:26:55,580 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:26:55,583 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:26:55,583 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:26:55,688 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:26:55,695 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:26:55,705 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:26:55,710 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:26:55,715 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:26:55,718 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:26:55,721 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:26:55,721 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:26:55,726 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:26:55,726 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:26:55,726 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:26:55,726 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:26:55,726 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:26:55,727 - root - INFO - Updated positions with current prices
+2025-04-16 00:26:55,727 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:26:55,727 - root - INFO - Found 0 exit signals
+2025-04-16 00:26:55,727 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:26:55,727 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:26:55,727 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:27:18,156 - root - INFO - Received signal 2. Shutting down...
+2025-04-16 00:27:18,157 - root - INFO - Stopping trading bot...
+2025-04-16 00:27:18,830 - root - INFO - Trading bot stopped
+2025-04-16 00:35:42,346 - root - INFO - Initializing trading bot...
+2025-04-16 00:35:42,348 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:35:42,349 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:35:42,349 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:35:42,349 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:35:42,349 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:35:42,349 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:35:42,349 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:35:42,999 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:35:42,999 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:35:43,000 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:35:43,000 - src.data_collection - INFO - Data collection module initialized
+2025-04-16 00:35:43,000 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:35:43,000 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:35:43,000 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:35:43,000 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:35:43,001 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:35:43,001 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:35:43,001 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:35:43,001 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:35:43,001 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:35:43,001 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:35:43,001 - src.strategy - INFO - Strategy module initialized
+2025-04-16 00:35:43,344 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-16 00:35:43,643 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-16 00:35:43,644 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-16 00:35:43,644 - src.execution - INFO - Execution module initialized in live mode
+2025-04-16 00:35:43,644 - root - INFO - Trading bot initialized
+2025-04-16 00:35:43,644 - root - INFO - Starting trading bot...
+2025-04-16 00:35:43,644 - root - INFO - Starting trading cycle...
+2025-04-16 00:35:43,644 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:35:43,645 - root - INFO - Candle interval: 15m
+2025-04-16 00:35:44,403 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:35:44,404 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:35:44,407 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:35:44,407 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:35:44,512 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:35:44,522 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:35:44,533 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:35:44,537 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:35:44,544 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:35:44,546 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:35:44,549 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:35:44,549 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:35:44,553 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:35:44,553 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:35:44,553 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:35:44,553 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:35:44,554 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:35:44,554 - root - INFO - Updated positions with current prices
+2025-04-16 00:35:44,554 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:35:44,554 - root - INFO - Found 0 exit signals
+2025-04-16 00:35:44,554 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:35:44,554 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:35:44,554 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:36:44,847 - root - INFO - Starting trading cycle...
+2025-04-16 00:36:44,849 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:36:44,850 - root - INFO - Candle interval: 15m
+2025-04-16 00:36:45,546 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:36:45,546 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:36:45,548 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:36:45,549 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:36:45,654 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:36:45,661 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:36:45,669 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:36:45,674 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:36:45,680 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:36:45,683 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:36:45,686 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:36:45,686 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:36:45,690 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:36:45,690 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:36:45,690 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:36:45,691 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:36:45,691 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:36:45,691 - root - INFO - Updated positions with current prices
+2025-04-16 00:36:45,691 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:36:45,691 - root - INFO - Found 0 exit signals
+2025-04-16 00:36:45,691 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:36:45,691 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:36:45,691 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:37:45,961 - root - INFO - Starting trading cycle...
+2025-04-16 00:37:45,963 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:37:45,963 - root - INFO - Candle interval: 15m
+2025-04-16 00:37:46,670 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:37:46,671 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:37:46,673 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:37:46,673 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:37:46,778 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:37:46,789 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:37:46,799 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:37:46,805 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:37:46,810 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:37:46,813 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:37:46,817 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:37:46,817 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:37:46,821 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:37:46,821 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:37:46,821 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:37:46,822 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:37:46,822 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:37:46,822 - root - INFO - Updated positions with current prices
+2025-04-16 00:37:46,822 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:37:46,822 - root - INFO - Found 0 exit signals
+2025-04-16 00:37:46,822 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:37:46,822 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:37:46,822 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:38:47,094 - root - INFO - Starting trading cycle...
+2025-04-16 00:38:47,096 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:38:47,096 - root - INFO - Candle interval: 15m
+2025-04-16 00:38:48,330 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:38:48,330 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:38:48,332 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:38:48,332 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:38:48,438 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:38:48,445 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:38:48,453 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:38:48,458 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:38:48,464 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:38:48,466 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:38:48,469 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:38:48,469 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:38:48,473 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:38:48,473 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:38:48,473 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:38:48,474 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:38:48,474 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:38:48,474 - root - INFO - Updated positions with current prices
+2025-04-16 00:38:48,474 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:38:48,474 - root - INFO - Found 0 exit signals
+2025-04-16 00:38:48,474 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:38:48,474 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:38:48,474 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:39:48,731 - root - INFO - Starting trading cycle...
+2025-04-16 00:39:48,733 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:39:48,733 - root - INFO - Candle interval: 15m
+2025-04-16 00:39:49,461 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:39:49,462 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:39:49,464 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:39:49,464 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:39:49,570 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:39:49,579 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:39:49,585 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:39:49,590 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:39:49,594 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:39:49,596 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:39:49,599 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:39:49,599 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:39:49,603 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:39:49,603 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:39:49,603 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:39:49,604 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:39:49,604 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:39:49,604 - root - INFO - Updated positions with current prices
+2025-04-16 00:39:49,604 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:39:49,604 - root - INFO - Found 0 exit signals
+2025-04-16 00:39:49,604 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:39:49,604 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:39:49,604 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:40:49,882 - root - INFO - Starting trading cycle...
+2025-04-16 00:40:49,883 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:40:49,884 - root - INFO - Candle interval: 15m
+2025-04-16 00:40:50,648 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:40:50,648 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:40:50,651 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:40:50,651 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:40:50,756 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:40:50,764 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:40:50,773 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:40:50,779 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:40:50,785 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:40:50,787 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:40:50,790 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:40:50,790 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:40:50,794 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:40:50,794 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:40:50,794 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:40:50,794 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:40:50,794 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:40:50,794 - root - INFO - Updated positions with current prices
+2025-04-16 00:40:50,795 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:40:50,795 - root - INFO - Found 0 exit signals
+2025-04-16 00:40:50,795 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:40:50,795 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:40:50,795 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:41:51,070 - root - INFO - Starting trading cycle...
+2025-04-16 00:41:51,072 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:41:51,072 - root - INFO - Candle interval: 15m
+2025-04-16 00:41:51,873 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:41:51,873 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:41:51,875 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:41:51,875 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:41:51,980 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:41:51,987 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:41:51,997 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:41:52,002 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:41:52,050 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:41:52,051 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:41:52,053 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:41:52,053 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:41:52,056 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:41:52,056 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:41:52,056 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:41:52,057 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:41:52,057 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:41:52,057 - root - INFO - Updated positions with current prices
+2025-04-16 00:41:52,057 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:41:52,057 - root - INFO - Found 0 exit signals
+2025-04-16 00:41:52,057 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:41:52,057 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:41:52,057 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:42:52,304 - root - INFO - Starting trading cycle...
+2025-04-16 00:42:52,306 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:42:52,307 - root - INFO - Candle interval: 15m
+2025-04-16 00:42:53,066 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:42:53,067 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:42:53,069 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:42:53,069 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:42:53,174 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:42:53,181 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:42:53,190 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:42:53,194 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:42:53,200 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:42:53,203 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:42:53,205 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:42:53,205 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:42:53,209 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:42:53,209 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:42:53,209 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:42:53,210 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:42:53,210 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:42:53,210 - root - INFO - Updated positions with current prices
+2025-04-16 00:42:53,210 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:42:53,210 - root - INFO - Found 0 exit signals
+2025-04-16 00:42:53,210 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:42:53,210 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:42:53,210 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:43:53,486 - root - INFO - Starting trading cycle...
+2025-04-16 00:43:53,488 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:43:53,488 - root - INFO - Candle interval: 15m
+2025-04-16 00:43:54,307 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:43:54,308 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:43:54,310 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:43:54,310 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:43:54,414 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:43:54,419 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:43:54,426 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:43:54,432 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:43:54,437 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:43:54,439 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:43:54,441 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:43:54,441 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:43:54,445 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:43:54,445 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:43:54,445 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:43:54,446 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:43:54,446 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:43:54,446 - root - INFO - Updated positions with current prices
+2025-04-16 00:43:54,446 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:43:54,446 - root - INFO - Found 0 exit signals
+2025-04-16 00:43:54,446 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:43:54,446 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:43:54,446 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:44:54,685 - root - INFO - Starting trading cycle...
+2025-04-16 00:44:54,687 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:44:54,688 - root - INFO - Candle interval: 15m
+2025-04-16 00:44:55,497 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:44:55,498 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:44:55,501 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:44:55,501 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:44:55,606 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:44:55,614 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:44:55,623 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:44:55,628 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:44:55,634 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:44:55,636 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:44:55,639 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:44:55,639 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:44:55,643 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:44:55,643 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:44:55,643 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:44:55,643 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:44:55,644 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:44:55,644 - root - INFO - Updated positions with current prices
+2025-04-16 00:44:55,644 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:44:55,644 - root - INFO - Found 0 exit signals
+2025-04-16 00:44:55,644 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:44:55,644 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:44:55,644 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:45:55,899 - root - INFO - Starting trading cycle...
+2025-04-16 00:45:55,901 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 00:45:55,901 - root - INFO - Candle interval: 15m
+2025-04-16 00:45:56,635 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 00:45:56,635 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 00:45:56,638 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 00:45:56,638 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 00:45:56,743 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 00:45:56,749 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 00:45:56,755 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 00:45:56,760 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 00:45:56,765 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 00:45:56,768 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 00:45:56,771 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 00:45:56,771 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 00:45:56,776 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 00:45:56,776 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 00:45:56,776 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 00:45:56,776 - root - INFO - Found 0 trading opportunities
+2025-04-16 00:45:56,777 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:45:56,777 - root - INFO - Updated positions with current prices
+2025-04-16 00:45:56,777 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 00:45:56,777 - root - INFO - Found 0 exit signals
+2025-04-16 00:45:56,777 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 00:45:56,777 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 00:45:56,778 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 00:46:26,610 - root - INFO - Received signal 2. Shutting down...
+2025-04-16 00:46:26,611 - root - INFO - Stopping trading bot...
+2025-04-16 00:46:26,905 - root - INFO - Trading bot stopped
+2025-04-16 00:50:27,419 - root - INFO - Initializing trading bot...
+2025-04-16 00:50:27,421 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:50:27,421 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 00:50:27,421 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 00:50:27,421 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 00:50:27,421 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 00:50:27,421 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 00:50:27,421 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 00:50:28,401 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:50:28,402 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 00:50:28,402 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 00:50:28,403 - src.data_collection - INFO - Data collection module initialized
+2025-04-16 00:50:28,403 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:50:28,403 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 00:50:28,403 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 00:50:28,403 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 00:50:28,404 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 00:50:28,404 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 00:50:28,404 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 00:50:28,404 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 00:50:28,404 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 00:50:28,404 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 00:50:28,405 - src.strategy - INFO - Strategy module initialized
+2025-04-16 00:50:28,750 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-16 00:50:28,750 - src.execution.binance_executor - ERROR - API credentials not provided for live trading

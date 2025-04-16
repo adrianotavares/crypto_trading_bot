@@ -1,0 +1,61 @@
+# Trading bot configuration
+binance:
+  api_key: ""  # Your Binance API key
+  api_secret: ""  # Your Binance API secret
+  testnet: false  # Use testnet for testing
+
+execution:
+  mode: "live"  # "paper" or "live"
+  open_positions: 0  # Current number of open positions
+  daily_pnl: 0.0  # Current daily PnL
+
+paper_trading:
+  initial_balance: 100.0  # Initial balance for paper trading
+
+bot:
+  trading_interval: 60 # Trading interval in seconds (900 = 15 minutes, 3600 = 1 hour)
+  candle_interval: '15m' # Candle interval for data fetching
+  
+  # List of trading pairs to monitor
+  trading_pairs: 
+    - BTCUSDT
+  
+strategy:
+  # RSI parameters
+  rsi_period: 14
+  rsi_overbought: 70
+  rsi_oversold: 30
+  
+  # MACD parameters
+  macd_fast: 12
+  macd_slow: 26
+  macd_signal: 9
+  
+  # Bollinger Bands parameters
+  bb_period: 20
+  bb_std_dev: 2.0
+  
+  # Stochastic parameters
+  stoch_k_period: 14
+  stoch_d_period: 3
+  stoch_smooth_k: 3
+  
+  # ATR parameters
+  atr_period: 14
+  atr_multiplier: 2.0
+  
+  # Trailing stop parameters
+  trailing_stop_pct: 2.0
+  
+  # Signal threshold
+  signal_threshold: 3
+
+risk:
+  max_position_size: 0.05  # 5% of account
+  max_open_positions: 5
+  max_daily_loss: 0.03  # 3% of account
+  trailing_stop_pct: 0.02  # 2%
+
+logging:
+  level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+  log_to_file: true
