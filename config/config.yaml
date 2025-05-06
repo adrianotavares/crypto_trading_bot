@@ -1,7 +1,7 @@
 # Trading bot configuration
 binance:
-  api_key: ""  # Your Binance API key
-  api_secret: ""  # Your Binance API secret
+  api_key: "mAYQcAQ9pb3uSyvZiATB5Nqy905OBYpI8oVV314MczbSAsRmSDyfQwAsOGLto9FV"  # Your Binance API key
+  api_secret: "ogX7SQ0BGRdOJaxqSYXfu2f2nRoqeehRjjhKmpy3zPio1NEOoClGNlf0IRYWGFT3"  # Your Binance API secret
   testnet: false  # Use testnet for testing
 
 execution:
@@ -51,7 +51,7 @@ strategy:
   signal_threshold: 3
 
 risk:
-  max_position_size: 0.05  # 5% of account
+  max_position_size: 200  # 5% of account
   max_open_positions: 5
   max_daily_loss: 0.03  # 3% of account
   trailing_stop_pct: 0.02  # 2%

@@ -36,6 +36,136 @@ class PositionManager:
         
         logger.info("Position manager initialized")
     
+    def import_existing_positions(self, symbols: List[str] = None) -> List[Dict[str, Any]]:
+        """
+        Import existing cryptocurrency positions from Binance account.
+        
+        Args:
+            symbols: List of trading pair symbols to check (optional)
+                If None, checks all available assets
+                
+        Returns:
+            List of imported positions
+        """
+        logger.info("Importing existing positions from Binance account...")
+    
+        imported_positions = []
+    
+        try:
+            # Get account balance
+            account_balance = self.executor.get_account_balance()
+            
+            # Get current prices for all symbols
+            if symbols is None:
+                # Get all symbols with non-zero balances
+                non_zero_assets = []
+                for asset, balance in account_balance.items():
+                    # Skip USDT and stablecoins
+                    if asset in ['USDT', 'BUSD', 'USDC', 'DAI', 'TUSD']:
+                        continue
+                    
+                    # Check if we have a non-zero balance
+                    if isinstance(balance, dict):
+                        asset_balance = balance.get('free', 0) + balance.get('locked', 0)
+                    else:
+                        asset_balance = float(balance)
+                    
+                    if asset_balance > 0:
+                        non_zero_assets.append(asset)
+                
+                # Create symbols list
+                symbols = [f"{asset}USDT" for asset in non_zero_assets]
+            
+            # Get current prices
+            current_prices = {}
+            for symbol in symbols:
+                try:
+                    ticker = self.executor.client.get_symbol_ticker(symbol=symbol)
+                    current_prices[symbol] = float(ticker['price'])
+                except Exception as e:
+                    logger.error(f"Error getting price for {symbol}: {e}")
+            
+            # Import positions
+            for symbol in symbols:
+                try:
+                    # Extract base asset from symbol (e.g., "BTCUSDT" -> "BTC")
+                    base_asset = symbol[:-4] if symbol.endswith('USDT') else symbol.split('/')[0]
+                    
+                    # Check if we have this asset
+                    if base_asset not in account_balance:
+                        continue
+                    
+                    # Get balance
+                    if isinstance(account_balance[base_asset], dict):
+                        asset_balance = account_balance[base_asset].get('free', 0) + account_balance[base_asset].get('locked', 0)
+                    else:
+                        asset_balance = float(account_balance[base_asset])
+                    
+                    # Skip if balance is too small
+                    if asset_balance <= 0.0001:
+                        continue
+                    
+                    # Get current price
+                    current_price = current_prices.get(symbol)
+                    if not current_price:
+                        logger.warning(f"Could not get price for {symbol}, skipping import")
+                        continue
+                    
+                    # Try to get average entry price from Binance API (only works for futures)
+                    entry_price = current_price  # Default to current price if not available
+                    
+                    try:
+                        # For futures, we can get the entry price
+                        if hasattr(self.executor.client, 'futures_position_information'):
+                            positions = self.executor.client.futures_position_information(symbol=symbol)
+                            if positions and float(positions[0]['positionAmt']) != 0:
+                                entry_price = float(positions[0]['entryPrice'])
+                    except Exception as e:
+                        logger.debug(f"Could not get entry price for {symbol} from futures API: {e}")
+                    
+                    # For spot trading, we don't have entry price, so we use current price
+                    # and apply a reasonable stop loss based on ATR or a percentage
+                    
+                    # Calculate stop loss based on trailing stop percentage
+                    trailing_stop_pct = self.config.get('risk', 'trailing_stop_pct', default=0.02)  # 2%
+                    stop_loss = entry_price * (1 - trailing_stop_pct)
+                    
+                    # Create position object
+                    position = {
+                        'id': f"imported_{int(time.time() * 1000)}_{base_asset}",
+                        'imported': True,  # Mark as imported
+                        'type': 'buy', # required
+                        'timestamp': int(time.time() * 1000),  # required Current time as we don't know actual entry time
+                        'price': current_price, # required
+                        'symbol': symbol, # required
+                        'side': 'LONG',  # Assume long for spot positions
+                        'quantity': asset_balance,
+                        'entry_price': entry_price,
+                        #'entry_order_id': symbol.orderId if hasattr(symbol, 'orderId') else None,
+                        'stop_loss': stop_loss,
+                        'take_profit': None,
+                        'status': 'OPEN',
+                        'pnl': 0.0,
+                        'pnl_percent': 0.0
+                    }
+                    
+                    # Add to positions list
+                    self.positions.append(position)
+                    imported_positions.append(position)
+                    
+                    logger.info(f"Imported position for {symbol}: {asset_balance} at approx. {entry_price}")
+                    
+                except Exception as e:
+                    logger.error(f"Error importing position for {symbol}: {e}")
+            
+            logger.info(f"Imported {len(imported_positions)} existing positions")
+            logger.info(f"Existing positions {imported_positions}")
+            return imported_positions
+            
+        except Exception as e:
+            logger.error(f"Error importing existing positions: {e}")
+            return []
+        
     def open_position(self, symbol: str, side: str, quantity: float, 
                      price: Optional[float] = None, stop_loss: Optional[float] = None,
                      take_profit: Optional[float] = None) -> Dict[str, Any]:

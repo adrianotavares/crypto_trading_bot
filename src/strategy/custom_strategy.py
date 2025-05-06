@@ -213,6 +213,15 @@ class CustomStrategy(Strategy):
         Returns:
             List of exit points with relevant information
         """
+        # Verifique se a chave 'type' existe no dicionário position
+        if 'type' not in position:
+            logger.error("Position object is missing the 'type' key")
+            return []
+
+        if 'price' not in position or 'timestamp' not in position:
+            logger.error("Position object is missing required keys: 'price' or 'timestamp'")
+            return []
+    
         df = data.copy()
         exit_points = []
         

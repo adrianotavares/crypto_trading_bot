@@ -1508,3 +1508,1671 @@ timestamp
 2025-04-16 00:50:28,405 - src.strategy - INFO - Strategy module initialized
 2025-04-16 00:50:28,750 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
 2025-04-16 00:50:28,750 - src.execution.binance_executor - ERROR - API credentials not provided for live trading
+2025-04-16 01:00:33,588 - root - INFO - Initializing trading bot...
+2025-04-16 01:00:33,591 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 01:00:33,591 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-16 01:00:33,591 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-16 01:00:33,591 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-16 01:00:33,591 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-16 01:00:33,591 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-16 01:00:33,591 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-16 01:00:34,570 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 01:00:34,570 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-16 01:00:34,571 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-16 01:00:34,571 - src.data_collection - INFO - Data collection module initialized
+2025-04-16 01:00:34,571 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 01:00:34,571 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-16 01:00:34,571 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-16 01:00:34,572 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-16 01:00:34,572 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-16 01:00:34,572 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-16 01:00:34,572 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-16 01:00:34,572 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-16 01:00:34,572 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-16 01:00:34,573 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-16 01:00:34,573 - src.strategy - INFO - Strategy module initialized
+2025-04-16 01:00:35,079 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-16 01:00:35,389 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-16 01:00:35,389 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-16 01:00:35,389 - src.execution - INFO - Execution module initialized in live mode
+2025-04-16 01:00:35,389 - root - INFO - Trading bot initialized
+2025-04-16 01:00:35,390 - root - INFO - Starting trading bot...
+2025-04-16 01:00:35,390 - root - INFO - Starting trading cycle...
+2025-04-16 01:00:35,390 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 01:00:35,390 - root - INFO - Candle interval: 15m
+2025-04-16 01:00:36,223 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 01:00:36,224 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 01:00:36,227 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 01:00:36,227 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 01:00:36,332 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 01:00:36,343 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 01:00:36,353 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 01:00:36,358 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 01:00:36,364 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 01:00:36,366 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 01:00:36,369 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 01:00:36,369 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 01:00:36,374 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 01:00:36,374 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 01:00:36,374 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 01:00:36,374 - root - INFO - Found 0 trading opportunities
+2025-04-16 01:00:36,374 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 01:00:36,375 - root - INFO - Updated positions with current prices
+2025-04-16 01:00:36,375 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 01:00:36,375 - root - INFO - Found 0 exit signals
+2025-04-16 01:00:36,375 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 01:00:36,375 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 01:00:36,375 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 01:01:36,656 - root - INFO - Starting trading cycle...
+2025-04-16 01:01:36,657 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-16 01:01:36,657 - root - INFO - Candle interval: 15m
+2025-04-16 01:01:37,352 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-16 01:01:37,352 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-16 01:01:37,355 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-16 01:01:37,355 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-16 01:01:37,460 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-16 01:01:37,469 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-16 01:01:37,477 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-16 01:01:37,482 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-16 01:01:37,488 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-16 01:01:37,491 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-16 01:01:37,494 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-16 01:01:37,494 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-16 01:01:37,498 - src.strategy.custom_strategy - INFO - Generated signals: 3 buy signals, 0 sell signals
+2025-04-16 01:01:37,498 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 3 buy signals, 0 sell signals
+2025-04-16 01:01:37,498 - root - INFO - Analyzed data for 1 pairs
+2025-04-16 01:01:37,498 - root - INFO - Found 0 trading opportunities
+2025-04-16 01:01:37,499 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 01:01:37,499 - root - INFO - Updated positions with current prices
+2025-04-16 01:01:37,499 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-16 01:01:37,499 - root - INFO - Found 0 exit signals
+2025-04-16 01:01:37,499 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-16 01:01:37,499 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-16 01:01:37,499 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-16 01:02:34,062 - root - INFO - Received signal 2. Shutting down...
+2025-04-16 01:02:34,065 - root - INFO - Stopping trading bot...
+2025-04-16 01:02:34,761 - root - INFO - Trading bot stopped
+2025-04-26 19:51:35,555 - root - INFO - Initializing trading bot...
+2025-04-26 19:51:35,558 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 19:51:35,558 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 19:51:35,558 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-26 19:51:35,558 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-26 19:51:35,558 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-26 19:51:35,558 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-26 19:51:35,558 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-26 19:51:39,079 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 19:51:39,079 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-26 19:51:39,080 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 19:51:39,080 - src.data_collection - INFO - Data collection module initialized
+2025-04-26 19:51:39,080 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 19:51:39,080 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 19:51:39,080 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-26 19:51:39,081 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-26 19:51:39,081 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-26 19:51:39,081 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-26 19:51:39,081 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-26 19:51:39,081 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-26 19:51:39,081 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-26 19:51:39,081 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-26 19:51:39,081 - src.strategy - INFO - Strategy module initialized
+2025-04-26 19:51:40,921 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-26 19:51:42,064 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-26 19:51:42,065 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-26 19:51:42,065 - src.execution - INFO - Execution module initialized in live mode
+2025-04-26 19:51:42,065 - root - INFO - Trading bot initialized
+2025-04-26 19:51:42,065 - root - INFO - Starting trading bot...
+2025-04-26 19:51:42,065 - root - INFO - Starting trading cycle...
+2025-04-26 19:51:42,066 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 19:51:42,066 - root - INFO - Candle interval: 15m
+2025-04-26 19:51:43,895 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 19:51:43,895 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 19:51:43,898 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 19:51:43,898 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 19:51:44,003 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 19:51:44,005 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 19:51:44,009 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 19:51:44,020 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 19:51:44,027 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 19:51:44,029 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 19:51:44,030 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 19:51:44,030 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 19:51:44,032 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 5 sell signals
+2025-04-26 19:51:44,032 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 5 sell signals
+2025-04-26 19:51:44,033 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 19:51:44,033 - root - INFO - Found 0 trading opportunities
+2025-04-26 19:51:44,033 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-26 19:51:44,033 - root - INFO - Updated positions with current prices
+2025-04-26 19:51:44,033 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-26 19:51:44,033 - root - INFO - Found 0 exit signals
+2025-04-26 19:51:44,033 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 19:51:44,033 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 19:51:44,033 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 19:52:21,768 - root - INFO - Received signal 2. Shutting down...
+2025-04-26 19:52:21,769 - root - INFO - Stopping trading bot...
+2025-04-26 19:52:22,189 - root - INFO - Trading bot stopped
+2025-04-26 20:24:05,248 - root - INFO - Initializing trading bot...
+2025-04-26 20:24:05,251 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:24:05,251 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:24:05,251 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-26 20:24:05,251 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-26 20:24:05,251 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-26 20:24:05,251 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-26 20:24:05,251 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-26 20:24:05,956 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:24:05,956 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-26 20:24:05,956 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:24:05,956 - src.data_collection - INFO - Data collection module initialized
+2025-04-26 20:24:05,956 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:24:05,957 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:24:05,957 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-26 20:24:05,957 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-26 20:24:05,957 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-26 20:24:05,957 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-26 20:24:05,957 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-26 20:24:05,957 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-26 20:24:05,957 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-26 20:24:05,957 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-26 20:24:05,957 - src.strategy - INFO - Strategy module initialized
+2025-04-26 20:24:06,466 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-26 20:24:06,777 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-26 20:24:06,778 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-26 20:24:06,778 - src.execution - INFO - Execution module initialized in live mode
+2025-04-26 20:24:06,778 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-26 20:24:07,058 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-26 20:24:08,617 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 94751.12
+2025-04-26 20:24:08,617 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-26 20:24:08,618 - root - INFO - Trading bot initialized
+2025-04-26 20:24:08,618 - root - INFO - Starting trading bot...
+2025-04-26 20:24:08,618 - root - INFO - Starting trading cycle...
+2025-04-26 20:24:08,618 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:24:08,618 - root - INFO - Candle interval: 15m
+2025-04-26 20:24:09,344 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:24:09,345 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:24:09,346 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:24:09,346 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:24:09,451 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:24:09,456 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:24:09,462 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:24:09,465 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:24:09,468 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:24:09,470 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:24:09,471 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:24:09,471 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:24:09,474 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:24:09,475 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:24:09,475 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:24:09,476 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:24:09,476 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:24:09,476 - root - INFO - Updated positions with current prices
+2025-04-26 20:24:09,476 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:24:09,477 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:24:09,477 - root - INFO - Found 0 exit signals
+2025-04-26 20:24:09,477 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:24:09,477 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:24:09,477 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:25:09,686 - root - INFO - Starting trading cycle...
+2025-04-26 20:25:09,687 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:25:09,687 - root - INFO - Candle interval: 15m
+2025-04-26 20:25:10,486 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:25:10,486 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:25:10,488 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:25:10,488 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:25:10,593 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:25:10,599 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:25:10,605 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:25:10,607 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:25:10,609 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:25:10,611 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:25:10,612 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:25:10,612 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:25:10,614 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:25:10,614 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:25:10,614 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:25:10,614 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:25:10,614 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:25:10,614 - root - INFO - Updated positions with current prices
+2025-04-26 20:25:10,614 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:25:10,614 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:25:10,614 - root - INFO - Found 0 exit signals
+2025-04-26 20:25:10,615 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:25:10,615 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:25:10,615 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:26:10,830 - root - INFO - Starting trading cycle...
+2025-04-26 20:26:10,831 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:26:10,831 - root - INFO - Candle interval: 15m
+2025-04-26 20:26:11,501 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:26:11,501 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:26:11,503 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:26:11,503 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:26:11,608 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:26:11,702 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:26:11,707 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:26:11,710 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:26:11,713 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:26:11,714 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:26:11,716 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:26:11,716 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:26:11,718 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:26:11,718 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:26:11,718 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:26:11,718 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:26:11,719 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:26:11,719 - root - INFO - Updated positions with current prices
+2025-04-26 20:26:11,719 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:26:11,719 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:26:11,719 - root - INFO - Found 0 exit signals
+2025-04-26 20:26:11,719 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:26:11,719 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:26:11,719 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:27:11,933 - root - INFO - Starting trading cycle...
+2025-04-26 20:27:11,934 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:27:11,934 - root - INFO - Candle interval: 15m
+2025-04-26 20:27:12,613 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:27:12,613 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:27:12,614 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:27:12,614 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:27:12,720 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:27:12,724 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:27:12,730 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:27:12,733 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:27:12,736 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:27:12,737 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:27:12,739 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:27:12,739 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:27:12,741 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:27:12,741 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:27:12,741 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:27:12,741 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:27:12,742 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:27:12,742 - root - INFO - Updated positions with current prices
+2025-04-26 20:27:12,742 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:27:12,742 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:27:12,742 - root - INFO - Found 0 exit signals
+2025-04-26 20:27:12,742 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:27:12,742 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:27:12,742 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:28:12,961 - root - INFO - Starting trading cycle...
+2025-04-26 20:28:12,962 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:28:12,962 - root - INFO - Candle interval: 15m
+2025-04-26 20:28:13,765 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:28:13,765 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:28:13,766 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:28:13,767 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:28:13,870 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:28:13,876 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:28:13,881 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:28:13,884 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:28:13,887 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:28:13,888 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:28:13,889 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:28:13,889 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:28:13,891 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:28:13,891 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:28:13,891 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:28:13,891 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:28:13,891 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:28:13,891 - root - INFO - Updated positions with current prices
+2025-04-26 20:28:13,892 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:28:13,892 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:28:13,892 - root - INFO - Found 0 exit signals
+2025-04-26 20:28:13,892 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:28:13,892 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:28:13,892 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:28:49,928 - root - INFO - Received signal 2. Shutting down...
+2025-04-26 20:28:49,929 - root - INFO - Stopping trading bot...
+2025-04-26 20:28:50,929 - root - INFO - Trading bot stopped
+2025-04-26 20:31:23,092 - root - INFO - Initializing trading bot...
+2025-04-26 20:31:23,094 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:31:23,095 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:31:23,095 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-26 20:31:23,095 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-26 20:31:23,095 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-26 20:31:23,095 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-26 20:31:23,095 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-26 20:31:24,003 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:31:24,004 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-26 20:31:24,004 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:31:24,004 - src.data_collection - INFO - Data collection module initialized
+2025-04-26 20:31:24,004 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:31:24,005 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:31:24,005 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-26 20:31:24,005 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-26 20:31:24,005 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-26 20:31:24,005 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-26 20:31:24,005 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-26 20:31:24,006 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-26 20:31:24,006 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-26 20:31:24,006 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-26 20:31:24,006 - src.strategy - INFO - Strategy module initialized
+2025-04-26 20:31:24,321 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-26 20:31:24,607 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-26 20:31:24,608 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-26 20:31:24,608 - src.execution - INFO - Execution module initialized in live mode
+2025-04-26 20:31:24,608 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-26 20:31:24,895 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-26 20:31:25,908 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 94729.49
+2025-04-26 20:31:25,908 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-26 20:31:25,909 - root - INFO - Trading bot initialized
+2025-04-26 20:31:25,909 - root - INFO - Starting trading bot...
+2025-04-26 20:31:25,909 - root - INFO - Starting trading cycle...
+2025-04-26 20:31:25,910 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:31:25,910 - root - INFO - Candle interval: 15m
+2025-04-26 20:31:26,492 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:31:26,492 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:31:26,493 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:31:26,493 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:31:26,596 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:31:26,599 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:31:26,603 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:31:26,606 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:31:26,609 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:31:26,610 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:31:26,612 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:31:26,612 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:31:26,614 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:31:26,614 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:31:26,614 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:31:26,614 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:31:26,614 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:31:26,614 - root - INFO - Updated positions with current prices
+2025-04-26 20:31:26,614 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:31:26,615 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:31:26,615 - root - INFO - Found 0 exit signals
+2025-04-26 20:31:26,615 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:31:26,615 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:31:26,615 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:32:02,313 - root - INFO - Received signal 2. Shutting down...
+2025-04-26 20:32:02,314 - root - INFO - Stopping trading bot...
+2025-04-26 20:32:02,746 - root - INFO - Trading bot stopped
+2025-04-26 20:39:18,784 - root - INFO - Initializing trading bot...
+2025-04-26 20:39:18,787 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:39:18,787 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:39:18,787 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-26 20:39:18,787 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-26 20:39:18,787 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-26 20:39:18,787 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-26 20:39:18,787 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-26 20:39:19,419 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:39:19,419 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-26 20:39:19,419 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:39:19,420 - src.data_collection - INFO - Data collection module initialized
+2025-04-26 20:39:19,420 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:39:19,420 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:39:19,420 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-26 20:39:19,421 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-26 20:39:19,421 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-26 20:39:19,421 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-26 20:39:19,422 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-26 20:39:19,422 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-26 20:39:19,422 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-26 20:39:19,422 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-26 20:39:19,422 - src.strategy - INFO - Strategy module initialized
+2025-04-26 20:39:19,851 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-26 20:39:20,131 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-26 20:39:20,131 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-26 20:39:20,131 - src.execution - INFO - Execution module initialized in live mode
+2025-04-26 20:39:20,132 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-26 20:39:20,553 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-26 20:39:21,774 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 94573.84
+2025-04-26 20:39:21,775 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-26 20:39:21,775 - root - INFO - Trading bot initialized
+2025-04-26 20:39:21,775 - root - INFO - Starting trading bot...
+2025-04-26 20:39:21,776 - root - INFO - Starting trading cycle...
+2025-04-26 20:39:21,776 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:39:21,776 - root - INFO - Candle interval: 15m
+2025-04-26 20:39:22,385 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:39:22,385 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:39:22,386 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:39:22,386 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:39:22,489 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:39:22,496 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:39:22,503 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:39:22,505 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:39:22,508 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:39:22,510 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:39:22,511 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:39:22,511 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:39:22,513 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:39:22,513 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:39:22,513 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:39:22,513 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:39:22,513 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:39:22,513 - root - INFO - Updated positions with current prices
+2025-04-26 20:39:22,513 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:39:22,514 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:39:22,514 - root - INFO - Found 0 exit signals
+2025-04-26 20:39:22,514 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:39:22,514 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:39:22,514 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:40:22,735 - root - INFO - Starting trading cycle...
+2025-04-26 20:40:22,736 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:40:22,736 - root - INFO - Candle interval: 15m
+2025-04-26 20:40:23,423 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:40:23,423 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:40:23,424 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:40:23,424 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:40:23,529 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:40:23,535 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:40:23,539 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:40:23,542 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:40:23,545 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:40:23,546 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:40:23,548 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:40:23,548 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:40:23,550 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:40:23,550 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:40:23,550 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:40:23,550 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:40:23,550 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:40:23,550 - root - INFO - Updated positions with current prices
+2025-04-26 20:40:23,550 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:40:23,550 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:40:23,551 - root - INFO - Found 0 exit signals
+2025-04-26 20:40:23,551 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:40:23,551 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:40:23,551 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:40:41,309 - root - INFO - Received signal 2. Shutting down...
+2025-04-26 20:40:41,310 - root - INFO - Stopping trading bot...
+2025-04-26 20:40:41,620 - root - INFO - Trading bot stopped
+2025-04-26 20:44:13,612 - root - INFO - Initializing trading bot...
+2025-04-26 20:44:13,615 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:44:13,615 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:44:13,615 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-26 20:44:13,615 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-26 20:44:13,615 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-26 20:44:13,615 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-26 20:44:13,615 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-26 20:44:14,321 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:44:14,321 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-26 20:44:14,321 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:44:14,321 - src.data_collection - INFO - Data collection module initialized
+2025-04-26 20:44:14,321 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:44:14,322 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:44:14,322 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-26 20:44:14,322 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-26 20:44:14,322 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-26 20:44:14,322 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-26 20:44:14,322 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-26 20:44:14,322 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-26 20:44:14,323 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-26 20:44:14,323 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-26 20:44:14,323 - src.strategy - INFO - Strategy module initialized
+2025-04-26 20:44:14,688 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-26 20:44:14,988 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-26 20:44:14,988 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-26 20:44:14,988 - src.execution - INFO - Execution module initialized in live mode
+2025-04-26 20:44:14,989 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-26 20:44:15,294 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-26 20:44:16,412 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 94619.05
+2025-04-26 20:44:16,413 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-26 20:44:16,413 - src.execution.position_manager - INFO - Existing positions [{'id': 'imported_1745711056412_BTC', 'symbol': 'BTCUSDT', 'side': 'LONG', 'quantity': 0.00175589, 'entry_price': 94619.05, 'entry_time': 1745711056412, 'current_price': 94619.05, 'stop_loss': 92726.669, 'status': 'OPEN', 'imported': True}]
+2025-04-26 20:44:16,413 - root - INFO - Trading bot initialized
+2025-04-26 20:44:16,413 - root - INFO - Starting trading bot...
+2025-04-26 20:44:16,413 - root - INFO - Starting trading cycle...
+2025-04-26 20:44:16,414 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:44:16,414 - root - INFO - Candle interval: 15m
+2025-04-26 20:44:17,055 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:44:17,056 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:44:17,057 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:44:17,057 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:44:17,162 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:44:17,169 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:44:17,176 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:44:17,179 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:44:17,181 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:44:17,183 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:44:17,184 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:44:17,184 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:44:17,186 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:44:17,186 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:44:17,186 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:44:17,187 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:44:17,187 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:44:17,187 - root - INFO - Updated positions with current prices
+2025-04-26 20:44:17,187 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:44:17,187 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:44:17,187 - root - INFO - Found 0 exit signals
+2025-04-26 20:44:17,187 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:44:17,187 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:44:17,187 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:45:17,420 - root - INFO - Starting trading cycle...
+2025-04-26 20:45:17,421 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:45:17,421 - root - INFO - Candle interval: 15m
+2025-04-26 20:45:17,995 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:45:17,995 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:45:17,996 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:45:17,996 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:45:18,102 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:45:18,109 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:45:18,113 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:45:18,116 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:45:18,118 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:45:18,120 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:45:18,121 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:45:18,121 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:45:18,124 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:45:18,124 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:45:18,124 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:45:18,125 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:45:18,125 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:45:18,125 - root - INFO - Updated positions with current prices
+2025-04-26 20:45:18,125 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:45:18,125 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:45:18,125 - root - INFO - Found 0 exit signals
+2025-04-26 20:45:18,125 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:45:18,125 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:45:18,125 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:46:18,360 - root - INFO - Starting trading cycle...
+2025-04-26 20:46:18,361 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:46:18,361 - root - INFO - Candle interval: 15m
+2025-04-26 20:46:19,049 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:46:19,049 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:46:19,050 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:46:19,050 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:46:19,155 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:46:19,162 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:46:19,166 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:46:19,169 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:46:19,171 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:46:19,172 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:46:19,174 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:46:19,174 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:46:19,177 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:46:19,177 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:46:19,177 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:46:19,177 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:46:19,177 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:46:19,177 - root - INFO - Updated positions with current prices
+2025-04-26 20:46:19,177 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:46:19,178 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:46:19,178 - root - INFO - Found 0 exit signals
+2025-04-26 20:46:19,178 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:46:19,178 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:46:19,178 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:47:19,398 - root - INFO - Starting trading cycle...
+2025-04-26 20:47:19,399 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:47:19,399 - root - INFO - Candle interval: 15m
+2025-04-26 20:47:20,094 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:47:20,094 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:47:20,095 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:47:20,095 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:47:20,200 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:47:20,207 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:47:20,212 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:47:20,215 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:47:20,217 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:47:20,218 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:47:20,220 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:47:20,220 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:47:20,222 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:47:20,222 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:47:20,222 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:47:20,222 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:47:20,222 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:47:20,223 - root - INFO - Updated positions with current prices
+2025-04-26 20:47:20,223 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:47:20,223 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:47:20,223 - root - INFO - Found 0 exit signals
+2025-04-26 20:47:20,223 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:47:20,223 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:47:20,223 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:48:20,431 - root - INFO - Starting trading cycle...
+2025-04-26 20:48:20,431 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:48:20,431 - root - INFO - Candle interval: 15m
+2025-04-26 20:48:21,121 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:48:21,121 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:48:21,122 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:48:21,122 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:48:21,227 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:48:21,233 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:48:21,237 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:48:21,239 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:48:21,242 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:48:21,243 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:48:21,245 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:48:21,246 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:48:21,280 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:48:21,280 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:48:21,280 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:48:21,280 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:48:21,281 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:48:21,281 - root - INFO - Updated positions with current prices
+2025-04-26 20:48:21,281 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 20:48:21,281 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 20:48:21,281 - root - INFO - Found 0 exit signals
+2025-04-26 20:48:21,281 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:48:21,281 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:48:21,281 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:48:42,314 - root - INFO - Received signal 2. Shutting down...
+2025-04-26 20:48:42,315 - root - INFO - Stopping trading bot...
+2025-04-26 20:48:42,361 - root - INFO - Trading bot stopped
+2025-04-26 20:52:10,470 - root - INFO - Initializing trading bot...
+2025-04-26 20:52:10,473 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:52:10,473 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 20:52:10,474 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-26 20:52:10,474 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-26 20:52:10,474 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-26 20:52:10,474 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-26 20:52:10,474 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-26 20:52:11,523 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:52:11,523 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-26 20:52:11,524 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 20:52:11,524 - src.data_collection - INFO - Data collection module initialized
+2025-04-26 20:52:11,524 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:52:11,524 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 20:52:11,524 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-26 20:52:11,525 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-26 20:52:11,525 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-26 20:52:11,525 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-26 20:52:11,525 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-26 20:52:11,525 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-26 20:52:11,525 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-26 20:52:11,525 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-26 20:52:11,526 - src.strategy - INFO - Strategy module initialized
+2025-04-26 20:52:11,861 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-26 20:52:12,239 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-26 20:52:12,240 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-26 20:52:12,240 - src.execution - INFO - Execution module initialized in live mode
+2025-04-26 20:52:12,240 - root - INFO - Trading bot initialized
+2025-04-26 20:52:12,240 - root - INFO - Starting trading bot...
+2025-04-26 20:52:12,240 - root - INFO - Starting trading cycle...
+2025-04-26 20:52:12,240 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:52:12,240 - root - INFO - Candle interval: 15m
+2025-04-26 20:52:12,863 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:52:12,863 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:52:12,864 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:52:12,864 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:52:12,969 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:52:12,977 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:52:12,983 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:52:12,985 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:52:12,988 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:52:12,989 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:52:12,990 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:52:12,990 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:52:12,992 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:52:12,992 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:52:12,992 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:52:12,993 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:52:12,993 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-26 20:52:12,993 - root - INFO - Updated positions with current prices
+2025-04-26 20:52:12,993 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-26 20:52:12,993 - root - INFO - Found 0 exit signals
+2025-04-26 20:52:12,993 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:52:12,993 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:52:12,993 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:53:13,241 - root - INFO - Starting trading cycle...
+2025-04-26 20:53:13,241 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 20:53:13,242 - root - INFO - Candle interval: 15m
+2025-04-26 20:53:13,820 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 20:53:13,820 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 20:53:13,821 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 20:53:13,821 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 20:53:13,923 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 20:53:13,935 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 20:53:13,941 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 20:53:13,944 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 20:53:13,947 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 20:53:13,950 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 20:53:13,955 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 20:53:13,957 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 20:53:13,961 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 20:53:13,961 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 20:53:13,961 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 20:53:13,963 - root - INFO - Found 0 trading opportunities
+2025-04-26 20:53:13,964 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-26 20:53:13,964 - root - INFO - Updated positions with current prices
+2025-04-26 20:53:13,964 - src.execution.position_manager - INFO - Retrieved 0 open positions
+2025-04-26 20:53:13,964 - root - INFO - Found 0 exit signals
+2025-04-26 20:53:13,964 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 20:53:13,965 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 20:53:13,965 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 20:53:23,091 - root - INFO - Received signal 2. Shutting down...
+2025-04-26 20:53:23,091 - root - INFO - Stopping trading bot...
+2025-04-26 20:53:23,995 - root - INFO - Trading bot stopped
+2025-04-26 21:08:58,599 - root - INFO - Initializing trading bot...
+2025-04-26 21:08:58,604 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 21:08:58,604 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-26 21:08:58,604 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-26 21:08:58,604 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-26 21:08:58,604 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-26 21:08:58,604 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-26 21:08:58,605 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-26 21:08:59,415 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 21:08:59,415 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-26 21:08:59,416 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-26 21:08:59,416 - src.data_collection - INFO - Data collection module initialized
+2025-04-26 21:08:59,416 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 21:08:59,416 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-26 21:08:59,416 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-26 21:08:59,416 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-26 21:08:59,416 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-26 21:08:59,416 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-26 21:08:59,416 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-26 21:08:59,417 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-26 21:08:59,417 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-26 21:08:59,417 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-26 21:08:59,417 - src.strategy - INFO - Strategy module initialized
+2025-04-26 21:08:59,826 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-26 21:09:00,144 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-26 21:09:00,144 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-26 21:09:00,144 - src.execution - INFO - Execution module initialized in live mode
+2025-04-26 21:09:00,145 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-26 21:09:00,440 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-26 21:09:01,875 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 94703.97
+2025-04-26 21:09:01,875 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-26 21:09:01,875 - src.execution.position_manager - INFO - Existing positions [{'id': 'imported_1745712541875_BTC', 'imported': True, 'symbol': 'BTCUSDT', 'side': 'LONG', 'quantity': 0.00175589, 'entry_price': 94703.97, 'entry_time': 1745712541875, 'current_price': 94703.97, 'entry_order_id': None, 'stop_loss': 92809.8906, 'take_profit': None, 'status': 'OPEN', 'pnl': 0.0, 'pnl_percent': 0.0}]
+2025-04-26 21:09:01,876 - root - INFO - Trading bot initialized
+2025-04-26 21:09:01,876 - root - INFO - Starting trading bot...
+2025-04-26 21:09:01,876 - root - INFO - Starting trading cycle...
+2025-04-26 21:09:01,876 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 21:09:01,876 - root - INFO - Candle interval: 15m
+2025-04-26 21:09:02,523 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 21:09:02,523 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 21:09:02,524 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 21:09:02,524 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 21:09:02,629 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 21:09:02,636 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 21:09:02,644 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 21:09:02,646 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 21:09:02,648 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 21:09:02,650 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 21:09:02,651 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 21:09:02,652 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 21:09:02,654 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 21:09:02,654 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 21:09:02,654 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 21:09:02,655 - root - INFO - Found 0 trading opportunities
+2025-04-26 21:09:02,655 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 21:09:02,655 - root - INFO - Updated positions with current prices
+2025-04-26 21:09:02,655 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 21:09:02,655 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 21:09:02,655 - root - INFO - Found 0 exit signals
+2025-04-26 21:09:02,655 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 21:09:02,655 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 21:09:02,655 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 21:10:02,864 - root - INFO - Starting trading cycle...
+2025-04-26 21:10:02,865 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-26 21:10:02,865 - root - INFO - Candle interval: 15m
+2025-04-26 21:10:04,859 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-26 21:10:04,860 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-26 21:10:04,861 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-26 21:10:04,861 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-26 21:10:04,966 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-26 21:10:04,972 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-26 21:10:04,978 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-26 21:10:04,982 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-26 21:10:04,985 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-26 21:10:04,986 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-26 21:10:04,989 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-26 21:10:04,989 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-26 21:10:04,991 - src.strategy.custom_strategy - INFO - Generated signals: 1 buy signals, 7 sell signals
+2025-04-26 21:10:04,991 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 1 buy signals, 7 sell signals
+2025-04-26 21:10:04,991 - root - INFO - Analyzed data for 1 pairs
+2025-04-26 21:10:04,991 - root - INFO - Found 0 trading opportunities
+2025-04-26 21:10:04,992 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 21:10:04,992 - root - INFO - Updated positions with current prices
+2025-04-26 21:10:04,992 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-26 21:10:04,992 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-26 21:10:04,992 - root - INFO - Found 0 exit signals
+2025-04-26 21:10:04,992 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-26 21:10:04,992 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-26 21:10:04,992 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-26 21:10:29,418 - root - INFO - Received signal 2. Shutting down...
+2025-04-26 21:10:29,419 - root - INFO - Stopping trading bot...
+2025-04-26 21:10:30,092 - root - INFO - Trading bot stopped
+2025-04-29 20:29:21,457 - root - INFO - Initializing trading bot...
+2025-04-29 20:29:21,459 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 20:29:21,459 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 20:29:21,459 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-29 20:29:21,460 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-29 20:29:21,460 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-29 20:29:21,460 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-29 20:29:21,460 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-29 20:29:23,017 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 20:29:23,017 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-29 20:29:23,018 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 20:29:23,018 - src.data_collection - INFO - Data collection module initialized
+2025-04-29 20:29:23,019 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 20:29:23,019 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 20:29:23,019 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-29 20:29:23,019 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-29 20:29:23,019 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-29 20:29:23,020 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-29 20:29:23,020 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-29 20:29:23,020 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-29 20:29:23,020 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-29 20:29:23,020 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-29 20:29:23,020 - src.strategy - INFO - Strategy module initialized
+2025-04-29 20:29:23,904 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-29 20:29:24,412 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-29 20:29:24,412 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-29 20:29:24,412 - src.execution - INFO - Execution module initialized in live mode
+2025-04-29 20:29:24,413 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-29 20:29:24,980 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-29 20:29:26,787 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 93844.0
+2025-04-29 20:29:26,788 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-29 20:29:26,788 - src.execution.position_manager - INFO - Existing positions [{'id': 'imported_1745969366787_BTC', 'imported': True, 'symbol': 'BTCUSDT', 'side': 'LONG', 'quantity': 0.00175589, 'entry_price': 93844.0, 'entry_time': 1745969366787, 'current_price': 93844.0, 'stop_loss': 91967.12, 'take_profit': None, 'status': 'OPEN', 'pnl': 0.0, 'pnl_percent': 0.0}]
+2025-04-29 20:29:26,788 - root - INFO - Trading bot initialized
+2025-04-29 20:29:26,788 - root - INFO - Starting trading bot...
+2025-04-29 20:29:26,788 - root - INFO - Starting trading cycle...
+2025-04-29 20:29:26,788 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 20:29:26,788 - root - INFO - Candle interval: 15m
+2025-04-29 20:29:27,921 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 20:29:27,922 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 20:29:27,923 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 20:29:27,923 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 20:29:28,026 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 20:29:28,033 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 20:29:28,040 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 20:29:28,042 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 20:29:28,045 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 20:29:28,046 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 20:29:28,048 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 20:29:28,048 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 20:29:28,050 - src.strategy.custom_strategy - INFO - Generated signals: 4 buy signals, 4 sell signals
+2025-04-29 20:29:28,050 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 4 buy signals, 4 sell signals
+2025-04-29 20:29:28,050 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 20:29:28,050 - root - INFO - Found 0 trading opportunities
+2025-04-29 20:29:28,051 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:29:28,051 - root - INFO - Updated positions with current prices
+2025-04-29 20:29:28,051 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:29:28,051 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-29 20:29:28,051 - root - INFO - Found 0 exit signals
+2025-04-29 20:29:28,051 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 20:29:28,051 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 20:29:28,052 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 20:30:28,225 - root - INFO - Starting trading cycle...
+2025-04-29 20:30:28,227 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 20:30:28,228 - root - INFO - Candle interval: 15m
+2025-04-29 20:30:29,232 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 20:30:29,232 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 20:30:29,233 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 20:30:29,233 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 20:30:29,338 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 20:30:29,341 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 20:30:29,344 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 20:30:29,346 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 20:30:29,349 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 20:30:29,350 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 20:30:29,351 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 20:30:29,351 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 20:30:29,354 - src.strategy.custom_strategy - INFO - Generated signals: 4 buy signals, 2 sell signals
+2025-04-29 20:30:29,354 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 4 buy signals, 2 sell signals
+2025-04-29 20:30:29,354 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 20:30:29,354 - root - INFO - Found 0 trading opportunities
+2025-04-29 20:30:29,354 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:30:29,355 - root - INFO - Updated positions with current prices
+2025-04-29 20:30:29,355 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:30:29,355 - src.strategy - ERROR - Error getting exit signals for BTCUSDT: 'type'
+2025-04-29 20:30:29,355 - root - INFO - Found 0 exit signals
+2025-04-29 20:30:29,355 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 20:30:29,355 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 20:30:29,355 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 20:30:54,399 - root - INFO - Received signal 2. Shutting down...
+2025-04-29 20:30:54,400 - root - INFO - Stopping trading bot...
+2025-04-29 20:30:54,440 - root - INFO - Trading bot stopped
+2025-04-29 20:40:55,507 - root - INFO - Initializing trading bot...
+2025-04-29 20:40:55,510 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 20:40:55,511 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 20:40:55,511 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-29 20:40:55,511 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-29 20:40:55,511 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-29 20:40:55,511 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-29 20:40:55,511 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-29 20:40:59,488 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 20:40:59,488 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-29 20:40:59,488 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 20:40:59,488 - src.data_collection - INFO - Data collection module initialized
+2025-04-29 20:40:59,489 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 20:40:59,489 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 20:40:59,489 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-29 20:40:59,489 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-29 20:40:59,489 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-29 20:40:59,489 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-29 20:40:59,489 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-29 20:40:59,489 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-29 20:40:59,490 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-29 20:40:59,490 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-29 20:40:59,490 - src.strategy - INFO - Strategy module initialized
+2025-04-29 20:41:00,798 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-29 20:41:01,424 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-29 20:41:01,424 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-29 20:41:01,424 - src.execution - INFO - Execution module initialized in live mode
+2025-04-29 20:41:01,425 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-29 20:41:02,002 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-29 20:41:03,939 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 93930.63
+2025-04-29 20:41:03,940 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-29 20:41:03,940 - src.execution.position_manager - INFO - Existing positions [{'id': 'imported_1745970063939_BTC', 'imported': True, 'type': 'buy', 'timestamp': 1745970063939, 'price': 93930.63, 'symbol': 'BTCUSDT', 'side': 'LONG', 'quantity': 0.00175589, 'entry_price': 93930.63, 'stop_loss': 92052.0174, 'take_profit': None, 'status': 'OPEN', 'pnl': 0.0, 'pnl_percent': 0.0}]
+2025-04-29 20:41:03,940 - root - INFO - Trading bot initialized
+2025-04-29 20:41:03,941 - root - INFO - Starting trading bot...
+2025-04-29 20:41:03,941 - root - INFO - Starting trading cycle...
+2025-04-29 20:41:03,941 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 20:41:03,942 - root - INFO - Candle interval: 15m
+2025-04-29 20:41:05,220 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 20:41:05,220 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 20:41:05,221 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 20:41:05,221 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 20:41:05,327 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 20:41:05,333 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 20:41:05,339 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 20:41:05,343 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 20:41:05,346 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 20:41:05,348 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 20:41:05,350 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 20:41:05,350 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 20:41:05,352 - src.strategy.custom_strategy - INFO - Generated signals: 4 buy signals, 2 sell signals
+2025-04-29 20:41:05,352 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 4 buy signals, 2 sell signals
+2025-04-29 20:41:05,352 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 20:41:05,353 - root - INFO - Found 0 trading opportunities
+2025-04-29 20:41:05,353 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,353 - root - INFO - Updated positions with current prices
+2025-04-29 20:41:05,353 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,355 - src.strategy.custom_strategy - INFO - Found 12 exit points for position entered at 1745970063939
+2025-04-29 20:41:05,355 - src.strategy - INFO - Found exit signal for BTCUSDT position entered at 1745970063939
+2025-04-29 20:41:05,355 - root - INFO - Found 12 exit signals
+2025-04-29 20:41:05,355 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,355 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.61644339) exceeds max (5.0)
+2025-04-29 20:41:05,355 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93751.0
+2025-04-29 20:41:05,355 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,355 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,355 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.6043628668) exceeds max (5.0)
+2025-04-29 20:41:05,355 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93744.12
+2025-04-29 20:41:05,355 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,355 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,355 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.7613218739) exceeds max (5.0)
+2025-04-29 20:41:05,355 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93833.51
+2025-04-29 20:41:05,356 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,356 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,356 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.29023414579999) exceeds max (5.0)
+2025-04-29 20:41:05,356 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93565.22
+2025-04-29 20:41:05,356 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,356 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,356 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.56727847) exceeds max (5.0)
+2025-04-29 20:41:05,356 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93723.0
+2025-04-29 20:41:05,356 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,356 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,356 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (165.0858454637) exceeds max (5.0)
+2025-04-29 20:41:05,356 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94018.33
+2025-04-29 20:41:05,356 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,356 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,356 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.5866634956) exceeds max (5.0)
+2025-04-29 20:41:05,356 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93734.04
+2025-04-29 20:41:05,356 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,356 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,356 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.43498971740001) exceeds max (5.0)
+2025-04-29 20:41:05,356 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93647.66
+2025-04-29 20:41:05,356 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,356 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,357 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.315308255) exceeds max (5.0)
+2025-04-29 20:41:05,357 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93579.5
+2025-04-29 20:41:05,357 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,357 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,357 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.86837848719998) exceeds max (5.0)
+2025-04-29 20:41:05,357 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93894.48
+2025-04-29 20:41:05,357 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,357 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,357 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.8708656788) exceeds max (5.0)
+2025-04-29 20:41:05,357 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 95034.92
+2025-04-29 20:41:05,357 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,357 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:41:05,357 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.5593181161) exceeds max (5.0)
+2025-04-29 20:41:05,357 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94857.49
+2025-04-29 20:41:05,357 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:41:05,357 - root - INFO - Closed 0 positions
+2025-04-29 20:41:05,357 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 20:41:05,357 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 20:41:05,357 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 20:42:05,553 - root - INFO - Starting trading cycle...
+2025-04-29 20:42:05,555 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 20:42:05,555 - root - INFO - Candle interval: 15m
+2025-04-29 20:42:09,564 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 20:42:09,565 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 20:42:09,566 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 20:42:09,566 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 20:42:09,671 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 20:42:09,678 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 20:42:09,683 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 20:42:09,685 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 20:42:09,688 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 20:42:09,690 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 20:42:09,693 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 20:42:09,693 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 20:42:09,695 - src.strategy.custom_strategy - INFO - Generated signals: 4 buy signals, 2 sell signals
+2025-04-29 20:42:09,695 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 4 buy signals, 2 sell signals
+2025-04-29 20:42:09,695 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 20:42:09,695 - root - INFO - Found 0 trading opportunities
+2025-04-29 20:42:09,696 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,696 - root - INFO - Updated positions with current prices
+2025-04-29 20:42:09,696 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,697 - src.strategy.custom_strategy - INFO - Found 12 exit points for position entered at 1745970063939
+2025-04-29 20:42:09,697 - src.strategy - INFO - Found exit signal for BTCUSDT position entered at 1745970063939
+2025-04-29 20:42:09,698 - root - INFO - Found 12 exit signals
+2025-04-29 20:42:09,698 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,698 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.61644339) exceeds max (5.0)
+2025-04-29 20:42:09,698 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93751.0
+2025-04-29 20:42:09,698 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,698 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,698 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.6043628668) exceeds max (5.0)
+2025-04-29 20:42:09,698 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93744.12
+2025-04-29 20:42:09,698 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,698 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,698 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.7613218739) exceeds max (5.0)
+2025-04-29 20:42:09,698 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93833.51
+2025-04-29 20:42:09,698 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,699 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,699 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.29023414579999) exceeds max (5.0)
+2025-04-29 20:42:09,699 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93565.22
+2025-04-29 20:42:09,699 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,699 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,699 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.56727847) exceeds max (5.0)
+2025-04-29 20:42:09,699 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93723.0
+2025-04-29 20:42:09,699 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,699 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,699 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (165.0858454637) exceeds max (5.0)
+2025-04-29 20:42:09,699 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94018.33
+2025-04-29 20:42:09,699 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,699 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,699 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.5866634956) exceeds max (5.0)
+2025-04-29 20:42:09,699 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93734.04
+2025-04-29 20:42:09,699 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,699 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,699 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.43498971740001) exceeds max (5.0)
+2025-04-29 20:42:09,699 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93647.66
+2025-04-29 20:42:09,699 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,699 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,700 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.315308255) exceeds max (5.0)
+2025-04-29 20:42:09,700 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93579.5
+2025-04-29 20:42:09,700 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,700 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,700 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.86837848719998) exceeds max (5.0)
+2025-04-29 20:42:09,700 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93894.48
+2025-04-29 20:42:09,700 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,700 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,700 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.8708656788) exceeds max (5.0)
+2025-04-29 20:42:09,700 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 95034.92
+2025-04-29 20:42:09,700 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,700 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 20:42:09,700 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.5593181161) exceeds max (5.0)
+2025-04-29 20:42:09,700 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94857.49
+2025-04-29 20:42:09,700 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 20:42:09,700 - root - INFO - Closed 0 positions
+2025-04-29 20:42:09,700 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 20:42:09,700 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 20:42:09,700 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 20:42:55,261 - root - INFO - Received signal 2. Shutting down...
+2025-04-29 20:42:55,261 - root - INFO - Stopping trading bot...
+2025-04-29 20:42:55,869 - root - INFO - Trading bot stopped
+2025-04-29 23:17:17,346 - root - INFO - Initializing trading bot...
+2025-04-29 23:17:17,348 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 23:17:17,348 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 23:17:17,348 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-29 23:17:17,348 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-29 23:17:17,349 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-29 23:17:17,349 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-29 23:17:17,349 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-29 23:17:18,228 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 23:17:18,229 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-29 23:17:18,229 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 23:17:18,229 - src.data_collection - INFO - Data collection module initialized
+2025-04-29 23:17:18,229 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 23:17:18,229 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 23:17:18,230 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-29 23:17:18,230 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-29 23:17:18,230 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-29 23:17:18,230 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-29 23:17:18,230 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-29 23:17:18,230 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-29 23:17:18,230 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-29 23:17:18,231 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-29 23:17:18,231 - src.strategy - INFO - Strategy module initialized
+2025-04-29 23:17:18,635 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-29 23:17:18,950 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-29 23:17:18,951 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-29 23:17:18,951 - src.execution - INFO - Execution module initialized in live mode
+2025-04-29 23:17:18,951 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-29 23:17:19,246 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-29 23:17:20,129 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 94652.47
+2025-04-29 23:17:20,130 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-29 23:17:20,130 - src.execution.position_manager - INFO - Existing positions [{'id': 'imported_1745979440129_BTC', 'imported': True, 'type': 'buy', 'timestamp': 1745979440129, 'price': 94652.47, 'symbol': 'BTCUSDT', 'side': 'LONG', 'quantity': 0.00175589, 'entry_price': 94652.47, 'stop_loss': 92759.4206, 'take_profit': None, 'status': 'OPEN', 'pnl': 0.0, 'pnl_percent': 0.0}]
+2025-04-29 23:17:20,131 - root - INFO - Trading bot initialized
+2025-04-29 23:17:20,131 - root - INFO - Starting trading bot...
+2025-04-29 23:17:20,131 - root - INFO - Starting trading cycle...
+2025-04-29 23:17:20,132 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 23:17:20,132 - root - INFO - Candle interval: 15m
+2025-04-29 23:17:20,799 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 23:17:20,799 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 23:17:20,801 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 23:17:20,801 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 23:17:20,907 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 23:17:20,917 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 23:17:20,929 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 23:17:20,934 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 23:17:20,939 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 23:17:20,942 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 23:17:20,944 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 23:17:20,944 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 23:17:20,949 - src.strategy.custom_strategy - INFO - Generated signals: 5 buy signals, 2 sell signals
+2025-04-29 23:17:20,949 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 5 buy signals, 2 sell signals
+2025-04-29 23:17:20,949 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 23:17:20,950 - root - INFO - Found 0 trading opportunities
+2025-04-29 23:17:20,950 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,950 - root - INFO - Updated positions with current prices
+2025-04-29 23:17:20,950 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,952 - src.strategy.custom_strategy - INFO - Found 12 exit points for position entered at 1745979440129
+2025-04-29 23:17:20,953 - src.strategy - INFO - Found exit signal for BTCUSDT position entered at 1745979440129
+2025-04-29 23:17:20,953 - root - INFO - Found 12 exit signals
+2025-04-29 23:17:20,953 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,953 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.61644339) exceeds max (5.0)
+2025-04-29 23:17:20,953 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93751.0
+2025-04-29 23:17:20,953 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,953 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,953 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.6043628668) exceeds max (5.0)
+2025-04-29 23:17:20,953 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93744.12
+2025-04-29 23:17:20,953 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,953 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,953 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.7613218739) exceeds max (5.0)
+2025-04-29 23:17:20,953 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93833.51
+2025-04-29 23:17:20,953 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,953 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,954 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.29023414579999) exceeds max (5.0)
+2025-04-29 23:17:20,954 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93565.22
+2025-04-29 23:17:20,954 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,954 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,954 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.56727847) exceeds max (5.0)
+2025-04-29 23:17:20,954 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93723.0
+2025-04-29 23:17:20,954 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,954 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,954 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (165.0858454637) exceeds max (5.0)
+2025-04-29 23:17:20,954 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94018.33
+2025-04-29 23:17:20,954 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,954 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,954 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.5866634956) exceeds max (5.0)
+2025-04-29 23:17:20,954 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93734.04
+2025-04-29 23:17:20,954 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,954 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,954 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.43498971740001) exceeds max (5.0)
+2025-04-29 23:17:20,954 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93647.66
+2025-04-29 23:17:20,954 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,955 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,955 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.315308255) exceeds max (5.0)
+2025-04-29 23:17:20,955 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93579.5
+2025-04-29 23:17:20,955 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,955 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,955 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.86837848719998) exceeds max (5.0)
+2025-04-29 23:17:20,955 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93894.48
+2025-04-29 23:17:20,955 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,955 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,955 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.8708656788) exceeds max (5.0)
+2025-04-29 23:17:20,955 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 95034.92
+2025-04-29 23:17:20,955 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,955 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:17:20,955 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.5593181161) exceeds max (5.0)
+2025-04-29 23:17:20,955 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94857.49
+2025-04-29 23:17:20,955 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:17:20,955 - root - INFO - Closed 0 positions
+2025-04-29 23:17:20,955 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 23:17:20,955 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 23:17:20,956 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 23:17:37,269 - root - INFO - Received signal 2. Shutting down...
+2025-04-29 23:17:37,270 - root - INFO - Stopping trading bot...
+2025-04-29 23:17:38,028 - root - INFO - Trading bot stopped
+2025-04-29 23:20:38,418 - root - INFO - Initializing trading bot...
+2025-04-29 23:20:38,421 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 23:20:38,421 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 23:20:38,421 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-29 23:20:38,421 - src.risk_management.risk_manager - INFO - Max position size: 5.0% of account
+2025-04-29 23:20:38,421 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-29 23:20:38,421 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-29 23:20:38,421 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-29 23:20:39,127 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 23:20:39,127 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-29 23:20:39,128 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 23:20:39,128 - src.data_collection - INFO - Data collection module initialized
+2025-04-29 23:20:39,128 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 23:20:39,128 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 23:20:39,128 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-29 23:20:39,128 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-29 23:20:39,128 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-29 23:20:39,129 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-29 23:20:39,129 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-29 23:20:39,129 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-29 23:20:39,129 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-29 23:20:39,129 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-29 23:20:39,129 - src.strategy - INFO - Strategy module initialized
+2025-04-29 23:20:39,548 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-29 23:20:39,850 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-29 23:20:39,851 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-29 23:20:39,851 - src.execution - INFO - Execution module initialized in live mode
+2025-04-29 23:20:39,851 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-29 23:20:40,145 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-29 23:20:40,968 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 94710.0
+2025-04-29 23:20:40,969 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-29 23:20:40,969 - src.execution.position_manager - INFO - Existing positions [{'id': 'imported_1745979640968_BTC', 'imported': True, 'type': 'buy', 'timestamp': 1745979640968, 'price': 94710.0, 'symbol': 'BTCUSDT', 'side': 'LONG', 'quantity': 0.00175589, 'entry_price': 94710.0, 'stop_loss': 92815.8, 'take_profit': None, 'status': 'OPEN', 'pnl': 0.0, 'pnl_percent': 0.0}]
+2025-04-29 23:20:40,969 - root - INFO - Trading bot initialized
+2025-04-29 23:20:40,970 - root - INFO - Starting trading bot...
+2025-04-29 23:20:40,970 - root - INFO - Starting trading cycle...
+2025-04-29 23:20:40,970 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 23:20:40,970 - root - INFO - Candle interval: 15m
+2025-04-29 23:20:41,583 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 23:20:41,583 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 23:20:41,586 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 23:20:41,586 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 23:20:41,692 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 23:20:41,700 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 23:20:41,710 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 23:20:41,715 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 23:20:41,721 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 23:20:41,724 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 23:20:41,727 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 23:20:41,727 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 23:20:41,730 - src.strategy.custom_strategy - INFO - Generated signals: 5 buy signals, 2 sell signals
+2025-04-29 23:20:41,731 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 5 buy signals, 2 sell signals
+2025-04-29 23:20:41,731 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 23:20:41,731 - root - INFO - Found 0 trading opportunities
+2025-04-29 23:20:41,731 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,731 - root - INFO - Updated positions with current prices
+2025-04-29 23:20:41,732 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,734 - src.strategy.custom_strategy - INFO - Found 12 exit points for position entered at 1745979640968
+2025-04-29 23:20:41,734 - src.strategy - INFO - Found exit signal for BTCUSDT position entered at 1745979640968
+2025-04-29 23:20:41,734 - root - INFO - Found 12 exit signals
+2025-04-29 23:20:41,734 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,735 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.61644339) exceeds max (5.0)
+2025-04-29 23:20:41,735 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93751.0
+2025-04-29 23:20:41,735 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,735 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,735 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.6043628668) exceeds max (5.0)
+2025-04-29 23:20:41,735 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93744.12
+2025-04-29 23:20:41,735 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,735 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,735 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.7613218739) exceeds max (5.0)
+2025-04-29 23:20:41,735 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93833.51
+2025-04-29 23:20:41,736 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,736 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,736 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.29023414579999) exceeds max (5.0)
+2025-04-29 23:20:41,736 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93565.22
+2025-04-29 23:20:41,736 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,736 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,736 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.56727847) exceeds max (5.0)
+2025-04-29 23:20:41,737 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93723.0
+2025-04-29 23:20:41,737 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,737 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,737 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (165.0858454637) exceeds max (5.0)
+2025-04-29 23:20:41,737 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94018.33
+2025-04-29 23:20:41,737 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,738 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,738 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.5866634956) exceeds max (5.0)
+2025-04-29 23:20:41,738 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93734.04
+2025-04-29 23:20:41,738 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,738 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,738 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.43498971740001) exceeds max (5.0)
+2025-04-29 23:20:41,738 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93647.66
+2025-04-29 23:20:41,738 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,738 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,738 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.315308255) exceeds max (5.0)
+2025-04-29 23:20:41,739 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93579.5
+2025-04-29 23:20:41,739 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,739 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,739 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.86837848719998) exceeds max (5.0)
+2025-04-29 23:20:41,739 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93894.48
+2025-04-29 23:20:41,739 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,739 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,739 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.8708656788) exceeds max (5.0)
+2025-04-29 23:20:41,739 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 95034.92
+2025-04-29 23:20:41,739 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,739 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:20:41,739 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.5593181161) exceeds max (5.0)
+2025-04-29 23:20:41,739 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94857.49
+2025-04-29 23:20:41,739 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:20:41,739 - root - INFO - Closed 0 positions
+2025-04-29 23:20:41,739 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 23:20:41,739 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 23:20:41,739 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 23:21:41,974 - root - INFO - Starting trading cycle...
+2025-04-29 23:21:41,976 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 23:21:41,976 - root - INFO - Candle interval: 15m
+2025-04-29 23:21:42,628 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 23:21:42,629 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 23:21:42,631 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 23:21:42,632 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 23:21:42,737 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 23:21:42,745 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 23:21:42,753 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 23:21:42,759 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 23:21:42,765 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 23:21:42,767 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 23:21:42,770 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 23:21:42,770 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 23:21:42,775 - src.strategy.custom_strategy - INFO - Generated signals: 5 buy signals, 2 sell signals
+2025-04-29 23:21:42,775 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 5 buy signals, 2 sell signals
+2025-04-29 23:21:42,775 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 23:21:42,775 - root - INFO - Found 0 trading opportunities
+2025-04-29 23:21:42,776 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,776 - root - INFO - Updated positions with current prices
+2025-04-29 23:21:42,776 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,778 - src.strategy.custom_strategy - INFO - Found 12 exit points for position entered at 1745979640968
+2025-04-29 23:21:42,778 - src.strategy - INFO - Found exit signal for BTCUSDT position entered at 1745979640968
+2025-04-29 23:21:42,778 - root - INFO - Found 12 exit signals
+2025-04-29 23:21:42,778 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,778 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.61644339) exceeds max (5.0)
+2025-04-29 23:21:42,778 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93751.0
+2025-04-29 23:21:42,779 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,779 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,779 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.6043628668) exceeds max (5.0)
+2025-04-29 23:21:42,779 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93744.12
+2025-04-29 23:21:42,779 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,779 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,779 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.7613218739) exceeds max (5.0)
+2025-04-29 23:21:42,779 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93833.51
+2025-04-29 23:21:42,779 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,779 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,779 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.29023414579999) exceeds max (5.0)
+2025-04-29 23:21:42,779 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93565.22
+2025-04-29 23:21:42,779 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,779 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,779 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.56727847) exceeds max (5.0)
+2025-04-29 23:21:42,779 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93723.0
+2025-04-29 23:21:42,779 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,779 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,780 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (165.0858454637) exceeds max (5.0)
+2025-04-29 23:21:42,780 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94018.33
+2025-04-29 23:21:42,780 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,780 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,780 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.5866634956) exceeds max (5.0)
+2025-04-29 23:21:42,780 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93734.04
+2025-04-29 23:21:42,780 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,780 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,780 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.43498971740001) exceeds max (5.0)
+2025-04-29 23:21:42,780 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93647.66
+2025-04-29 23:21:42,780 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,780 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,781 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.315308255) exceeds max (5.0)
+2025-04-29 23:21:42,781 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93579.5
+2025-04-29 23:21:42,781 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,781 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,781 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.86837848719998) exceeds max (5.0)
+2025-04-29 23:21:42,781 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93894.48
+2025-04-29 23:21:42,781 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,781 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,781 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.8708656788) exceeds max (5.0)
+2025-04-29 23:21:42,781 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 95034.92
+2025-04-29 23:21:42,781 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,781 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:21:42,781 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.5593181161) exceeds max (5.0)
+2025-04-29 23:21:42,781 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94857.49
+2025-04-29 23:21:42,781 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:21:42,781 - root - INFO - Closed 0 positions
+2025-04-29 23:21:42,781 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 23:21:42,782 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 23:21:42,782 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 23:22:43,031 - root - INFO - Starting trading cycle...
+2025-04-29 23:22:43,033 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 23:22:43,034 - root - INFO - Candle interval: 15m
+2025-04-29 23:22:43,814 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 23:22:43,815 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 23:22:43,818 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 23:22:43,818 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 23:22:43,923 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 23:22:43,927 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 23:22:43,935 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 23:22:43,940 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 23:22:43,946 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 23:22:43,948 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 23:22:43,951 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 23:22:43,951 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 23:22:43,956 - src.strategy.custom_strategy - INFO - Generated signals: 5 buy signals, 2 sell signals
+2025-04-29 23:22:43,956 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 5 buy signals, 2 sell signals
+2025-04-29 23:22:43,956 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 23:22:43,956 - root - INFO - Found 0 trading opportunities
+2025-04-29 23:22:43,957 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,957 - root - INFO - Updated positions with current prices
+2025-04-29 23:22:43,957 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,959 - src.strategy.custom_strategy - INFO - Found 12 exit points for position entered at 1745979640968
+2025-04-29 23:22:43,959 - src.strategy - INFO - Found exit signal for BTCUSDT position entered at 1745979640968
+2025-04-29 23:22:43,959 - root - INFO - Found 12 exit signals
+2025-04-29 23:22:43,959 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,959 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.61644339) exceeds max (5.0)
+2025-04-29 23:22:43,959 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93751.0
+2025-04-29 23:22:43,959 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,959 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,959 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.6043628668) exceeds max (5.0)
+2025-04-29 23:22:43,960 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93744.12
+2025-04-29 23:22:43,960 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,960 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,960 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.7613218739) exceeds max (5.0)
+2025-04-29 23:22:43,960 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93833.51
+2025-04-29 23:22:43,960 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,960 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,960 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.29023414579999) exceeds max (5.0)
+2025-04-29 23:22:43,960 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93565.22
+2025-04-29 23:22:43,960 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,960 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,960 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.56727847) exceeds max (5.0)
+2025-04-29 23:22:43,960 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93723.0
+2025-04-29 23:22:43,960 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,960 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,961 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (165.0858454637) exceeds max (5.0)
+2025-04-29 23:22:43,961 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94018.33
+2025-04-29 23:22:43,961 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,961 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,961 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.5866634956) exceeds max (5.0)
+2025-04-29 23:22:43,961 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93734.04
+2025-04-29 23:22:43,961 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,961 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,961 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.43498971740001) exceeds max (5.0)
+2025-04-29 23:22:43,961 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93647.66
+2025-04-29 23:22:43,961 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,961 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,961 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.315308255) exceeds max (5.0)
+2025-04-29 23:22:43,961 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93579.5
+2025-04-29 23:22:43,961 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,961 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,961 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.86837848719998) exceeds max (5.0)
+2025-04-29 23:22:43,962 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93894.48
+2025-04-29 23:22:43,962 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,962 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,962 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.8708656788) exceeds max (5.0)
+2025-04-29 23:22:43,962 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 95034.92
+2025-04-29 23:22:43,962 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,962 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:22:43,962 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.5593181161) exceeds max (5.0)
+2025-04-29 23:22:43,962 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94857.49
+2025-04-29 23:22:43,962 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:22:43,962 - root - INFO - Closed 0 positions
+2025-04-29 23:22:43,962 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 23:22:43,962 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 23:22:43,962 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 23:23:44,227 - root - INFO - Starting trading cycle...
+2025-04-29 23:23:44,229 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 23:23:44,230 - root - INFO - Candle interval: 15m
+2025-04-29 23:23:45,305 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 23:23:45,305 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 23:23:45,307 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 23:23:45,307 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 23:23:45,412 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 23:23:45,415 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 23:23:45,420 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 23:23:45,424 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 23:23:45,428 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 23:23:45,430 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 23:23:45,432 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 23:23:45,432 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 23:23:45,435 - src.strategy.custom_strategy - INFO - Generated signals: 5 buy signals, 2 sell signals
+2025-04-29 23:23:45,435 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 5 buy signals, 2 sell signals
+2025-04-29 23:23:45,435 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 23:23:45,435 - root - INFO - Found 0 trading opportunities
+2025-04-29 23:23:45,436 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,436 - root - INFO - Updated positions with current prices
+2025-04-29 23:23:45,436 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,437 - src.strategy.custom_strategy - INFO - Found 12 exit points for position entered at 1745979640968
+2025-04-29 23:23:45,438 - src.strategy - INFO - Found exit signal for BTCUSDT position entered at 1745979640968
+2025-04-29 23:23:45,438 - root - INFO - Found 12 exit signals
+2025-04-29 23:23:45,438 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,438 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.61644339) exceeds max (5.0)
+2025-04-29 23:23:45,438 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93751.0
+2025-04-29 23:23:45,438 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,438 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,438 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.6043628668) exceeds max (5.0)
+2025-04-29 23:23:45,438 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93744.12
+2025-04-29 23:23:45,438 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,438 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,439 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.7613218739) exceeds max (5.0)
+2025-04-29 23:23:45,439 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93833.51
+2025-04-29 23:23:45,439 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,439 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,439 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.29023414579999) exceeds max (5.0)
+2025-04-29 23:23:45,439 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93565.22
+2025-04-29 23:23:45,439 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,439 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,439 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.56727847) exceeds max (5.0)
+2025-04-29 23:23:45,439 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93723.0
+2025-04-29 23:23:45,439 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,439 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,439 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (165.0858454637) exceeds max (5.0)
+2025-04-29 23:23:45,439 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94018.33
+2025-04-29 23:23:45,439 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,439 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,439 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.5866634956) exceeds max (5.0)
+2025-04-29 23:23:45,439 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93734.04
+2025-04-29 23:23:45,439 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,439 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,439 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.43498971740001) exceeds max (5.0)
+2025-04-29 23:23:45,440 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93647.66
+2025-04-29 23:23:45,440 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,440 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,440 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.315308255) exceeds max (5.0)
+2025-04-29 23:23:45,440 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93579.5
+2025-04-29 23:23:45,440 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,440 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,440 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (164.86837848719998) exceeds max (5.0)
+2025-04-29 23:23:45,440 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 93894.48
+2025-04-29 23:23:45,440 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,440 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,440 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.8708656788) exceeds max (5.0)
+2025-04-29 23:23:45,440 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 95034.92
+2025-04-29 23:23:45,440 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,440 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:23:45,440 - src.risk_management.risk_manager - WARNING - Order rejected: Position size (166.5593181161) exceeds max (5.0)
+2025-04-29 23:23:45,440 - src.execution.binance_executor - WARNING - Order rejected by risk manager: SELL 0.00175589 BTCUSDT at 94857.49
+2025-04-29 23:23:45,440 - src.execution - ERROR - Error executing exit signal: Order rejected by risk manager
+2025-04-29 23:23:45,440 - root - INFO - Closed 0 positions
+2025-04-29 23:23:45,440 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 23:23:45,440 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 23:23:45,440 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 23:24:09,934 - root - INFO - Received signal 2. Shutting down...
+2025-04-29 23:24:09,934 - root - INFO - Stopping trading bot...
+2025-04-29 23:24:10,485 - root - INFO - Trading bot stopped
+2025-04-29 23:24:16,013 - root - INFO - Initializing trading bot...
+2025-04-29 23:24:16,016 - src.config.config_manager - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 23:24:16,016 - root - INFO - Configuration loaded from /Users/adrianotavares/dev/crypto_trading_bot/config/config.yaml
+2025-04-29 23:24:16,016 - src.risk_management.risk_manager - INFO - Risk manager initialized with parameters:
+2025-04-29 23:24:16,016 - src.risk_management.risk_manager - INFO - Max position size: 20000% of account
+2025-04-29 23:24:16,016 - src.risk_management.risk_manager - INFO - Max open positions: 5
+2025-04-29 23:24:16,016 - src.risk_management.risk_manager - INFO - Max daily loss: 3.0% of account
+2025-04-29 23:24:16,016 - src.risk_management.risk_manager - INFO - Trailing stop percentage: 2.0%
+2025-04-29 23:24:16,365 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 23:24:16,366 - src.data_collection.binance_data_provider - INFO - Binance data provider initialized
+2025-04-29 23:24:16,367 - src.data_collection.data_preprocessor - INFO - Data preprocessor initialized
+2025-04-29 23:24:16,367 - src.data_collection - INFO - Data collection module initialized
+2025-04-29 23:24:16,367 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 23:24:16,367 - src.strategy.indicator_calculator - INFO - Indicator calculator initialized
+2025-04-29 23:24:16,367 - src.strategy.custom_strategy - INFO - Custom strategy initialized with parameters:
+2025-04-29 23:24:16,368 - src.strategy.custom_strategy - INFO - RSI: period=14, overbought=70, oversold=30
+2025-04-29 23:24:16,368 - src.strategy.custom_strategy - INFO - MACD: fast=12, slow=26, signal=9
+2025-04-29 23:24:16,368 - src.strategy.custom_strategy - INFO - Bollinger Bands: period=20, std_dev=2.0
+2025-04-29 23:24:16,368 - src.strategy.custom_strategy - INFO - Stochastic: k_period=14, d_period=3, smooth_k=3
+2025-04-29 23:24:16,368 - src.strategy.custom_strategy - INFO - ATR: period=14, multiplier=2.0
+2025-04-29 23:24:16,368 - src.strategy.custom_strategy - INFO - Trailing stop: percentage=2.0
+2025-04-29 23:24:16,369 - src.strategy.signal_generator - INFO - Signal generator initialized with threshold: 3
+2025-04-29 23:24:16,369 - src.strategy - INFO - Strategy module initialized
+2025-04-29 23:24:16,713 - src.execution.binance_executor - INFO - Binance executor initialized in live mode
+2025-04-29 23:24:17,014 - src.execution.binance_executor - INFO - Successfully connected to Binance API
+2025-04-29 23:24:17,014 - src.execution.position_manager - INFO - Position manager initialized
+2025-04-29 23:24:17,014 - src.execution - INFO - Execution module initialized in live mode
+2025-04-29 23:24:17,014 - src.execution.position_manager - INFO - Importing existing positions from Binance account...
+2025-04-29 23:24:17,313 - src.execution.binance_executor - INFO - Retrieved account balance for 2 assets
+2025-04-29 23:24:18,121 - src.execution.position_manager - INFO - Imported position for BTCUSDT: 0.00175589 at approx. 94716.88
+2025-04-29 23:24:18,121 - src.execution.position_manager - INFO - Imported 1 existing positions
+2025-04-29 23:24:18,121 - src.execution.position_manager - INFO - Existing positions [{'id': 'imported_1745979858121_BTC', 'imported': True, 'type': 'buy', 'timestamp': 1745979858121, 'price': 94716.88, 'symbol': 'BTCUSDT', 'side': 'LONG', 'quantity': 0.00175589, 'entry_price': 94716.88, 'stop_loss': 92822.5424, 'take_profit': None, 'status': 'OPEN', 'pnl': 0.0, 'pnl_percent': 0.0}]
+2025-04-29 23:24:18,122 - root - INFO - Trading bot initialized
+2025-04-29 23:24:18,122 - root - INFO - Starting trading bot...
+2025-04-29 23:24:18,122 - root - INFO - Starting trading cycle...
+2025-04-29 23:24:18,122 - root - INFO - Top 1 trading pairs: ['BTCUSDT']
+2025-04-29 23:24:18,122 - root - INFO - Candle interval: 15m
+2025-04-29 23:24:18,744 - src.data_collection.data_preprocessor - INFO - Preprocessed OHLCV data: 168 rows, 5 columns
+2025-04-29 23:24:18,744 - src.data_collection.binance_data_provider - INFO - Retrieved historical data for BTCUSDT at 15m interval
+2025-04-29 23:24:18,746 - src.data_collection.data_preprocessor - INFO - Calculated returns for price data
+2025-04-29 23:24:18,746 - src.data_collection - INFO - Retrieved and preprocessed 167 candles for BTCUSDT
+2025-04-29 23:24:18,852 - root - INFO - Retrieved historical data for 1 pairs
+2025-04-29 23:24:18,860 - src.strategy.indicator_calculator - INFO - Added RSI to DataFrame
+2025-04-29 23:24:18,869 - src.strategy.indicator_calculator - INFO - Added MACD to DataFrame
+2025-04-29 23:24:18,874 - src.strategy.indicator_calculator - INFO - Added Bollinger Bands to DataFrame
+2025-04-29 23:24:18,880 - src.strategy.indicator_calculator - INFO - Added Stochastic Oscillator to DataFrame
+2025-04-29 23:24:18,883 - src.strategy.indicator_calculator - INFO - Added ATR to DataFrame
+2025-04-29 23:24:18,885 - src.strategy.indicator_calculator - INFO - Added volume indicators to DataFrame
+2025-04-29 23:24:18,885 - src.strategy.custom_strategy - INFO - Calculated indicators for 167 data points
+2025-04-29 23:24:18,889 - src.strategy.custom_strategy - INFO - Generated signals: 5 buy signals, 2 sell signals
+2025-04-29 23:24:18,890 - src.strategy - INFO - Analyzed data for BTCUSDT: 167 candles, 5 buy signals, 2 sell signals
+2025-04-29 23:24:18,890 - root - INFO - Analyzed data for 1 pairs
+2025-04-29 23:24:18,890 - root - INFO - Found 0 trading opportunities
+2025-04-29 23:24:18,890 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:18,890 - root - INFO - Updated positions with current prices
+2025-04-29 23:24:18,890 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:18,893 - src.strategy.custom_strategy - INFO - Found 12 exit points for position entered at 1745979858121
+2025-04-29 23:24:18,893 - src.strategy - INFO - Found exit signal for BTCUSDT position entered at 1745979858121
+2025-04-29 23:24:18,893 - root - INFO - Found 12 exit signals
+2025-04-29 23:24:18,893 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:18,893 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:19,246 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:19,246 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:19,247 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:19,247 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:19,546 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:19,547 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:19,547 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:19,548 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:19,843 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:19,843 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:19,844 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:19,844 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:20,165 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:20,165 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:20,165 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:20,166 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:20,461 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:20,461 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:20,461 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:20,462 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:20,756 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:20,757 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:20,757 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:20,757 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:21,086 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:21,086 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:21,086 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:21,086 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:21,378 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:21,379 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:21,379 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:21,379 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:21,676 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:21,677 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:21,677 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:21,677 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:21,975 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:21,976 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:21,976 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:21,977 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:22,273 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:22,274 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:22,274 - src.execution.position_manager - INFO - Retrieved 1 open positions
+2025-04-29 23:24:22,274 - src.risk_management.risk_manager - INFO - Order approved: SELL 0.00175589 BTCUSDT
+2025-04-29 23:24:22,564 - src.execution.binance_executor - ERROR - Error placing order on Binance: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:22,565 - src.execution - ERROR - Error executing exit signal: APIError(code=-1013): Filter failure: LOT_SIZE
+2025-04-29 23:24:22,565 - root - INFO - Closed 0 positions
+2025-04-29 23:24:22,565 - src.execution.position_manager - INFO - No closed positions to calculate performance metrics
+2025-04-29 23:24:22,565 - root - INFO - Performance metrics: {'total_trades': 0, 'winning_trades': 0, 'losing_trades': 0, 'win_rate': 0.0, 'total_pnl': 0.0, 'average_pnl': 0.0, 'average_win': 0.0, 'average_loss': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.0}
+2025-04-29 23:24:22,566 - root - INFO - Trading cycle completed. Waiting 60 seconds for next cycle...
+2025-04-29 23:25:20,269 - root - INFO - Received signal 2. Shutting down...
+2025-04-29 23:25:20,270 - root - INFO - Stopping trading bot...
+2025-04-29 23:25:20,815 - root - INFO - Trading bot stopped

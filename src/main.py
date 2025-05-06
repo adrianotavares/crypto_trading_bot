@@ -49,6 +49,11 @@ class TradingBot:
         self.strategy = StrategyModule(self.config)
         self.execution = ExecutionModule(self.config, self.risk_manager)
         
+        # Import existing positions if in live mode
+        if self.config.get('execution', 'mode') == 'live':
+            trading_pairs = self.config.get('bot', 'trading_pairs', default=None)
+            self.execution.position_manager.import_existing_positions(symbols=trading_pairs)
+        
         # Trading parameters
         self.trading_interval = self.config.get('bot', 'trading_interval', default=3600)  # Default: 1 hour
         self.top_n_cryptos = self.config.get('bot', 'top_n_cryptos', default=10)
