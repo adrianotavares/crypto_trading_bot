@@ -109,7 +109,13 @@ class CustomStrategy(Strategy):
         # Calculate volume indicators
         df = self.indicator_calculator.add_volume_indicators(df)
         
+        # log all indicators calculated: label and value
+        for col in df.columns:
+            if col.startswith('RSI_') or col.startswith('MACD_') or col.startswith('BB_') or col.startswith('Stoch_') or col.startswith('ATR_'):
+                logger.info(f"{col}: {df[col].iloc[-1]}")  
+        
         logger.info(f"Calculated indicators for {len(df)} data points")
+        
         return df
     
     def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:

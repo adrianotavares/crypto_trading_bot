@@ -5,7 +5,7 @@ binance:
   testnet: false  # Use testnet for testing
 
 execution:
-  mode: "live"  # "paper" or "live"
+  mode: "paper"  # "paper" or "live"
   open_positions: 0  # Current number of open positions
   daily_pnl: 0.0  # Current daily PnL
 
@@ -52,10 +52,10 @@ strategy:
 
 risk:
   max_position_size: 200  # 5% of account
-  max_open_positions: 5
+  max_open_positions: 3  # Maximum number of open positions
   max_daily_loss: 0.03  # 3% of account
   trailing_stop_pct: 0.02  # 2%
 
 logging:
-  level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+  log_level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
   log_to_file: true

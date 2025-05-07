@@ -539,6 +539,12 @@ class PositionManager:
             open_positions = self.positions.copy()
         
         logger.info(f"Retrieved {len(open_positions)} open positions")
+        
+        for pos in open_positions:
+            # Update type to 'buy' or 'sell'
+            pos['type'] = 'buy' if pos['side'] == 'LONG' else 'sell'
+            logger.info(f"Position object: {pos}")
+        
         return open_positions
     
     def get_position_history(self, symbol: Optional[str] = None) -> List[Dict[str, Any]]:
@@ -557,6 +563,7 @@ class PositionManager:
             history = self.position_history.copy()
         
         logger.info(f"Retrieved {len(history)} closed positions")
+        
         return history
     
     def get_performance_metrics(self) -> Dict[str, Any]:
