@@ -49,13 +49,13 @@ class CustomStrategy(Strategy):
         # Trailing stop loss parameters
         self.trailing_stop_pct = config.get('strategy', 'trailing_stop_pct', default=2.0)
         
-        logger.info("Custom strategy initialized with parameters:")
-        logger.info(f"RSI: period={self.rsi_period}, overbought={self.rsi_overbought}, oversold={self.rsi_oversold}")
-        logger.info(f"MACD: fast={self.macd_fast}, slow={self.macd_slow}, signal={self.macd_signal}")
-        logger.info(f"Bollinger Bands: period={self.bb_period}, std_dev={self.bb_std_dev}")
-        logger.info(f"Stochastic: k_period={self.stoch_k_period}, d_period={self.stoch_d_period}, smooth_k={self.stoch_smooth_k}")
-        logger.info(f"ATR: period={self.atr_period}, multiplier={self.atr_multiplier}")
-        logger.info(f"Trailing stop: percentage={self.trailing_stop_pct}")
+        # logger.info("Custom strategy initialized with parameters:")
+        # logger.info(f"RSI: period={self.rsi_period}, overbought={self.rsi_overbought}, oversold={self.rsi_oversold}")
+        # logger.info(f"MACD: fast={self.macd_fast}, slow={self.macd_slow}, signal={self.macd_signal}")
+        # logger.info(f"Bollinger Bands: period={self.bb_period}, std_dev={self.bb_std_dev}")
+        # logger.info(f"Stochastic: k_period={self.stoch_k_period}, d_period={self.stoch_d_period}, smooth_k={self.stoch_smooth_k}")
+        # logger.info(f"ATR: period={self.atr_period}, multiplier={self.atr_multiplier}")
+        # logger.info(f"Trailing stop: percentage={self.trailing_stop_pct}")
     
     def calculate_indicators(self, data: pd.DataFrame) -> pd.DataFrame:
         """
@@ -224,9 +224,9 @@ class CustomStrategy(Strategy):
             logger.error("Position object is missing the 'type' key")
             return []
 
-        if 'price' not in position or 'timestamp' not in position:
-            logger.error("Position object is missing required keys: 'price' or 'timestamp'")
-            return []
+        # if 'price' not in position or 'timestamp' not in position:
+        #     logger.error("Position object is missing required keys: 'price' or 'timestamp'")
+        #     return []
     
         df = data.copy()
         exit_points = []

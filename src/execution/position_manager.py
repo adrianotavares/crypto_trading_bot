@@ -132,7 +132,7 @@ class PositionManager:
                     
                     # Create position object
                     position = {
-                        'id': f"imported_{int(time.time() * 1000)}_{base_asset}",
+                        'id': f"pos_{int(time.time() * 1000)}_{base_asset}",
                         'imported': True,  # Mark as imported
                         'type': 'buy', # required
                         'timestamp': int(time.time() * 1000),  # required Current time as we don't know actual entry time
@@ -207,6 +207,8 @@ class PositionManager:
             'symbol': symbol,
             'side': side,
             'quantity': quantity,
+            'price': price or float(order.get('price', 0)),
+            'timestamp': int(time.time() * 1000),
             'entry_price': price or float(order.get('price', 0)),
             'entry_time': int(time.time() * 1000),
             'entry_order_id': order.get('orderId'),

@@ -45,7 +45,7 @@ strategy:
   atr_multiplier: 2.0
   
   # Trailing stop parameters
-  trailing_stop_pct: 2.0
+  trailing_stop_pct: 1.0
   
   # Signal threshold
   signal_threshold: 3

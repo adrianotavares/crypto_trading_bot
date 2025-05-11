@@ -236,6 +236,58 @@
       "status": "NEW",
       "time": 1746574198570,
       "updateTime": 1746574198570
+    },
+    {
+      "orderId": "paper_1746923130707",
+      "symbol": "ETHUSDT",
+      "side": "BUY",
+      "type": "STOP_LOSS",
+      "quantity": 7.843444840974156,
+      "price": null,
+      "stopPrice": 2637.82350601723,
+      "timeInForce": "GTC",
+      "status": "NEW",
+      "time": 1746923130707,
+      "updateTime": 1746923130707
+    },
+    {
+      "orderId": "paper_1746923130708",
+      "symbol": "ETHUSDT",
+      "side": "BUY",
+      "type": "TAKE_PROFIT",
+      "quantity": 7.843444840974156,
+      "price": null,
+      "stopPrice": 2374.05298796554,
+      "timeInForce": "GTC",
+      "status": "NEW",
+      "time": 1746923130708,
+      "updateTime": 1746923130708
+    },
+    {
+      "orderId": "paper_1746923711069",
+      "symbol": "ETHUSDT",
+      "side": "BUY",
+      "type": "STOP_LOSS",
+      "quantity": 7.860924523333189,
+      "price": null,
+      "stopPrice": 2638.3606770735396,
+      "timeInForce": "GTC",
+      "status": "NEW",
+      "time": 1746923711069,
+      "updateTime": 1746923711069
+    },
+    {
+      "orderId": "paper_1746923711070",
+      "symbol": "ETHUSDT",
+      "side": "BUY",
+      "type": "TAKE_PROFIT",
+      "quantity": 7.860924523333189,
+      "price": null,
+      "stopPrice": 2355.9686458529213,
+      "timeInForce": "GTC",
+      "status": "NEW",
+      "time": 1746923711070,
+      "updateTime": 1746923711070
     }
   ],
   "positions": []
