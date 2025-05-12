@@ -49,13 +49,13 @@ class CustomStrategy(Strategy):
         # Trailing stop loss parameters
         self.trailing_stop_pct = config.get('strategy', 'trailing_stop_pct', default=2.0)
         
-        # logger.info("Custom strategy initialized with parameters:")
-        # logger.info(f"RSI: period={self.rsi_period}, overbought={self.rsi_overbought}, oversold={self.rsi_oversold}")
-        # logger.info(f"MACD: fast={self.macd_fast}, slow={self.macd_slow}, signal={self.macd_signal}")
-        # logger.info(f"Bollinger Bands: period={self.bb_period}, std_dev={self.bb_std_dev}")
-        # logger.info(f"Stochastic: k_period={self.stoch_k_period}, d_period={self.stoch_d_period}, smooth_k={self.stoch_smooth_k}")
-        # logger.info(f"ATR: period={self.atr_period}, multiplier={self.atr_multiplier}")
-        # logger.info(f"Trailing stop: percentage={self.trailing_stop_pct}")
+        logger.debug("Custom strategy initialized with parameters:")
+        logger.debug(f"RSI: period={self.rsi_period}, overbought={self.rsi_overbought}, oversold={self.rsi_oversold}")
+        logger.debug(f"MACD: fast={self.macd_fast}, slow={self.macd_slow}, signal={self.macd_signal}")
+        logger.debug(f"Bollinger Bands: period={self.bb_period}, std_dev={self.bb_std_dev}")
+        logger.debug(f"Stochastic: k_period={self.stoch_k_period}, d_period={self.stoch_d_period}, smooth_k={self.stoch_smooth_k}")
+        logger.debug(f"ATR: period={self.atr_period}, multiplier={self.atr_multiplier}")
+        logger.debug(f"Trailing stop: percentage={self.trailing_stop_pct}")
     
     def calculate_indicators(self, data: pd.DataFrame) -> pd.DataFrame:
         """
@@ -112,7 +112,7 @@ class CustomStrategy(Strategy):
         # log all indicators calculated: label and value
         for col in df.columns:
             if col.startswith('RSI_') or col.startswith('MACD_') or col.startswith('BB_') or col.startswith('Stoch_') or col.startswith('ATR_'):
-                logger.info(f"{col}: {df[col].iloc[-1]}")  
+                logger.debug(f"{col}: {df[col].iloc[-1]}")  
         
         logger.info(f"Calculated indicators for {len(df)} data points")
         
@@ -156,8 +156,9 @@ class CustomStrategy(Strategy):
         df['Signal_Strength'] -= np.where(df['High_Volume'] & (df['Signal_Strength'] < 0), 1, 0)  # High volume confirms sell signal
         
         # Generate final buy/sell signals based on signal strength
-        df['Buy_Signal'] = df['Signal_Strength'] >= 3  # Strong buy signal
-        df['Sell_Signal'] = df['Signal_Strength'] <= -3  # Strong sell signal
+        signal_threshold = self.config.get('strategy', 'signal_threshold', default=3)
+        df['Buy_Signal'] = df['Signal_Strength'] >= signal_threshold # Strong buy signal
+        df['Sell_Signal'] = df['Signal_Strength'] <= -signal_threshold  # Strong sell signal
         
         logger.info(f"Generated signals: {df['Buy_Signal'].sum()} buy signals, {df['Sell_Signal'].sum()} sell signals")
         return df
