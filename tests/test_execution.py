@@ -25,7 +25,7 @@ def test_execution():
     Test the execution module.
     """
     # Setup logging
-    setup_logger(log_level=logging.INFO)
+    setup_logger(log_level=logging.DEBUG, log_to_file=False)
     logger = logging.getLogger(__name__)
     logger.info("Starting execution test...")
 

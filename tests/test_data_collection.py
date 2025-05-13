@@ -6,6 +6,7 @@ import os
 import sys
 import logging
 import time
+import datetime as dt
 from pathlib import Path
 
 # Add the src directory to the Python path
@@ -21,7 +22,7 @@ def test_data_collection():
     Test the data collection module.
     """
     # Setup logging
-    setup_logger(log_level=logging.INFO)
+    setup_logger(log_level=logging.DEBUG)
     logger = logging.getLogger(__name__)
     logger.info("Starting data collection test...")
 
@@ -52,10 +53,16 @@ def test_data_collection():
     try:
         logger.info("Testing get_historical_data...")
         symbol = top_cryptos[0]['symbol']
+        
+        now = dt.datetime.now(dt.timezone.utc)
+        past = now - dt.timedelta(days=7)
+            
         historical_data = data_provider.get_historical_data(
             symbol=symbol,
             interval='1h',
-            limit=100
+            limit=7 * 24,
+            start_time=past,  # Last 7 days
+            end_time=now  # Current time
         )
         
         logger.info(f"Historical data for {symbol}: {len(historical_data)} candles")

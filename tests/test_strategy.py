@@ -6,6 +6,7 @@ import os
 import sys
 import logging
 import time
+import datetime as dt
 from pathlib import Path
 import pandas as pd
 
@@ -24,7 +25,7 @@ def test_strategy():
     Test the strategy module.
     """
     # Setup logging
-    setup_logger(log_level=logging.INFO)
+    setup_logger(log_level=logging.DEBUG, log_to_file=False)
     logger = logging.getLogger(__name__)
     logger.info("Starting strategy test...")
 
@@ -46,13 +47,18 @@ def test_strategy():
         top_cryptos = data_provider.get_top_cryptocurrencies(limit=3)
         symbols = [crypto['symbol'] for crypto in top_cryptos]
         
+        now = dt.datetime.now(dt.timezone.utc)
+        past = now - dt.timedelta(days=7)
+                  
         # Get historical data for each symbol
         historical_data = {}
         for symbol in symbols:
             data = data_provider.get_historical_data(
                 symbol=symbol,
                 interval='1h',
-                limit=200
+                limit=7 * 24,
+                start_time=past,  # Last 7 days
+                end_time=now  # Current time
             )
             historical_data[symbol] = data
             logger.info(f"Retrieved {len(data)} candles for {symbol}")

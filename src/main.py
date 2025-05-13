@@ -140,7 +140,7 @@ class TradingBot:
                     
                     # Step 9: Get performance metrics
                     metrics = self.execution.get_performance_metrics()
-                    self.logger.info(f"Step 9: Performance metrics")
+                    self.logger.info(f"Step 9: Performance metrics ")
                     
                     # Log performance metrics
                     for key, value in metrics.items():

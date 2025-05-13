@@ -25,7 +25,7 @@ class ColorFormatter(logging.Formatter):
         message = super().format(record)
         return f"{color}{message}{self.COLORS['RESET']}"
 
-def setup_logger(log_level, log_to_file):
+def setup_logger(log_level=logging.DEBUG, log_to_file=False):
     """
     Set up the logger for the trading bot.
     

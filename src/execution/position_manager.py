@@ -548,7 +548,7 @@ class PositionManager:
                         
         for pos in open_positions:
             logger.debug("Position object:")        
-            for key, value in pos:
+            for key, value in pos.items():
                 logger.debug(f"{key}: {value}")
             
         return open_positions

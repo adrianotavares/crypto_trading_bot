@@ -6,6 +6,7 @@ import os
 import sys
 import logging
 import time
+import datetime as dt
 from pathlib import Path
 import pandas as pd
 
@@ -24,7 +25,7 @@ def test_integration():
     Integration test for the complete trading bot.
     """
     # Setup logging
-    setup_logger(log_level=logging.INFO)
+    setup_logger(log_level=logging.DEBUG, log_to_file=False)
     logger = logging.getLogger(__name__)
     logger.info("Starting integration test...")
 
@@ -47,6 +48,9 @@ def test_integration():
         logger.info(f"Top trading pairs: {trading_pairs}")
         
         # Step 2: Get historical data for pairs
+        now = dt.datetime.now(dt.timezone.utc)
+        past = now - dt.timedelta(days=7)
+            
         historical_data = data_collection.get_historical_data_for_pairs(
             trading_pairs=trading_pairs,
             interval='1h',
