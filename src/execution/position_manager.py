@@ -545,8 +545,12 @@ class PositionManager:
         for pos in open_positions:
             # Update type to 'buy' or 'sell'
             pos['type'] = 'buy' if pos['side'] == 'LONG' else 'sell'
-            logger.info(f"Position object: {pos}")
-        
+                        
+        for pos in open_positions:
+            logger.debug("Position object:")        
+            for key, value in pos:
+                logger.debug(f"{key}: {value}")
+            
         return open_positions
     
     def get_position_history(self, symbol: Optional[str] = None) -> List[Dict[str, Any]]:
@@ -642,5 +646,4 @@ class PositionManager:
             'max_drawdown': max_drawdown
         }
         
-        logger.info(f"Calculated performance metrics: {metrics}")
         return metrics

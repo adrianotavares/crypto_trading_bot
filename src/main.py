@@ -140,9 +140,12 @@ class TradingBot:
                     
                     # Step 9: Get performance metrics
                     metrics = self.execution.get_performance_metrics()
-                    self.logger.info(f"Step 9: Get performance metrics")
-                    self.logger.debug(f"Performance metrics: {metrics}")
+                    self.logger.info(f"Step 9: Performance metrics")
                     
+                    # Log performance metrics
+                    for key, value in metrics.items():
+                        self.logger.info(f"{key}: {value}")
+            
                 except Exception as e:
                     self.logger.error(f"Error in trading cycle: {e}")
                 
