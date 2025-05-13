@@ -147,7 +147,7 @@ class TradingBot:
                     self.logger.error(f"Error in trading cycle: {e}")
                 
                 # Wait for next cycle
-                self.logger.info(f"Trading cycle completed. Waiting {self.trading_interval} seconds for next cycle...")
+                self.logger.info(f"Step 10: Trading cycle completed. Waiting {self.trading_interval} seconds for next cycle...")
                 self.logger.info(f"------")
                
                 # time.sleep(self.trading_interval)

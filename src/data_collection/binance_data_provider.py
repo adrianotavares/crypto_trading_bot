@@ -83,10 +83,12 @@ class BinanceDataProvider(MarketDataProvider):
             logger.error(f"Error getting top cryptocurrencies from Binance: {e}")
             raise
     
-    def get_historical_data(self, symbol: str, interval: str, 
-                           start_time: Optional[str] = None, 
-                           end_time: Optional[str] = None,
-                           limit: Optional[int] = None) -> pd.DataFrame:
+    def get_historical_data(self, 
+                            symbol: str, 
+                            interval: str, 
+                            start_time: Optional[str] = None, 
+                            end_time: Optional[str] = None,
+                            limit: Optional[int] = None) -> pd.DataFrame:
         """
         Get historical OHLCV data for a specific cryptocurrency.
         
@@ -101,10 +103,7 @@ class BinanceDataProvider(MarketDataProvider):
             DataFrame with historical data
         """
         try:
-            # Convert ISO format to milliseconds timestamp if provided
-            start_ms = None
-            end_ms = None
-            
+            # Convert start_time and end_time to milliseconds           
             if start_time:
                 start_ms = int(pd.Timestamp(start_time).timestamp() * 1000)
             if end_time:

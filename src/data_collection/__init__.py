@@ -6,8 +6,8 @@ import logging
 from typing import Dict, List, Any, Optional
 import pandas as pd
 import time
-from datetime import datetime, timedelta
-
+import datetime as dt
+                
 from src.data_collection.binance_data_provider import BinanceDataProvider
 from src.data_collection.data_preprocessor import DataPreprocessor
 
@@ -53,8 +53,10 @@ class DataCollectionModule:
             logger.error(f"Error getting top trading pairs: {e}")
             return []
     
-    def get_historical_data_for_pairs(self, trading_pairs: List[str], 
-                                     interval: str = '1h', days: int = 7) -> Dict[str, pd.DataFrame]:
+    def get_historical_data_for_pairs(self, 
+                                      trading_pairs: List[str], 
+                                      interval: str = '1h', 
+                                      days: int = 7) -> Dict[str, pd.DataFrame]:
         """
         Get historical data for multiple trading pairs.
         
@@ -70,10 +72,15 @@ class DataCollectionModule:
         
         for symbol in trading_pairs:
             try:
+                now = dt.datetime.now(dt.timezone.utc)
+                past = now - dt.timedelta(days=days)
+            
                 # Get historical data
                 data = self.data_provider.get_historical_data(
                     symbol=symbol,
                     interval=interval,
+                    start_time=past,
+                    end_time=now,
                     limit=days * 24  # Approximate number of candles
                 )
                 
@@ -145,7 +152,7 @@ class DataCollectionModule:
             # Save each DataFrame to a CSV file
             for symbol, df in data.items():
                 # Create filename
-                timestamp = datetime.now().strftime('%Y%m%d')
+                timestamp = dt.now().strftime('%Y%m%d')
                 filename = f"{symbol}_{timestamp}.csv"
                 filepath = Path(base_dir) / filename
                 
