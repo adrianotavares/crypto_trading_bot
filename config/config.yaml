@@ -14,7 +14,7 @@ paper_trading:
 
 bot:
   trading_interval: 300 # Trading interval in seconds (900 = 15 minutes, 3600 = 1 hour)
-  candle_interval: '15m' # Candle interval for data fetching
+  candle_interval: '1h' # Candle interval for data fetching
   
   # List of trading pairs to monitor
   trading_pairs: 
