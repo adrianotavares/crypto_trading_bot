@@ -46,7 +46,7 @@ class TradingBot:
         self.logger.info("Initializing trading bot...")
         
         self.config = ConfigManager(config_path)
-        self.logger.info(f"Configuration loaded from {config_path}")
+        # self.logger.info(f"Configuration loaded from {config_path}")
         
         # Initialize components
         self.risk_manager = RiskManager(self.config)
