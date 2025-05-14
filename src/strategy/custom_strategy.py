@@ -114,7 +114,7 @@ class CustomStrategy(Strategy):
             if col.startswith('RSI_') or col.startswith('MACD_') or col.startswith('BB_') or col.startswith('Stoch_') or col.startswith('ATR_'):
                 logger.debug(f"{col}: {df[col].iloc[-1]}")  
         
-        logger.info(f"Calculated indicators for {len(df)} data points")
+        logger.debug(f"Calculated indicators for {len(df)} data points")
         
         return df
     
@@ -160,7 +160,7 @@ class CustomStrategy(Strategy):
         df['Buy_Signal'] = df['Signal_Strength'] >= signal_threshold # Strong buy signal
         df['Sell_Signal'] = df['Signal_Strength'] <= -signal_threshold  # Strong sell signal
         
-        logger.info(f"Generated signals: {df['Buy_Signal'].sum()} buy signals, {df['Sell_Signal'].sum()} sell signals")
+        logger.debug(f"Generated signals: {df['Buy_Signal'].sum()} buy signals, {df['Sell_Signal'].sum()} sell signals")
         return df
     
     def get_entry_points(self, data: pd.DataFrame) -> List[Dict[str, Any]]:
@@ -206,7 +206,7 @@ class CustomStrategy(Strategy):
             }
             entry_points.append(entry_point)
         
-        logger.info(f"Found {len(entry_points)} entry points")
+        logger.debug(f"Found {len(entry_points)} entry points")
         return entry_points
     
     def get_exit_points(self, data: pd.DataFrame, position: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -276,7 +276,7 @@ class CustomStrategy(Strategy):
             }
             exit_points.append(exit_point)
         
-        logger.info(f"Found {len(exit_points)} exit points for position entered at {entry_time}")
+        logger.debug(f"Found {len(exit_points)} exit points for position entered at {entry_time}")
         return exit_points
     
     def optimize_parameters(self, data: pd.DataFrame, **kwargs) -> Dict[str, Any]:
@@ -310,7 +310,7 @@ class CustomStrategy(Strategy):
             'trailing_stop_pct': self.trailing_stop_pct
         }
         
-        logger.info("Parameter optimization not implemented, returning current parameters")
+        logger.debug("Parameter optimization not implemented, returning current parameters")
         return optimized_params
     
     def _calculate_stop_loss(self, row: pd.Series, position_type: str) -> float:
@@ -324,6 +324,8 @@ class CustomStrategy(Strategy):
         Returns:
             Stop loss price
         """
+        logger.debug("Calculate Stop Loss")
+
         atr = row.get(f'ATR_{self.atr_period}', 0)
         
         if position_type == 'buy':
@@ -332,7 +334,7 @@ class CustomStrategy(Strategy):
         else:
             # For short positions, stop loss is above entry price
             return row['Close'] + (atr * self.atr_multiplier)
-    
+        
     def _calculate_take_profit(self, row: pd.Series, position_type: str) -> float:
         """
         Calculate take profit price.
@@ -344,6 +346,8 @@ class CustomStrategy(Strategy):
         Returns:
             Take profit price
         """
+        logger.debug("Calculate Take Profit")
+
         atr = row.get(f'ATR_{self.atr_period}', 0)
         
         if position_type == 'buy':
@@ -379,6 +383,8 @@ class CustomStrategy(Strategy):
         # Ensure trailing stop is at least the initial stop
         trailing_stop = trailing_stop.clip(lower=initial_stop)
         
+        logger.debug("Calculate Trailing Stop Loss for LONG Position")
+
         return trailing_stop
     
     def _calculate_trailing_stop_short(self, df: pd.DataFrame, entry_price: float) -> pd.Series:
@@ -407,6 +413,8 @@ class CustomStrategy(Strategy):
         # Ensure trailing stop is at most the initial stop
         trailing_stop = trailing_stop.clip(upper=initial_stop)
         
+        logger.debug("Calculate Trailing Stop Loss for SHORT Position")
+
         return trailing_stop
     
     def _calculate_profit_percentage(self, entry_price: float, exit_price: float, position_type: str) -> float:
@@ -421,6 +429,8 @@ class CustomStrategy(Strategy):
         Returns:
             Profit percentage
         """
+        logger.debug("Calculate Profit Percentage")
+
         if position_type == 'buy':
             # For long positions
             return ((exit_price - entry_price) / entry_price) * 100

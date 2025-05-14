@@ -97,12 +97,15 @@ class TradingBot:
                     
                     candle_interval = self.config.get('bot', 'candle_interval', default='1h')
                     self.logger.info(f"Candle interval: {candle_interval}")
-                    
+
+                    days = self.config.get('bot', 'historical_data_days', default='7') 
+                    self.logger.info(f"Historical Data:  {days} days")
+
                     # Step 2: Get historical data for pairs
                     historical_data = self.data_collection.get_historical_data_for_pairs(
                         trading_pairs=trading_pairs,
                         interval=candle_interval,
-                        days=7
+                        days=days
                     )
                     self.logger.info(f"Step 2: Retrieved historical data for {len(historical_data)} pairs")
                     

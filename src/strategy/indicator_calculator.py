@@ -18,7 +18,7 @@ class IndicatorCalculator:
         """
         Initialize the indicator calculator.
         """
-        logger.info("Indicator calculator initialized")
+        logger.debug("Indicator calculator initialized")
     
     def add_moving_averages(self, df: pd.DataFrame, short_period: int = 20, 
                            medium_period: int = 50, long_period: int = 200) -> pd.DataFrame:
@@ -46,7 +46,7 @@ class IndicatorCalculator:
         df[f'EMA_{medium_period}'] = ta.ema(df['Close'], length=medium_period)
         df[f'EMA_{long_period}'] = ta.ema(df['Close'], length=long_period)
         
-        logger.info("Added moving averages to DataFrame")
+        logger.debug("Added moving averages to DataFrame")
         return df
     
     def add_rsi(self, df: pd.DataFrame, period: int = 14, 
@@ -72,7 +72,7 @@ class IndicatorCalculator:
         df['RSI_Overbought'] = df[f'RSI_{period}'] > overbought
         df['RSI_Oversold'] = df[f'RSI_{period}'] < oversold
         
-        logger.info("Added RSI to DataFrame")
+        logger.debug("Added RSI to DataFrame")
         return df
     
     def add_macd(self, df: pd.DataFrame, fast: int = 12, slow: int = 26, 
@@ -103,7 +103,7 @@ class IndicatorCalculator:
         df['MACD_Bullish_Crossover'] = (df['MACD'] > df['MACD_Signal']) & (df['MACD'].shift(1) <= df['MACD_Signal'].shift(1))
         df['MACD_Bearish_Crossover'] = (df['MACD'] < df['MACD_Signal']) & (df['MACD'].shift(1) >= df['MACD_Signal'].shift(1))
         
-        logger.info("Added MACD to DataFrame")
+        logger.debug("Added MACD to DataFrame")
         return df
     
     def add_bollinger_bands(self, df: pd.DataFrame, period: int = 20, 
@@ -137,7 +137,7 @@ class IndicatorCalculator:
         df['BB_Upper_Touch'] = df['High'] >= df['BB_Upper']
         df['BB_Lower_Touch'] = df['Low'] <= df['BB_Lower']
         
-        logger.info("Added Bollinger Bands to DataFrame")
+        logger.debug("Added Bollinger Bands to DataFrame")
         return df
     
     def add_stochastic(self, df: pd.DataFrame, k_period: int = 14, 
@@ -167,7 +167,7 @@ class IndicatorCalculator:
         df['Stoch_Bullish_Crossover'] = (df['Stoch_K'] > df['Stoch_D']) & (df['Stoch_K'].shift(1) <= df['Stoch_D'].shift(1))
         df['Stoch_Bearish_Crossover'] = (df['Stoch_K'] < df['Stoch_D']) & (df['Stoch_K'].shift(1) >= df['Stoch_D'].shift(1))
         
-        logger.info("Added Stochastic Oscillator to DataFrame")
+        logger.debug("Added Stochastic Oscillator to DataFrame")
         return df
     
     def add_atr(self, df: pd.DataFrame, period: int = 14) -> pd.DataFrame:
@@ -186,7 +186,7 @@ class IndicatorCalculator:
         # Calculate ATR
         df[f'ATR_{period}'] = ta.atr(df['High'], df['Low'], df['Close'], length=period)
         
-        logger.info("Added ATR to DataFrame")
+        logger.debug("Added ATR to DataFrame")
         return df
     
     def add_volume_indicators(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -213,7 +213,7 @@ class IndicatorCalculator:
         # High volume signals
         df['High_Volume'] = df['Volume_Ratio'] > 1.5
         
-        logger.info("Added volume indicators to DataFrame")
+        logger.debug("Added volume indicators to DataFrame")
         return df
     
     def add_all_indicators(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -237,5 +237,5 @@ class IndicatorCalculator:
         df = self.add_atr(df)
         df = self.add_volume_indicators(df)
         
-        logger.info("Added all indicators to DataFrame")
+        logger.debug("Added all indicators to DataFrame")
         return df

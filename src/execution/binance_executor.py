@@ -39,8 +39,7 @@ class BinanceExecutor(OrderExecutor):
         
         # Set trading mode
         self.trading_mode = config.get('execution', 'mode', default='paper')
-        
-        logger.info(f"Binance executor initialized in {self.trading_mode} mode")
+        logger.debug(f"Binance executor initialized in {self.trading_mode} mode")
         
         # Validate API connection
         if self.trading_mode == 'live' and (not self.api_key or not self.api_secret):
@@ -50,7 +49,7 @@ class BinanceExecutor(OrderExecutor):
         if self.trading_mode == 'live':
             try:
                 self.client.get_account()
-                logger.info("Successfully connected to Binance API")
+                logger.debug("Successfully connected to Binance API")
             except BinanceAPIException as e:
                 logger.error(f"Failed to connect to Binance API: {e}")
                 raise
@@ -76,7 +75,7 @@ class BinanceExecutor(OrderExecutor):
         """
         # Check if we're in paper trading mode
         if self.trading_mode == 'paper':
-            logger.info(f"Paper trading: Would place {side} {order_type} order for {quantity} {symbol}")
+            logger.debug(f"Paper trading: Would place {side} {order_type} order for {quantity} {symbol}")
             
             # Simulate order response
             order_id = f"paper_{int(time.time() * 1000)}"
@@ -122,7 +121,7 @@ class BinanceExecutor(OrderExecutor):
             # Place the order
             order = self.client.create_order(**params)
             
-            logger.info(f"Placed {side} {order_type} order for {quantity} {symbol}: {order['orderId']}")
+            logger.debug(f"Placed {side} {order_type} order for {quantity} {symbol}: {order['orderId']}")
             return order
             
         except BinanceAPIException as e:
@@ -142,7 +141,7 @@ class BinanceExecutor(OrderExecutor):
         """
         # Check if we're in paper trading mode
         if self.trading_mode == 'paper':
-            logger.info(f"Paper trading: Would cancel order {order_id} for {symbol}")
+            logger.debug(f"Paper trading: Would cancel order {order_id} for {symbol}")
             
             # Simulate cancellation response
             return {
@@ -156,7 +155,7 @@ class BinanceExecutor(OrderExecutor):
             # Cancel the order
             result = self.client.cancel_order(symbol=symbol, orderId=order_id)
             
-            logger.info(f"Cancelled order {order_id} for {symbol}")
+            logger.debug(f"Cancelled order {order_id} for {symbol}")
             return result
             
         except BinanceAPIException as e:
@@ -176,7 +175,7 @@ class BinanceExecutor(OrderExecutor):
         """
         # Check if we're in paper trading mode
         if self.trading_mode == 'paper':
-            logger.info(f"Paper trading: Would get order {order_id} for {symbol}")
+            logger.debug(f"Paper trading: Would get order {order_id} for {symbol}")
             
             # Simulate order information
             return {
@@ -190,7 +189,7 @@ class BinanceExecutor(OrderExecutor):
             # Get the order
             order = self.client.get_order(symbol=symbol, orderId=order_id)
             
-            logger.info(f"Retrieved order {order_id} for {symbol}: {order['status']}")
+            logger.debug(f"Retrieved order {order_id} for {symbol}: {order['status']}")
             return order
             
         except BinanceAPIException as e:
@@ -209,7 +208,7 @@ class BinanceExecutor(OrderExecutor):
         """
         # Check if we're in paper trading mode
         if self.trading_mode == 'paper':
-            logger.info(f"Paper trading: Would get open orders for {symbol if symbol else 'all symbols'}")
+            logger.debug(f"Paper trading: Would get open orders for {symbol if symbol else 'all symbols'}")
             
             # Simulate empty open orders list
             return []
@@ -221,7 +220,7 @@ class BinanceExecutor(OrderExecutor):
             else:
                 orders = self.client.get_open_orders()
             
-            logger.info(f"Retrieved {len(orders)} open orders")
+            logger.debug(f"Retrieved {len(orders)} open orders")
             return orders
             
         except BinanceAPIException as e:
@@ -237,7 +236,7 @@ class BinanceExecutor(OrderExecutor):
         """
         # Check if we're in paper trading mode
         if self.trading_mode == 'paper':
-            logger.info("Paper trading: Would get account balance")
+            logger.debug("Paper trading: Would get account balance")
             
             # Simulate account balance
             paper_balance = self.config.get('paper_trading', 'initial_balance', default=10000.0)
@@ -265,7 +264,7 @@ class BinanceExecutor(OrderExecutor):
                         'total': total
                     }
             
-            logger.info(f"Retrieved account balance for {len(balances)} assets")
+            logger.debug(f"Retrieved account balance for {len(balances)} assets")
             return balances
             
         except BinanceAPIException as e:
@@ -289,7 +288,7 @@ class BinanceExecutor(OrderExecutor):
         """
         # Check if we're in paper trading mode
         if self.trading_mode == 'paper':
-            logger.info(f"Paper trading: Would place trailing stop {side} order for {quantity} {symbol}")
+            logger.debug(f"Paper trading: Would place trailing stop {side} order for {quantity} {symbol}")
             
             # Simulate order response
             order_id = f"paper_trailing_{int(time.time() * 1000)}"
@@ -329,7 +328,7 @@ class BinanceExecutor(OrderExecutor):
                 callbackRate=callback_rate
             )
             
-            logger.info(f"Placed trailing stop {side} order for {quantity} {symbol}: {order['orderId']}")
+            logger.debug(f"Placed trailing stop {side} order for {quantity} {symbol}: {order['orderId']}")
             return order
             
         except BinanceAPIException as e:

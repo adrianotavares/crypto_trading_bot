@@ -38,7 +38,7 @@ class BinanceDataProvider(MarketDataProvider):
         # Initialize data preprocessor
         self.preprocessor = DataPreprocessor()
         
-        logger.info("Binance data provider initialized")
+        logger.debug("Binance data provider initialized")
     
     def get_top_cryptocurrencies(self, limit: int = 10) -> List[Dict[str, Any]]:
         """
@@ -76,7 +76,7 @@ class BinanceDataProvider(MarketDataProvider):
                     'change24h': float(ticker['priceChangePercent'])
                 })
             
-            logger.info(f"Retrieved top {limit} cryptocurrencies from Binance")
+            logger.debug(f"Retrieved top {limit} cryptocurrencies from Binance")
             return result
             
         except BinanceAPIException as e:
@@ -128,7 +128,7 @@ class BinanceDataProvider(MarketDataProvider):
             # Preprocess the data
             df = self.preprocessor.preprocess_ohlcv(df)
             
-            logger.info(f"Retrieved historical data for {symbol} at {interval} interval")
+            logger.debug(f"Retrieved historical data for {symbol} at {interval} interval")
             return df
             
         except BinanceAPIException as e:
@@ -157,7 +157,7 @@ class BinanceDataProvider(MarketDataProvider):
                 all_tickers = self.client.get_ticker()
                 tickers = {t['symbol']: t for t in all_tickers}
             
-            logger.info(f"Retrieved ticker data for {len(tickers)} symbols")
+            logger.debug(f"Retrieved ticker data for {len(tickers)} symbols")
             return tickers
             
         except BinanceAPIException as e:
@@ -195,7 +195,7 @@ class BinanceDataProvider(MarketDataProvider):
             # Start the socket manager
             bm.start()
             
-            logger.info(f"Started websocket for {len(symbols)} symbols with {interval} interval")
+            logger.debug(f"Started websocket for {len(symbols)} symbols with {interval} interval")
             return bm
             
         except Exception as e:

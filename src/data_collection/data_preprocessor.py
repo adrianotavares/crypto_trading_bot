@@ -17,7 +17,7 @@ class DataPreprocessor:
         """
         Initialize the data preprocessor.
         """
-        logger.info("Data preprocessor initialized")
+        logger.debug("Data preprocessor initialized")
     
     def preprocess_ohlcv(self, df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -64,7 +64,7 @@ class DataPreprocessor:
         # Sort by timestamp
         df.sort_index(inplace=True)
         
-        logger.info(f"Preprocessed OHLCV data: {df.shape[0]} rows, {df.shape[1]} columns")
+        logger.debug(f"Preprocessed OHLCV data: {df.shape[0]} rows, {df.shape[1]} columns")
         return df
     
     def calculate_returns(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -88,7 +88,7 @@ class DataPreprocessor:
         # Drop NaN values created by the returns calculation
         df.dropna(inplace=True)
         
-        logger.info("Calculated returns for price data")
+        logger.debug("Calculated returns for price data")
         return df
     
     def normalize_data(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -111,5 +111,5 @@ class DataPreprocessor:
                 max_val = df[col].max()
                 df[f'{col}_Norm'] = (df[col] - min_val) / (max_val - min_val)
         
-        logger.info("Normalized price data")
+        logger.debug("Normalized price data")
         return df
