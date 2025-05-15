@@ -132,7 +132,7 @@ class PositionManager:
                     
                     # Create position object
                     position = {
-                        'id': f"pos_{int(time.time() * 1000)}_{base_asset}",
+                        'id': f"imported_{int(time.time() * 1000)}_{base_asset}",
                         'imported': True,  # Mark as imported
                         'type': 'buy', # required
                         'timestamp': int(time.time() * 1000),  # required Current time as we don't know actual entry time
@@ -539,17 +539,17 @@ class PositionManager:
             open_positions = [pos for pos in self.positions if pos['symbol'] == symbol]
         else:
             open_positions = self.positions.copy()
+            if open_positions:
+                logger.info(f"Retrieved {len(open_positions)} open positions")
         
-        logger.info(f"Retrieved {len(open_positions)} open positions")
-        
-        for pos in open_positions:
-            # Update type to 'buy' or 'sell'
-            pos['type'] = 'buy' if pos['side'] == 'LONG' else 'sell'
+                for pos in open_positions:
+                    # Update type to 'buy' or 'sell'
+                    pos['type'] = 'buy' if pos['side'] == 'LONG' else 'sell'
                         
-        for pos in open_positions:
-            logger.debug("Position object:")        
-            for key, value in pos.items():
-                logger.debug(f"{key}: {value}")
+                for pos in open_positions:
+                    logger.debug("Position object:")        
+                    for key, value in pos.items():
+                        logger.debug(f"{key}: {value}")
             
         return open_positions
     

@@ -14,8 +14,9 @@ paper_trading:
 
 bot:
   trading_interval: 300 # Trading interval in seconds (900 = 15 minutes, 3600 = 1 hour)
-  candle_interval: '1h' # Candle interval for data fetching
-  historical_data_days: 30 
+  top_n_cryptos: 10 # Number of top cryptocurrencies to monitor
+  candle_interval: '15m' # Candle interval for data fetching
+  historical_data_days: 20 # Number of days to fetch historical data 
   
   # List of trading pairs to monitor
   trading_pairs: 
@@ -27,18 +28,28 @@ bot:
 
 strategy: 
   # RSI parameters
-  rsi_period: 14
+  rsi_period: 9
   rsi_overbought: 70
   rsi_oversold: 30
   
+  # SMA parameters
+  sma_short_period: 20
+  sma_medium_period: 50
+  sma_long_period: 200
+
+  # EMA parameters
+  ema_short_period: 20
+  ema_medium_period: 50
+  ema_long_period: 200
+
   # MACD parameters
-  macd_fast: 12
-  macd_slow: 26
-  macd_signal: 9
+  macd_fast: 9
+  macd_slow: 21
+  macd_signal: 7
   
   # Bollinger Bands parameters
   bb_period: 20
-  bb_std_dev: 2.0
+  bb_std_dev: 1.5
   
   # Stochastic parameters
   stoch_k_period: 14
@@ -50,17 +61,17 @@ strategy:
   atr_multiplier: 2.0
   
   # Trailing stop parameters
-  trailing_stop_pct: 1.0
+  trailing_stop_pct: 2.0
   
   # Signal threshold
-  signal_threshold: 3
+  signal_threshold: 2
 
 risk:
-  max_position_size: 10  # 500% of account
-  max_open_positions: 3  # Maximum number of open positions
+  max_position_size: 0.20  # 20% of account
+  max_open_positions: 1  # Maximum number of open positions
   max_daily_loss: 0.03  # 3% of account
   trailing_stop_pct: 0.02  # 2%
 
 logging:
   log_level: "DEBUG"  # "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
-  log_to_file: True # Log to file or console
+  log_to_file: False # Log to file or console

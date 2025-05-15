@@ -25,7 +25,8 @@ class SignalGenerator:
         self.signal_threshold = config.get('strategy', 'signal_threshold', default=3)
         logger.info(f"Signal generator initialized with threshold: {self.signal_threshold}")
     
-    def generate_signals(self, df: pd.DataFrame) -> pd.DataFrame:
+    def generate_signals(self, 
+                         df: pd.DataFrame) -> pd.DataFrame:
         """
         Generate trading signals based on indicator values.
         
@@ -56,7 +57,8 @@ class SignalGenerator:
         logger.info(f"Generated signals: {df['Buy_Signal'].sum()} buy, {df['Sell_Signal'].sum()} sell")
         return df
     
-    def _calculate_signal_strength(self, df: pd.DataFrame) -> None:
+    def _calculate_signal_strength(self, 
+                                   df: pd.DataFrame) -> None:
         """
         Calculate signal strength based on various indicators.
         
@@ -67,9 +69,10 @@ class SignalGenerator:
             None (modifies df in-place)
         """
         # RSI signals
-        if 'RSI_14' in df.columns:
-            df['Signal_Strength'] += np.where(df['RSI_14'] < 30, 1, 0)  # Oversold (buy)
-            df['Signal_Strength'] -= np.where(df['RSI_14'] > 70, 1, 0)  # Overbought (sell)
+        rsi_period = self.config.get('strategy', 'rsi_period')
+        if f'RSI_{rsi_period}' in df.columns:
+            df['Signal_Strength'] += np.where(df[f'RSI_{rsi_period}'] < 30, 1, 0)  # Oversold (buy)
+            df['Signal_Strength'] -= np.where(df[f'RSI_{rsi_period}'] > 70, 1, 0)  # Overbought (sell)
         
         # MACD signals
         if all(col in df.columns for col in ['MACD', 'MACD_Signal']):
@@ -90,7 +93,12 @@ class SignalGenerator:
             df['Signal_Strength'] -= np.where(df['High'] >= df['BB_Upper'], 1, 0)
         
         # Moving Average signals
-        for ma_pair in [('SMA_20', 'SMA_50'), ('EMA_20', 'EMA_50')]:
+        sma_short_period = self.config.get('strategy', 'sma_short_period')
+        sma_long_period = self.config.get('strategy', 'sma_long_period')
+        ema_short_period = self.config.get('strategy', 'ema_short_period')
+        ema_long_period = self.config.get('strategy', 'ema_long_period')
+        
+        for ma_pair in [(f'SMA_{sma_short_period}', f'SMA_{sma_long_period}'), (f'EMA_{ema_short_period}', f'EMA_{ema_long_period}')]:
             short_ma, long_ma = ma_pair
             if all(col in df.columns for col in [short_ma, long_ma]):
                 # Bullish crossover (short MA crosses above long MA)

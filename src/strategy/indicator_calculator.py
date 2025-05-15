@@ -20,8 +20,14 @@ class IndicatorCalculator:
         """
         logger.debug("Indicator calculator initialized")
     
-    def add_moving_averages(self, df: pd.DataFrame, short_period: int = 20, 
-                           medium_period: int = 50, long_period: int = 200) -> pd.DataFrame:
+    def add_moving_averages(self, 
+                            df: pd.DataFrame,
+                            sma_short_period,
+                            sma_medium_period,
+                            sma_long_period,
+                            ema_short_period,
+                            ema_medium_period,
+                            ema_long_period ) -> pd.DataFrame:
         """
         Add simple moving averages to the DataFrame.
         
@@ -37,20 +43,22 @@ class IndicatorCalculator:
         df = df.copy()
         
         # Calculate SMAs
-        df[f'SMA_{short_period}'] = ta.sma(df['Close'], length=short_period)
-        df[f'SMA_{medium_period}'] = ta.sma(df['Close'], length=medium_period)
-        df[f'SMA_{long_period}'] = ta.sma(df['Close'], length=long_period)
+        df[f'SMA_{sma_short_period}'] = ta.sma(df['Close'], length=sma_short_period)
+        df[f'SMA_{sma_medium_period}'] = ta.sma(df['Close'], length=sma_medium_period)
+        df[f'SMA_{sma_long_period}'] = ta.sma(df['Close'], length=sma_long_period)
         
         # Calculate EMAs
-        df[f'EMA_{short_period}'] = ta.ema(df['Close'], length=short_period)
-        df[f'EMA_{medium_period}'] = ta.ema(df['Close'], length=medium_period)
-        df[f'EMA_{long_period}'] = ta.ema(df['Close'], length=long_period)
+        df[f'EMA_{ema_short_period}'] = ta.ema(df['Close'], length=ema_short_period)
+        df[f'EMA_{ema_medium_period}'] = ta.ema(df['Close'], length=ema_medium_period)
+        df[f'EMA_{ema_long_period}'] = ta.ema(df['Close'], length=ema_long_period)
         
-        logger.debug("Added moving averages to DataFrame")
+        logger.debug("Added Moving Averages to DataFrame")
         return df
     
-    def add_rsi(self, df: pd.DataFrame, period: int = 14, 
-               overbought: int = 70, oversold: int = 30) -> pd.DataFrame:
+    def add_rsi(self, df: pd.DataFrame, 
+                period: int = 14, 
+                overbought: int = 70, 
+                oversold: int = 30) -> pd.DataFrame:
         """
         Add Relative Strength Index (RSI) to the DataFrame.
         
@@ -75,8 +83,11 @@ class IndicatorCalculator:
         logger.debug("Added RSI to DataFrame")
         return df
     
-    def add_macd(self, df: pd.DataFrame, fast: int = 12, slow: int = 26, 
-                signal: int = 9) -> pd.DataFrame:
+    def add_macd(self, 
+                 df: pd.DataFrame, 
+                 fast: int = 12, 
+                 slow: int = 26, 
+                 signal: int = 9) -> pd.DataFrame:
         """
         Add Moving Average Convergence Divergence (MACD) to the DataFrame.
         
@@ -95,9 +106,9 @@ class IndicatorCalculator:
         macd = ta.macd(df['Close'], fast=fast, slow=slow, signal=signal)
         
         # Add MACD columns to the DataFrame
-        df['MACD'] = macd['MACD_12_26_9']
-        df['MACD_Signal'] = macd['MACDs_12_26_9']
-        df['MACD_Histogram'] = macd['MACDh_12_26_9']
+        df['MACD'] = macd[f'MACD_{fast}_{slow}_{signal}']
+        df['MACD_Signal'] = macd[f'MACDs_{fast}_{slow}_{signal}']
+        df['MACD_Histogram'] = macd[f'MACDh_{fast}_{slow}_{signal}']
         
         # Add MACD crossover signals
         df['MACD_Bullish_Crossover'] = (df['MACD'] > df['MACD_Signal']) & (df['MACD'].shift(1) <= df['MACD_Signal'].shift(1))
@@ -106,8 +117,10 @@ class IndicatorCalculator:
         logger.debug("Added MACD to DataFrame")
         return df
     
-    def add_bollinger_bands(self, df: pd.DataFrame, period: int = 20, 
-                           std_dev: float = 2.0) -> pd.DataFrame:
+    def add_bollinger_bands(self, 
+                            df: pd.DataFrame, 
+                            period: int = 20, 
+                            std_dev: float = 2.0) -> pd.DataFrame:
         """
         Add Bollinger Bands to the DataFrame.
         
@@ -125,9 +138,9 @@ class IndicatorCalculator:
         bbands = ta.bbands(df['Close'], length=period, std=std_dev)
         
         # Add Bollinger Bands columns to the DataFrame
-        df['BB_Upper'] = bbands['BBU_20_2.0']
-        df['BB_Middle'] = bbands['BBM_20_2.0']
-        df['BB_Lower'] = bbands['BBL_20_2.0']
+        df['BB_Upper'] = bbands[f'BBU_{period}_{std_dev}']
+        df['BB_Middle'] = bbands[f'BBM_{period}_{std_dev}']
+        df['BB_Lower'] = bbands[f'BBL_{period}_{std_dev}']
         
         # Calculate Bollinger Band width
         df['BB_Width'] = (df['BB_Upper'] - df['BB_Lower']) / df['BB_Middle']
@@ -170,7 +183,9 @@ class IndicatorCalculator:
         logger.debug("Added Stochastic Oscillator to DataFrame")
         return df
     
-    def add_atr(self, df: pd.DataFrame, period: int = 14) -> pd.DataFrame:
+    def add_atr(self, 
+                df: pd.DataFrame, 
+                period: int = 14) -> pd.DataFrame:
         """
         Add Average True Range (ATR) to the DataFrame.
         
@@ -189,7 +204,7 @@ class IndicatorCalculator:
         logger.debug("Added ATR to DataFrame")
         return df
     
-    def add_volume_indicators(self, df: pd.DataFrame) -> pd.DataFrame:
+    def add_volume_indicators(self, df: pd.DataFrame, sma_short_period) -> pd.DataFrame:
         """
         Add volume-based indicators to the DataFrame.
         
@@ -205,10 +220,10 @@ class IndicatorCalculator:
         df['OBV'] = ta.obv(df['Close'], df['Volume'])
         
         # Calculate Volume Moving Average
-        df['Volume_SMA_20'] = ta.sma(df['Volume'], length=20)
+        df[f'Volume_SMA_{sma_short_period}'] = ta.sma(df['Volume'], length=sma_short_period)
         
         # Calculate Volume Relative to Moving Average
-        df['Volume_Ratio'] = df['Volume'] / df['Volume_SMA_20']
+        df['Volume_Ratio'] = df['Volume'] / df[f'Volume_SMA_{sma_short_period}']
         
         # High volume signals
         df['High_Volume'] = df['Volume_Ratio'] > 1.5

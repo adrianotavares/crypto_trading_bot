@@ -36,17 +36,16 @@ class TradingBot:
         if config_path is None:
             config_path = Path(__file__).parent.parent / "config" / "config.yaml"
         
+        self.config = ConfigManager(config_path)
+                
         # get config log level and log to file from config.yaml
-        log_level = ConfigManager(config_path).get('logging', 'log_level', default='INFO')
-        log_to_file = ConfigManager(config_path).get('logging', 'log_to_file', default=False)        
+        log_level = self.config.get('logging', 'log_level', default='INFO')
+        log_to_file = self.config.get('logging', 'log_to_file', default=False)        
         
         # Setup logging
         self.logger = setup_logger(log_level, log_to_file)
         self.logger.warning("Startup")
         self.logger.info("Initializing trading bot...")
-        
-        self.config = ConfigManager(config_path)
-        # self.logger.info(f"Configuration loaded from {config_path}")
         
         # Initialize components
         self.risk_manager = RiskManager(self.config)
@@ -56,11 +55,11 @@ class TradingBot:
         
         # Import existing positions if in live mode
         if self.config.get('execution', 'mode') == 'live':
-            trading_pairs = self.config.get('bot', 'trading_pairs', default=None)
             self.execution.position_manager.import_existing_positions(symbols=trading_pairs)
         
         # Trading parameters
         self.trading_interval = self.config.get('bot', 'trading_interval', default=3600)  # Default: 1 hour
+        trading_pairs = self.config.get('bot', 'trading_pairs', default=None)
         self.top_n_cryptos = self.config.get('bot', 'top_n_cryptos', default=10)
         self.running = False
         

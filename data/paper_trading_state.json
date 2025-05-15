@@ -1,6 +1,10 @@
 {
   "balances": {
-    "USDT": 100.0
+    "USDT": 55.52462633455734,
+    "ETH": 0.0,
+    "ADA": 0.0,
+    "XRP": 0.0,
+    "BTC": 0.0004174614835419582
   },
   "orders": [
     {
@@ -1044,5 +1048,710 @@
       "updateTime": 1747132091945
     }
   ],
-  "positions": []
+  "positions": [
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.0021920330558584823,
+      "entry_price": 1824.79,
+      "entry_time": 1747271480943,
+      "current_price": 1824.79
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 5.949724825226833,
+      "entry_price": 0.6723,
+      "entry_time": 1747271490540,
+      "current_price": 0.6723
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.0021920330558584823,
+      "entry_price": 1791.98,
+      "entry_time": 1747271505356,
+      "current_price": 1791.98
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 5.949724825226833,
+      "entry_price": 0.6715,
+      "entry_time": 1747271505366,
+      "current_price": 0.6715
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010960165279292411,
+      "entry_price": 1824.79,
+      "entry_time": 1747271625743,
+      "current_price": 1824.79
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.748624126134168,
+      "entry_price": 0.6723,
+      "entry_time": 1747271625756,
+      "current_price": 0.6723
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010960165279292411,
+      "entry_price": 1791.98,
+      "entry_time": 1747271625804,
+      "current_price": 1791.98
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.748624126134168,
+      "entry_price": 0.6715,
+      "entry_time": 1747271625813,
+      "current_price": 0.6715
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010966174833725374,
+      "entry_price": 1823.79,
+      "entry_time": 1747271932949,
+      "current_price": 1823.79
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.407780234253726,
+      "entry_price": 2.1259,
+      "entry_time": 1747271932956,
+      "current_price": 2.1259
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.81070204203309,
+      "entry_price": 0.6709,
+      "entry_time": 1747271932960,
+      "current_price": 0.6709
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010966174833725374,
+      "entry_price": 1792.44,
+      "entry_time": 1747271932995,
+      "current_price": 1792.44
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.407780234253726,
+      "entry_price": 2.1132,
+      "entry_time": 1747271933008,
+      "current_price": 2.1132
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.81070204203309,
+      "entry_price": 0.6672,
+      "entry_time": 1747271933016,
+      "current_price": 0.6672
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010966174833725374,
+      "entry_price": 1823.79,
+      "entry_time": 1747272084627,
+      "current_price": 1823.79
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.407780234253726,
+      "entry_price": 2.1259,
+      "entry_time": 1747272084632,
+      "current_price": 2.1259
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.81070204203309,
+      "entry_price": 0.6709,
+      "entry_time": 1747272084635,
+      "current_price": 0.6709
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010966174833725374,
+      "entry_price": 1792.44,
+      "entry_time": 1747272084663,
+      "current_price": 1792.44
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.407780234253726,
+      "entry_price": 2.1132,
+      "entry_time": 1747272084668,
+      "current_price": 2.1132
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.81070204203309,
+      "entry_price": 0.6672,
+      "entry_time": 1747272084672,
+      "current_price": 0.6672
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010966174833725374,
+      "entry_price": 1823.79,
+      "entry_time": 1747272391879,
+      "current_price": 1823.79
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.407780234253726,
+      "entry_price": 2.1259,
+      "entry_time": 1747272391885,
+      "current_price": 2.1259
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.81070204203309,
+      "entry_price": 0.6709,
+      "entry_time": 1747272391889,
+      "current_price": 0.6709
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010966174833725374,
+      "entry_price": 1792.44,
+      "entry_time": 1747272391915,
+      "current_price": 1792.44
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.407780234253726,
+      "entry_price": 2.1132,
+      "entry_time": 1747272391920,
+      "current_price": 2.1132
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.81070204203309,
+      "entry_price": 0.6672,
+      "entry_time": 1747272391924,
+      "current_price": 0.6672
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010966174833725374,
+      "entry_price": 1823.79,
+      "entry_time": 1747272491946,
+      "current_price": 1823.79
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.407780234253726,
+      "entry_price": 2.1259,
+      "entry_time": 1747272491951,
+      "current_price": 2.1259
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.81070204203309,
+      "entry_price": 0.6709,
+      "entry_time": 1747272491955,
+      "current_price": 0.6709
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010966174833725374,
+      "entry_price": 1792.44,
+      "entry_time": 1747272491983,
+      "current_price": 1792.44
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.407780234253726,
+      "entry_price": 2.1132,
+      "entry_time": 1747272491988,
+      "current_price": 2.1132
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.81070204203309,
+      "entry_price": 0.6672,
+      "entry_time": 1747272491992,
+      "current_price": 0.6672
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "quantity": 0.0002056939372946146,
+      "entry_price": 97231.84,
+      "entry_time": 1747272654086,
+      "current_price": 97231.84
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010909348766425388,
+      "entry_price": 1833.29,
+      "entry_time": 1747272654091,
+      "current_price": 1833.29
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.35278713056491,
+      "entry_price": 2.1384,
+      "entry_time": 1747272654095,
+      "current_price": 2.1384
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.577048210588583,
+      "entry_price": 0.6762,
+      "entry_time": 1747272654099,
+      "current_price": 0.6762
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "quantity": 0.0002056939372946146,
+      "entry_price": 94059.43,
+      "entry_time": 1747272654136,
+      "current_price": 94059.43
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010909348766425388,
+      "entry_price": 1792.44,
+      "entry_time": 1747272654140,
+      "current_price": 1792.44
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.35278713056491,
+      "entry_price": 2.1288,
+      "entry_time": 1747272654144,
+      "current_price": 2.1288
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.577048210588583,
+      "entry_price": 0.6745,
+      "entry_time": 1747272654148,
+      "current_price": 0.6745
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010909348766425388,
+      "entry_price": 1833.29,
+      "entry_time": 1747272959723,
+      "current_price": 1833.29
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.35278713056491,
+      "entry_price": 2.1384,
+      "entry_time": 1747272959728,
+      "current_price": 2.1384
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.577048210588583,
+      "entry_price": 0.6762,
+      "entry_time": 1747272959732,
+      "current_price": 0.6762
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010909348766425388,
+      "entry_price": 1792.44,
+      "entry_time": 1747272959760,
+      "current_price": 1792.44
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.35278713056491,
+      "entry_price": 2.1288,
+      "entry_time": 1747272959765,
+      "current_price": 2.1288
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.577048210588583,
+      "entry_price": 0.6745,
+      "entry_time": 1747272959768,
+      "current_price": 0.6745
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "quantity": 0.0002056939372946146,
+      "entry_price": 97231.84,
+      "entry_time": 1747273266838,
+      "current_price": 97231.84
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010909348766425388,
+      "entry_price": 1833.29,
+      "entry_time": 1747273266844,
+      "current_price": 1833.29
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.35278713056491,
+      "entry_price": 2.1384,
+      "entry_time": 1747273266848,
+      "current_price": 2.1384
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.577048210588583,
+      "entry_price": 0.6762,
+      "entry_time": 1747273266852,
+      "current_price": 0.6762
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "quantity": 0.0002056939372946146,
+      "entry_price": 94059.43,
+      "entry_time": 1747273266888,
+      "current_price": 94059.43
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010909348766425388,
+      "entry_price": 1792.44,
+      "entry_time": 1747273266892,
+      "current_price": 1792.44
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.35278713056491,
+      "entry_price": 2.1288,
+      "entry_time": 1747273266897,
+      "current_price": 2.1288
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.577048210588583,
+      "entry_price": 0.6745,
+      "entry_time": 1747273266901,
+      "current_price": 0.6745
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010935535021050904,
+      "entry_price": 1828.9,
+      "entry_time": 1747273573608,
+      "current_price": 1828.9
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.36724275209592,
+      "entry_price": 2.1351,
+      "entry_time": 1747273573612,
+      "current_price": 2.1351
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.717682020802375,
+      "entry_price": 0.673,
+      "entry_time": 1747273573617,
+      "current_price": 0.673
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "quantity": 0.00020613879263066187,
+      "entry_price": 94436.07,
+      "entry_time": 1747273573649,
+      "current_price": 94436.07
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010935535021050904,
+      "entry_price": 1818.6,
+      "entry_time": 1747273573654,
+      "current_price": 1818.6
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.36724275209592,
+      "entry_price": 2.1288,
+      "entry_time": 1747273573659,
+      "current_price": 2.1288
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.717682020802375,
+      "entry_price": 0.6715,
+      "entry_time": 1747273573663,
+      "current_price": 0.6715
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "quantity": 0.00020613879263066187,
+      "entry_price": 97022.01,
+      "entry_time": 1747273762511,
+      "current_price": 97022.01
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010935535021050904,
+      "entry_price": 1828.9,
+      "entry_time": 1747273762517,
+      "current_price": 1828.9
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.36724275209592,
+      "entry_price": 2.1351,
+      "entry_time": 1747273762522,
+      "current_price": 2.1351
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.717682020802375,
+      "entry_price": 0.673,
+      "entry_time": 1747273762527,
+      "current_price": 0.673
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "quantity": 0.00020613879263066187,
+      "entry_price": 94436.07,
+      "entry_time": 1747273762559,
+      "current_price": 94436.07
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010935535021050904,
+      "entry_price": 1818.6,
+      "entry_time": 1747273762564,
+      "current_price": 1818.6
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.36724275209592,
+      "entry_price": 2.1288,
+      "entry_time": 1747273762569,
+      "current_price": 2.1288
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.717682020802375,
+      "entry_price": 0.6715,
+      "entry_time": 1747273762573,
+      "current_price": 0.6715
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "quantity": 0.00020613879263066187,
+      "entry_price": 97022.01,
+      "entry_time": 1747273909984,
+      "current_price": 97022.01
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010935535021050904,
+      "entry_price": 1828.9,
+      "entry_time": 1747273909991,
+      "current_price": 1828.9
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.36724275209592,
+      "entry_price": 2.1351,
+      "entry_time": 1747273909996,
+      "current_price": 2.1351
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.717682020802375,
+      "entry_price": 0.673,
+      "entry_time": 1747273910001,
+      "current_price": 0.673
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "quantity": 0.00020613879263066187,
+      "entry_price": 94436.07,
+      "entry_time": 1747273910047,
+      "current_price": 94436.07
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010935535021050904,
+      "entry_price": 1818.6,
+      "entry_time": 1747273910054,
+      "current_price": 1818.6
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.36724275209592,
+      "entry_price": 2.1288,
+      "entry_time": 1747273910060,
+      "current_price": 2.1288
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.717682020802375,
+      "entry_price": 0.6715,
+      "entry_time": 1747273910065,
+      "current_price": 0.6715
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "quantity": 0.00020613879263066187,
+      "entry_price": 97022.01,
+      "entry_time": 1747274216712,
+      "current_price": 97022.01
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "quantity": 0.010935535021050904,
+      "entry_price": 1828.9,
+      "entry_time": 1747274216720,
+      "current_price": 1828.9
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "quantity": 9.36724275209592,
+      "entry_price": 2.1351,
+      "entry_time": 1747274216725,
+      "current_price": 2.1351
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "quantity": 29.717682020802375,
+      "entry_price": 0.673,
+      "entry_time": 1747274216731,
+      "current_price": 0.673
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "quantity": 0.00020613879263066187,
+      "entry_price": 94436.07,
+      "entry_time": 1747274216776,
+      "current_price": 94436.07
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "quantity": 0.010935535021050904,
+      "entry_price": 1818.6,
+      "entry_time": 1747274216782,
+      "current_price": 1818.6
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "quantity": 9.36724275209592,
+      "entry_price": 2.1288,
+      "entry_time": 1747274216789,
+      "current_price": 2.1288
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "quantity": 29.717682020802375,
+      "entry_price": 0.6715,
+      "entry_time": 1747274216794,
+      "current_price": 0.6715
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "quantity": 0.00021132269091129634,
+      "entry_price": 94467.21,
+      "entry_time": 1747277293111,
+      "current_price": 94467.21
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "quantity": 0.00021132269091129634,
+      "entry_price": 94641.99,
+      "entry_time": 1747277959430,
+      "current_price": 94641.99
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "quantity": 0.00021132269091129634,
+      "entry_price": 94467.21,
+      "entry_time": 1747277959462,
+      "current_price": 94467.21
+    }
+  ]
 }

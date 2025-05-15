@@ -36,6 +36,14 @@ class CustomStrategy(Strategy):
         self.macd_slow = config.get('strategy', 'macd_slow', default=26)
         self.macd_signal = config.get('strategy', 'macd_signal', default=9)
         
+        self.ema_short_period = config.get('strategy', 'ema_short_period', default=20)
+        self.ema_medium_period = config.get('strategy', 'ema_medium_period', default=50)
+        self.ema_long_period = config.get('strategy', 'ema_long_period', default=200)
+        
+        self.sma_short_period = config.get('strategy', 'sma_short_period', default=20)
+        self.sma_medium_period = config.get('strategy', 'sma_medium_period', default=50)
+        self.sma_long_period = config.get('strategy', 'sma_long_period', default=200)
+        
         self.bb_period = config.get('strategy', 'bb_period', default=20)
         self.bb_std_dev = config.get('strategy', 'bb_std_dev', default=2.0)
         
@@ -52,6 +60,8 @@ class CustomStrategy(Strategy):
         logger.debug("Custom strategy initialized with parameters:")
         logger.debug(f"RSI: period={self.rsi_period}, overbought={self.rsi_overbought}, oversold={self.rsi_oversold}")
         logger.debug(f"MACD: fast={self.macd_fast}, slow={self.macd_slow}, signal={self.macd_signal}")
+        logger.debug(f"EMA: short={self.ema_short_period}, medium={self.ema_medium_period}, long={self.ema_long_period}")
+        logger.debug(f"SMA: short={self.sma_short_period}, medium={self.sma_medium_period}, long={self.sma_long_period}")
         logger.debug(f"Bollinger Bands: period={self.bb_period}, std_dev={self.bb_std_dev}")
         logger.debug(f"Stochastic: k_period={self.stoch_k_period}, d_period={self.stoch_d_period}, smooth_k={self.stoch_smooth_k}")
         logger.debug(f"ATR: period={self.atr_period}, multiplier={self.atr_multiplier}")
@@ -84,6 +94,14 @@ class CustomStrategy(Strategy):
             slow=self.macd_slow, 
             signal=self.macd_signal
         )
+        # Calculate Moving Averages
+        df = self.indicator_calculator.add_moving_averages(df,
+                                                           sma_short_period=self.sma_short_period,
+                                                           sma_medium_period=self.sma_medium_period,
+                                                           sma_long_period=self.sma_long_period,
+                                                           ema_short_period=self.ema_short_period,
+                                                           ema_medium_period=self.ema_medium_period,
+                                                           ema_long_period=self.ema_long_period)
         
         # Calculate Bollinger Bands
         df = self.indicator_calculator.add_bollinger_bands(
@@ -107,11 +125,11 @@ class CustomStrategy(Strategy):
         )
         
         # Calculate volume indicators
-        df = self.indicator_calculator.add_volume_indicators(df)
+        df = self.indicator_calculator.add_volume_indicators(df, sma_short_period=self.sma_short_period)
         
         # log all indicators calculated: label and value
         for col in df.columns:
-            if col.startswith('RSI_') or col.startswith('MACD_') or col.startswith('BB_') or col.startswith('Stoch_') or col.startswith('ATR_'):
+            if col.startswith('RSI_') or col.startswith('MACD_') or col.startswith('EMA_') or col.startswith('SMA_') or col.startswith('BB_') or col.startswith('Stoch_') or col.startswith('ATR_'):
                 logger.debug(f"{col}: {df[col].iloc[-1]}")  
         
         logger.debug(f"Calculated indicators for {len(df)} data points")
@@ -324,7 +342,6 @@ class CustomStrategy(Strategy):
         Returns:
             Stop loss price
         """
-        logger.debug("Calculate Stop Loss")
 
         atr = row.get(f'ATR_{self.atr_period}', 0)
         
@@ -346,7 +363,6 @@ class CustomStrategy(Strategy):
         Returns:
             Take profit price
         """
-        logger.debug("Calculate Take Profit")
 
         atr = row.get(f'ATR_{self.atr_period}', 0)
         
@@ -429,7 +445,7 @@ class CustomStrategy(Strategy):
         Returns:
             Profit percentage
         """
-        logger.debug("Calculate Profit Percentage")
+        # logger.debug("Calculate Profit Percentage")
 
         if position_type == 'buy':
             # For long positions
