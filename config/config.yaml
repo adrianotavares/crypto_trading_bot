@@ -20,12 +20,13 @@ bot:
   
   # List of trading pairs to monitor
   trading_pairs: 
-    - BTCUSDT
-    - ETHUSDT
-    - BNBUSDT
-    - XRPUSDT
-    - ADAUSDT
-
+    - LINKUSDT
+    # - BTCUSDT
+    # - ETHUSDT
+    # - BNBUSDT
+    # - XRPUSDT
+    # - ADAUSDT
+    
 strategy: 
   # RSI parameters
   rsi_period: 9
